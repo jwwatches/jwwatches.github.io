@@ -329,12 +329,7 @@
             }
         }
  
-        /* Featured Watch Section */
-        .featured-watch {
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, var(--warm-white) 0%, var(--cream) 100%);
-        }
- 
+        /* Categories Grid */
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -369,129 +364,6 @@
             margin: 0 auto;
         }
  
-        .watch-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
- 
-        .watch-image-container {
-            position: relative;
-            padding: 3rem;
-            background: white;
-            border-radius: 4px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
- 
-        .watch-image-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid var(--rich-gold);
-            border-radius: 4px;
-            opacity: 0.3;
-        }
- 
-        .watch-image {
-            width: 100%;
-            height: 500px;
-            object-fit: contain;
-        }
- 
-        .watch-details {
-            padding: 2rem 0;
-        }
- 
-        .watch-brand {
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--rich-gold);
-            margin-bottom: 0.75rem;
-        }
- 
-        .watch-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--deep-navy);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
- 
-        .watch-description {
-            font-size: 1.1rem;
-            color: var(--slate);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
- 
-        .watch-specs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            padding: 2rem;
-            background: rgba(212, 175, 55, 0.05);
-            border-left: 3px solid var(--rich-gold);
-        }
- 
-        .spec {
-            display: flex;
-            flex-direction: column;
-        }
- 
-        .spec-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--slate);
-            opacity: 0.7;
-            margin-bottom: 0.25rem;
-        }
- 
-        .spec-value {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--deep-navy);
-        }
- 
-        .watch-price {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--rich-gold);
-            margin-bottom: 1.5rem;
-        }
- 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--deep-navy);
-            color: var(--cream);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            border: 2px solid var(--deep-navy);
-        }
- 
-        .cta-button:hover {
-            background: transparent;
-            color: var(--deep-navy);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
- 
-        /* Categories Grid */
         .categories-section {
             padding: 6rem 2rem;
             background: white;
@@ -727,11 +599,6 @@
                 height: 150px;
             }
  
-            .watch-showcase {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
- 
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -890,20 +757,6 @@
                         <span class="stat-label">Complications</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
- 
-    <!-- Featured Watch Section (Auto-Rotating) -->
-    <section class="featured-watch">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Featured This Week</div>
-                <h2 class="section-title">Spotlight Watch</h2>
-                <p class="section-description">Handpicked timepieces showcasing exceptional value, craftsmanship, and style across all price points.</p>
-            </div>
-            <div class="watch-showcase" id="featuredWatch">
-                <!-- Featured watch content will be loaded here by JavaScript -->
             </div>
         </div>
     </section>
@@ -1067,174 +920,6 @@
         }
  
         setInterval(rotateHero, 7000); // Change slide every 7 seconds
- 
-        // Featured Watch Auto-Rotation (Changes on page load)
-        const featuredWatches = [
-            {
-                brand: "OMEGA",
-                name: "Seamaster Planet Ocean",
-                description: "A bold dive watch with stunning blue dial and chronograph functionality. The Planet Ocean combines Omega's Master Chronometer movement with robust sports watch design, perfect for both underwater adventures and daily wear.",
-                price: "$8,400",
-                image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80",
-                specs: {
-                    movement: "Automatic Chronograph",
-                    case: "45.5mm Stainless Steel",
-                    waterResist: "600m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "ROLEX",
-                name: "Submariner Date",
-                description: "The quintessential luxury dive watch that defined a category. With its iconic Cerachrom bezel and legendary reliability, the Submariner remains the gold standard in professional dive watches.",
-                price: "$10,250",
-                image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80",
-                specs: {
-                    movement: "Automatic",
-                    case: "41mm Oystersteel",
-                    waterResist: "300m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "CHRISTOPHER WARD",
-                name: "C63 Sealander GMT",
-                description: "British microbrand excellence at an accessible price point. The C63 offers true GMT functionality with an in-house movement, proving that microbrands can compete with established luxury names on quality and design.",
-                price: "$1,195",
-                image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80",
-                specs: {
-                    movement: "Automatic GMT",
-                    case: "41mm Stainless Steel",
-                    waterResist: "150m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "GRAND SEIKO",
-                name: "Spring Drive SBGA211",
-                description: "Japanese horological innovation at its finest. The Spring Drive movement combines the best of mechanical and quartz, delivering unparalleled accuracy with the smooth sweep of a traditional mechanical watch.",
-                price: "$5,800",
-                image: "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80",
-                specs: {
-                    movement: "Spring Drive",
-                    case: "41mm Stainless Steel",
-                    waterResist: "100m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "TUDOR",
-                name: "Black Bay Fifty-Eight",
-                description: "Vintage-inspired dive watch with modern reliability. The Black Bay 58 captures the essence of Tudor's dive watch heritage in a perfectly proportioned 39mm case, making it ideal for smaller wrists and vintage enthusiasts.",
-                price: "$3,975",
-                image: "https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80",
-                specs: {
-                    movement: "Automatic",
-                    case: "39mm Stainless Steel",
-                    waterResist: "200m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "ORIS",
-                name: "Aquis Date",
-                description: "Swiss-made dive watch excellence without the luxury price tag. Oris delivers exceptional build quality, stunning ceramic bezels, and reliable movements at a fraction of the cost of comparable luxury brands.",
-                price: "$2,100",
-                image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80",
-                specs: {
-                    movement: "Automatic",
-                    case: "43.5mm Stainless Steel",
-                    waterResist: "300m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "SEIKO",
-                name: "Prospex SPB143",
-                description: "The modern reinterpretation of Seiko's legendary 62MAS diver. Combining vintage aesthetics with contemporary specifications, this watch delivers exceptional value with Seiko's renowned build quality and accuracy.",
-                price: "$1,050",
-                image: "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80",
-                specs: {
-                    movement: "Automatic",
-                    case: "40.5mm Stainless Steel",
-                    waterResist: "200m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "CARTIER",
-                name: "Santos de Cartier",
-                description: "One of the world's first wristwatches, the Santos combines jewelry-grade finishing with aviation heritage. Its distinctive square case and exposed screws make it instantly recognizable and eternally stylish.",
-                price: "$7,400",
-                image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80",
-                specs: {
-                    movement: "Automatic",
-                    case: "39.8mm Stainless Steel",
-                    waterResist: "100m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "ZENITH",
-                name: "Chronomaster Sport",
-                description: "High-beat chronograph excellence with Zenith's legendary El Primero movement. Running at 36,000 vph, this watch offers chronograph accuracy to 1/10th of a second while maintaining a 60-hour power reserve.",
-                price: "$9,900",
-                image: "https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80",
-                specs: {
-                    movement: "El Primero Automatic",
-                    case: "41mm Stainless Steel",
-                    waterResist: "100m",
-                    crystal: "Sapphire"
-                }
-            },
-            {
-                brand: "LONGINES",
-                name: "Spirit Zulu Time",
-                description: "Vintage-inspired GMT functionality with contemporary reliability. The Spirit line represents Longines' return to serious tool watches, offering excellent value with a true GMT movement and classic aesthetic.",
-                price: "$2,850",
-                image: "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80",
-                specs: {
-                    movement: "Automatic GMT",
-                    case: "42mm Stainless Steel",
-                    waterResist: "100m",
-                    crystal: "Sapphire"
-                }
-            }
-        ];
- 
-        // Select random featured watch on page load
-        const randomWatch = featuredWatches[Math.floor(Math.random() * featuredWatches.length)];
-        
-        document.getElementById('featuredWatch').innerHTML = `
-            <div class="watch-image-container">
-                <img src="${randomWatch.image}" alt="${randomWatch.brand} ${randomWatch.name}" class="watch-image">
-            </div>
-            <div class="watch-details">
-                <div class="watch-brand">${randomWatch.brand}</div>
-                <h3 class="watch-name">${randomWatch.name}</h3>
-                <p class="watch-description">${randomWatch.description}</p>
-                <div class="watch-specs">
-                    <div class="spec">
-                        <span class="spec-label">Movement</span>
-                        <span class="spec-value">${randomWatch.specs.movement}</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Case Size</span>
-                        <span class="spec-value">${randomWatch.specs.case}</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Water Resistance</span>
-                        <span class="spec-value">${randomWatch.specs.waterResist}</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Crystal</span>
-                        <span class="spec-value">${randomWatch.specs.crystal}</span>
-                    </div>
-                </div>
-                <div class="watch-price">${randomWatch.price}</div>
-                <a href="#" class="cta-button">View Details</a>
-            </div>
-        `;
     </script>
 </body>
 </html>
