@@ -3,378 +3,703 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive luxury watch guide covering all dial colors, complications, and price ranges. Expert reviews of Rolex, Omega, Cartier, and more from trusted dealers.">
-    <meta name="keywords" content="luxury watches, watch reviews, Rolex, Omega, dial colors, watch complications, best watches">
-    <title>JW Watches | Luxury Watch Reviews & Buying Guides</title>
-    
-    <!-- Fonts -->
+    <title>JW Watches - Your Complete Watch Guide From $100 to $100,000</title>
+    <meta name="description" content="Expert watch reviews and guides across every budget. From affordable microbrands to luxury Swiss timepieces - find your perfect watch.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #C9A961;
-            --deep-navy: #0A1628;
-            --off-white: #F8F6F3;
-            --silver: #E8E8E8;
-            --charcoal: #2C2C2C;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+ 
+        :root {
+            --deep-navy: #0a1628;
+            --rich-gold: #d4af37;
+            --cream: #f8f6f1;
+            --slate: #334155;
+            --charcoal: #1e293b;
+            --warm-white: #fefdfb;
+            --accent-bronze: #cd7f32;
+        }
+ 
         body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.7;
+            font-family: 'Inter', sans-serif;
+            background: var(--warm-white);
             color: var(--charcoal);
-            background: var(--off-white);
+            line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            line-height: 1.2;
-        }
-        
+ 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2940 100%);
-            color: var(--off-white);
+            background: var(--deep-navy);
+            color: var(--cream);
+            padding: 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
-        
-        .top-bar {
+ 
+        .header-top {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 1rem 0;
+        }
+ 
+        .header-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 1rem 3rem;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        
+ 
         .logo {
-            font-size: 1.8rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--gold);
-            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--rich-gold);
             text-decoration: none;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        
+ 
+        .logo-accent {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--cream);
+            opacity: 0.7;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
+        }
+ 
         nav {
+            background: var(--deep-navy);
+        }
+ 
+        .nav-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 3rem;
+            padding: 0 2rem;
         }
-        
-        .main-nav {
-            display: flex;
+ 
+        .nav-menu {
             list-style: none;
+            display: flex;
             gap: 0;
         }
-        
-        .main-nav > li {
+ 
+        .nav-menu > li {
             position: relative;
         }
-        
-        .main-nav > li > a {
+ 
+        .nav-menu > li > a {
             display: block;
-            padding: 1.2rem 1.5rem;
-            color: var(--off-white);
+            padding: 1.25rem 1.75rem;
+            color: var(--cream);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
+            font-weight: 500;
+            font-size: 0.95rem;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
             transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
         }
-        
-        .main-nav > li > a:hover,
-        .main-nav > li:hover > a {
-            color: var(--gold);
-            background: rgba(201, 169, 97, 0.1);
+ 
+        .nav-menu > li > a:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-bottom-color: var(--rich-gold);
+            color: var(--rich-gold);
         }
-        
+ 
         /* Dropdown Menus */
         .dropdown {
             position: absolute;
             top: 100%;
             left: 0;
-            background: #1a2940;
-            min-width: 250px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: var(--charcoal);
+            min-width: 280px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
             transition: all 0.3s ease;
-            border-top: 2px solid var(--gold);
+            border-top: 3px solid var(--rich-gold);
         }
-        
-        .main-nav > li:hover .dropdown {
+ 
+        .nav-menu > li:hover .dropdown {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-        
-        .dropdown li {
-            list-style: none;
-        }
-        
+ 
         .dropdown a {
             display: block;
-            padding: 0.8rem 1.5rem;
-            color: var(--silver);
+            padding: 0.875rem 1.5rem;
+            color: var(--cream);
             text-decoration: none;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
         }
-        
+ 
         .dropdown a:hover {
-            background: rgba(201, 169, 97, 0.15);
-            color: var(--gold);
+            background: rgba(212, 175, 55, 0.15);
+            border-left-color: var(--rich-gold);
+            color: var(--rich-gold);
             padding-left: 2rem;
         }
-        
-        .dropdown-indicator::after {
-            content: ' ▾';
-            font-size: 0.7rem;
-            margin-left: 0.3rem;
+ 
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--cream);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
         }
-        
-        /* Hero Section */
+ 
+        /* Hero Section with Rotating Carousel */
         .hero {
-            background: linear-gradient(135deg, var(--deep-navy) 0%, #2a3f5f 100%);
-            color: var(--off-white);
-            padding: 6rem 3rem;
-            text-align: center;
             position: relative;
+            height: 650px;
             overflow: hidden;
+            background: var(--deep-navy);
         }
-        
-        .hero::before {
+ 
+        .hero-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+ 
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+ 
+        .hero-slide.active {
+            opacity: 1;
+        }
+ 
+        .hero-slide::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%);
-            pointer-events: none;
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(10, 22, 40, 0.4) 100%);
         }
-        
+ 
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
         .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
             position: relative;
-            z-index: 1;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--cream);
         }
-        
-        .hero h1 {
-            font-size: 3.5rem;
+ 
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--rich-gold);
+            color: var(--rich-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 1.5rem;
-            color: var(--off-white);
-            letter-spacing: 1px;
+            width: fit-content;
+            animation: fadeInUp 0.8s ease-out;
         }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--silver);
+ 
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+ 
+        .hero-tagline {
+            font-size: 1.5rem;
             font-weight: 300;
-            letter-spacing: 0.5px;
+            color: var(--cream);
+            opacity: 0.9;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
         }
-        
-        .accent-line {
-            width: 80px;
-            height: 2px;
-            background: var(--gold);
-            margin: 2rem auto;
+ 
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
         }
-        
-        /* Container */
+ 
+        .stat-card {
+            position: relative;
+            height: 180px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+ 
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--rich-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+ 
+        .stat-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(10, 22, 40, 0.5) 0%, rgba(10, 22, 40, 0.85) 100%);
+        }
+ 
+        .stat-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            z-index: 1;
+            text-align: center;
+        }
+ 
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--cream);
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+ 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+ 
+        /* Featured Watch Section */
+        .featured-watch {
+            padding: 6rem 2rem;
+            background: linear-gradient(to bottom, var(--warm-white) 0%, var(--cream) 100%);
+        }
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 3rem;
         }
-        
-        /* Category Sections */
-        .category-section {
-            padding: 5rem 0;
-        }
-        
-        .category-section:nth-child(even) {
-            background: white;
-        }
-        
+ 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
-        
-        .section-header h2 {
+ 
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--rich-gold);
+            margin-bottom: 1rem;
+        }
+ 
+        .section-title {
+            font-family: 'Playfair Display', serif;
             font-size: 3rem;
+            font-weight: 700;
             color: var(--deep-navy);
             margin-bottom: 1rem;
         }
-        
-        .section-header p {
+ 
+        .section-description {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--slate);
             max-width: 700px;
             margin: 0 auto;
         }
-        
-        /* Category Grid */
-        .category-grid {
+ 
+        .watch-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
-        
-        .category-card {
-            background: var(--off-white);
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+ 
+        .watch-image-container {
+            position: relative;
+            padding: 3rem;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+ 
+        .watch-image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--rich-gold);
+            border-radius: 4px;
+            opacity: 0.3;
+        }
+ 
+        .watch-image {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+        }
+ 
+        .watch-details {
+            padding: 2rem 0;
+        }
+ 
+        .watch-brand {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--rich-gold);
+            margin-bottom: 0.75rem;
+        }
+ 
+        .watch-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+ 
+        .watch-description {
+            font-size: 1.1rem;
+            color: var(--slate);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+ 
+        .watch-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--rich-gold);
+        }
+ 
+        .spec {
+            display: flex;
+            flex-direction: column;
+        }
+ 
+        .spec-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--slate);
+            opacity: 0.7;
+            margin-bottom: 0.25rem;
+        }
+ 
+        .spec-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+        }
+ 
+        .watch-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--rich-gold);
+            margin-bottom: 1.5rem;
+        }
+ 
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--deep-navy);
+            color: var(--cream);
             text-decoration: none;
-            display: block;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid var(--deep-navy);
         }
-        
-        .category-card:hover {
-            transform: translateY(-5px);
+ 
+        .cta-button:hover {
+            background: transparent;
+            color: var(--deep-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+ 
+        /* Categories Grid */
+        .categories-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+ 
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+ 
+        .category-card {
+            position: relative;
+            height: 350px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: var(--gold);
         }
-        
-        .category-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
+ 
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(10, 22, 40, 0.3) 0%, rgba(10, 22, 40, 0.85) 100%);
+            z-index: 1;
+            transition: all 0.4s ease;
         }
-        
-        .category-card h3 {
+ 
+        .category-card:hover::before {
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.3) 0%, rgba(10, 22, 40, 0.9) 100%);
+        }
+ 
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+ 
+        .category-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+ 
+        .category-card:hover .category-bg {
+            transform: scale(1.1);
+        }
+ 
+        .category-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            z-index: 2;
+            color: var(--cream);
+        }
+ 
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+ 
+        .category-count {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+ 
+        /* Browse Sections */
+        .browse-section {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+ 
+        .browse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+ 
+        .browse-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--rich-gold);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+ 
+        .browse-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+ 
+        .browse-card h3 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             color: var(--deep-navy);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
-        
-        .category-card p {
-            color: #666;
+ 
+        .browse-card p {
+            color: var(--slate);
             font-size: 0.95rem;
+            line-height: 1.6;
         }
-        
-        /* Stats Section */
-        .stats-section {
-            background: var(--deep-navy);
-            color: var(--off-white);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        
-        .stat {
-            padding: 1.5rem;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--gold);
-            font-family: 'Cormorant Garamond', serif;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            color: var(--silver);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
+ 
         /* Footer */
         footer {
             background: var(--deep-navy);
-            color: var(--silver);
-            padding: 3rem 0 2rem;
-            text-align: center;
+            color: var(--cream);
+            padding: 4rem 2rem 2rem;
         }
-        
+ 
         .footer-content {
-            max-width: 800px;
+            max-width: 1400px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
-        
-        .disclaimer {
-            font-size: 0.85rem;
-            color: #999;
-            margin-top: 2rem;
+ 
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--rich-gold);
+            margin-bottom: 1rem;
+        }
+ 
+        .footer-tagline {
+            color: var(--cream);
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+ 
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--rich-gold);
+            margin-bottom: 1rem;
+        }
+ 
+        .footer-links {
+            list-style: none;
+        }
+ 
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+ 
+        .footer-links a {
+            color: var(--cream);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+ 
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--rich-gold);
+            padding-left: 5px;
+        }
+ 
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            color: var(--cream);
+            opacity: 0.7;
+            font-size: 0.9rem;
         }
-        
-        /* Mobile Navigation */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--off-white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        /* Responsive */
+ 
+        /* Mobile Responsive */
         @media (max-width: 1024px) {
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            nav {
-                padding: 0;
-            }
-            
-            .main-nav {
+            .nav-menu {
                 display: none;
                 flex-direction: column;
-                background: #1a2940;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--charcoal);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
             }
-            
-            .main-nav.active {
+ 
+            .nav-menu.active {
                 display: flex;
             }
-            
-            .main-nav > li {
-                width: 100%;
+ 
+            .nav-menu > li > a {
+                padding: 1rem 2rem;
             }
-            
-            .main-nav > li > a {
-                padding: 1rem 3rem;
-            }
-            
+ 
             .dropdown {
                 position: static;
                 opacity: 1;
@@ -383,282 +708,535 @@
                 box-shadow: none;
                 border-top: none;
                 background: rgba(0,0,0,0.2);
-                display: none;
             }
-            
-            .main-nav > li.active .dropdown {
+ 
+            .mobile-menu-toggle {
                 display: block;
             }
-            
-            .dropdown a {
-                padding: 0.8rem 3rem 0.8rem 4rem;
+ 
+            .hero h1 {
+                font-size: 3rem;
+            }
+ 
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+ 
+            .stat-card {
+                height: 150px;
+            }
+ 
+            .watch-showcase {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+ 
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
-        
+ 
         @media (max-width: 768px) {
-            .top-bar {
-                padding: 1rem 1.5rem;
-            }
-            
             .hero {
-                padding: 4rem 2rem;
+                height: 500px;
             }
-            
+ 
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
-            .container {
-                padding: 0 1.5rem;
+ 
+            .hero-tagline {
+                font-size: 1.2rem;
             }
-            
-            .category-grid {
+ 
+            .section-title {
+                font-size: 2rem;
+            }
+ 
+            .categories-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .section-header h2 {
-                font-size: 2.2rem;
+ 
+            .browse-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <a href="/" class="logo">JW Watches</a>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        <div class="header-top">
+            <div class="header-container">
+                <a href="/" class="logo">
+                    JW WATCHES
+                    <span class="logo-accent">Since 2026</span>
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
         </div>
         <nav>
-            <ul class="main-nav" id="mainNav">
-                <li><a href="/">Home</a></li>
-                <li>
-                    <a href="#" class="dropdown-indicator">By Dial Color</a>
-                    <ul class="dropdown">
-                        <li><a href="white-dial-watches.html">White Dial Watches</a></li>
-                        <li><a href="black-dial-watches.html">Black Dial Watches</a></li>
-                        <li><a href="blue-dial-watches.html">Blue Dial Watches</a></li>
-                        <li><a href="green-dial-watches.html">Green Dial Watches</a></li>
-                        <li><a href="silver-dial-watches.html">Silver Dial Watches</a></li>
-                        <li><a href="gold-dial-watches.html">Gold Dial Watches</a></li>
-                        <li><a href="red-dial-watches.html">Red Dial Watches</a></li>
-                        <li><a href="orange-dial-watches.html">Orange Dial Watches</a></li>
-                        <li><a href="yellow-dial-watches.html">Yellow Dial Watches</a></li>
-                        <li><a href="multi-color-dial-watches.html">Multi-Color Dial Watches</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-indicator">By Complication</a>
-                    <ul class="dropdown">
-                        <li><a href="chronograph-watches.html">Chronograph Watches</a></li>
-                        <li><a href="gmt-watches.html">GMT Watches</a></li>
-                        <li><a href="dive-watches.html">Dive Watches</a></li>
-                        <li><a href="day-date-watches.html">Day/Date Watches</a></li>
-                        <li><a href="moon-phase-watches.html">Moon Phase Watches</a></li>
-                        <li><a href="alarm-watches.html">Countdown Timer / Alarm Watches</a></li>
-                        <li><a href="power-reserve-watches.html">Power Reserve Watches</a></li>
-                        <li><a href="jump-hour-watches.html">Jump Hour Watches</a></li>
-                        <li><a href="world-timer-watches.html">World Timer Watches</a></li>
-                        <li><a href="tourbillon-watches.html">Tourbillon Watches</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-indicator">By Price Range</a>
-                    <ul class="dropdown">
-                        <li><a href="watches-under-1k.html">Best Watches Under $1K</a></li>
-                        <li><a href="watches-1k-2k.html">Best Watches $1K-$2K</a></li>
-                        <li><a href="watches-2k-3k.html">Best Watches $2K-$3K</a></li>
-                        <li><a href="watches-3k-5k.html">Best Watches $3K-$5K</a></li>
-                        <li><a href="watches-5k-10k.html">Best Watches $5K-$10K</a></li>
-                        <li><a href="watches-10k-20k.html">Best Watches $10K-$20K</a></li>
-                        <li><a href="watches-over-20k.html">Best Watches $20K+</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-indicator">Top 10 Lists</a>
-                    <ul class="dropdown">
-                        <li><a href="top-10-luxury-watches-2026.html">Top 10 Luxury Watches of 2026</a></li>
-                        <li><a href="top-10-rolex.html">Top 10 Rolex Watches</a></li>
-                        <li><a href="top-10-omega.html">Top 10 Omega Watches</a></li>
-                        <li><a href="top-10-oris.html">Top 10 Oris Watches</a></li>
-                        <li><a href="top-10-microbrands.html">Top 10 Microbrands</a></li>
-                        <li><a href="top-10-tudor.html">Top 10 Tudor Watches</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="nav-container">
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="#dial-color">By Dial Color</a>
+                        <div class="dropdown">
+                            <a href="/white-dial-watches.html">White Dial Watches</a>
+                            <a href="/black-dial-watches.html">Black Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
+                            <a href="/green-dial-watches.html">Green Dial Watches</a>
+                            <a href="/silver-dial-watches.html">Silver Dial Watches</a>
+                            <a href="/gold-dial-watches.html">Gold Dial Watches</a>
+                            <a href="/red-dial-watches.html">Red Dial Watches</a>
+                            <a href="/orange-dial-watches.html">Orange Dial Watches</a>
+                            <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
+                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#complication">By Complication</a>
+                        <div class="dropdown">
+                            <a href="/chronograph-watches.html">Chronograph</a>
+                            <a href="/gmt-watches.html">GMT</a>
+                            <a href="/dive-watches.html">Dive Watches</a>
+                            <a href="/day-date-watches.html">Day-Date</a>
+                            <a href="/moon-phase-watches.html">Moon Phase</a>
+                            <a href="/alarm-timer-watches.html">Alarm/Timer</a>
+                            <a href="/power-reserve-watches.html">Power Reserve</a>
+                            <a href="/jump-hour-watches.html">Jump Hour</a>
+                            <a href="/world-timer-watches.html">World Timer</a>
+                            <a href="/tourbillon-watches.html">Tourbillon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#price">By Price Range</a>
+                        <div class="dropdown">
+                            <a href="/watches-under-100.html">Under $100</a>
+                            <a href="/watches-100-300.html">$100 - $300</a>
+                            <a href="/watches-300-500.html">$300 - $500</a>
+                            <a href="/watches-500-1k.html">$500 - $1K</a>
+                            <a href="/watches-1k-2k.html">$1K - $2K</a>
+                            <a href="/watches-2k-3k.html">$2K - $3K</a>
+                            <a href="/watches-3k-5k.html">$3K - $5K</a>
+                            <a href="/watches-5k-10k.html">$5K - $10K</a>
+                            <a href="/watches-10k-20k.html">$10K - $20K</a>
+                            <a href="/watches-over-20k.html">$20K+</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#top-lists">Top 10 Lists</a>
+                        <div class="dropdown">
+                            <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
+                            <a href="/best-rolex-watches.html">Best Rolex Watches</a>
+                            <a href="/best-omega-watches.html">Best Omega Watches</a>
+                            <a href="/best-oris-watches.html">Best Oris Watches</a>
+                            <a href="/best-tudor-watches.html">Best Tudor Watches</a>
+                            <a href="/best-microbrands.html">Best Microbrands</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
  
+    <!-- Hero Section with Rotating Carousel -->
     <section class="hero">
+        <div class="hero-carousel">
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=1600&q=80" alt="Watch dial close-up">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1585123334904-845d60e97842?w=1600&q=80" alt="Luxury watch movement">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1600&q=80" alt="Watch collection display">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="Elegant timepiece detail">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=1600&q=80" alt="Sports chronograph">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=1600&q=80" alt="Watch bezel and crown">
+            </div>
+        </div>
         <div class="hero-content">
-            <h1>Your Complete Luxury Watch Guide</h1>
-            <div class="accent-line"></div>
-            <p class="hero-subtitle">Expert reviews and buying guides covering every dial color, complication, and price range from $1,000 to $100,000+</p>
-        </div>
-    </section>
- 
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Expert Guides</div>
+            <div class="hero-badge">Expert Watch Reviews</div>
+            <h1>Your Complete Watch Guide</h1>
+            <p class="hero-tagline">From $100 to $100,000</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&q=80" alt="Luxury dive watch">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Luxury Icons</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">10</div>
-                    <div class="stat-label">Dial Colors Covered</div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=400&q=80" alt="Microbrand watches">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Microbrands</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">10</div>
-                    <div class="stat-label">Complications</div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=400&q=80" alt="Affordable watches">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Budget Picks</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Price Ranges</div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=400&q=80" alt="Watch movements">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Complications</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
  
-    <section class="category-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Browse by Dial Color</h2>
-                <p>Find the perfect aesthetic for your collection</p>
-            </div>
-            <div class="category-grid">
-                <a href="white-dial-watches.html" class="category-card">
-                    <span class="category-icon">⚪</span>
-                    <h3>White Dial</h3>
-                    <p>Classic, versatile, timeless</p>
-                </a>
-                <a href="black-dial-watches.html" class="category-card">
-                    <span class="category-icon">⚫</span>
-                    <h3>Black Dial</h3>
-                    <p>Sporty, bold, iconic</p>
-                </a>
-                <a href="blue-dial-watches.html" class="category-card">
-                    <span class="category-icon">🔵</span>
-                    <h3>Blue Dial</h3>
-                    <p>Modern, sophisticated, elegant</p>
-                </a>
-                <a href="green-dial-watches.html" class="category-card">
-                    <span class="category-icon">🟢</span>
-                    <h3>Green Dial</h3>
-                    <p>Distinctive, trending, unique</p>
-                </a>
-            </div>
-        </div>
-    </section>
- 
-    <section class="category-section">
+    <!-- Featured Watch Section (Auto-Rotating) -->
+    <section class="featured-watch">
         <div class="container">
             <div class="section-header">
-                <h2>Shop by Complication</h2>
-                <p>Find watches with the functionality you need</p>
+                <div class="section-label">Featured This Week</div>
+                <h2 class="section-title">Spotlight Watch</h2>
+                <p class="section-description">Handpicked timepieces showcasing exceptional value, craftsmanship, and style across all price points.</p>
             </div>
-            <div class="category-grid">
-                <a href="chronograph-watches.html" class="category-card">
-                    <span class="category-icon">⏱️</span>
-                    <h3>Chronograph</h3>
-                    <p>Timing precision at your wrist</p>
-                </a>
-                <a href="gmt-watches.html" class="category-card">
-                    <span class="category-icon">🌍</span>
-                    <h3>GMT</h3>
-                    <p>Track multiple time zones</p>
-                </a>
-                <a href="dive-watches.html" class="category-card">
-                    <span class="category-icon">🌊</span>
+            <div class="watch-showcase" id="featuredWatch">
+                <!-- Featured watch content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Main Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Explore by Category</div>
+                <h2 class="section-title">Find Your Perfect Watch</h2>
+                <p class="section-description">Browse our comprehensive guides organized by dial color, complications, and price range.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80" alt="Dial Colors" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">By Dial Color</h3>
+                        <p class="category-count">10 comprehensive guides</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=800&q=80" alt="Complications" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">By Complication</h3>
+                        <p class="category-count">10 function categories</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=800&q=80" alt="Price Ranges" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">By Price Range</h3>
+                        <p class="category-count">10 budget tiers</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800&q=80" alt="Top Lists" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">Top 10 Lists</h3>
+                        <p class="category-count">Curated collections</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Browse by Movement Type -->
+    <section class="browse-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">More Ways to Browse</div>
+                <h2 class="section-title">Explore by Movement & Style</h2>
+            </div>
+            <div class="browse-grid">
+                <div class="browse-card">
+                    <h3>Automatic Watches</h3>
+                    <p>Self-winding mechanical movements powered by wrist motion</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Quartz Watches</h3>
+                    <p>Battery-powered precision with minimal maintenance</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Manual Wind</h3>
+                    <p>Traditional hand-wound mechanical timepieces</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Spring Drive</h3>
+                    <p>Seiko's revolutionary hybrid technology</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Dress Watches</h3>
+                    <p>Elegant timepieces for formal occasions</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Sport Watches</h3>
+                    <p>Robust designs for active lifestyles</p>
+                </div>
+                <div class="browse-card">
                     <h3>Dive Watches</h3>
-                    <p>Built for underwater adventure</p>
-                </a>
-                <a href="moon-phase-watches.html" class="category-card">
-                    <span class="category-icon">🌙</span>
-                    <h3>Moon Phase</h3>
-                    <p>Celestial beauty on your wrist</p>
-                </a>
-            </div>
-        </div>
-    </section>
- 
-    <section class="category-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Find Your Price Range</h2>
-                <p>Luxury watches for every budget</p>
-            </div>
-            <div class="category-grid">
-                <a href="watches-under-1k.html" class="category-card">
-                    <span class="category-icon">💰</span>
-                    <h3>Under $1K</h3>
-                    <p>Entry-level luxury</p>
-                </a>
-                <a href="watches-5k-10k.html" class="category-card">
-                    <span class="category-icon">💎</span>
-                    <h3>$5K - $10K</h3>
-                    <p>Premium Swiss timepieces</p>
-                </a>
-                <a href="watches-10k-20k.html" class="category-card">
-                    <span class="category-icon">👑</span>
-                    <h3>$10K - $20K</h3>
-                    <p>High-end luxury</p>
-                </a>
-                <a href="watches-over-20k.html" class="category-card">
-                    <span class="category-icon">✨</span>
-                    <h3>$20K+</h3>
-                    <p>Ultimate luxury & haute horlogerie</p>
-                </a>
+                    <p>Water-resistant tools built for underwater</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Pilot Watches</h3>
+                    <p>Aviation-inspired cockpit instruments</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Swiss Made</h3>
+                    <p>Legendary Swiss watchmaking tradition</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Japanese Watches</h3>
+                    <p>Precision and innovation from Japan</p>
+                </div>
+                <div class="browse-card">
+                    <h3>German Watches</h3>
+                    <p>Bauhaus-inspired minimalist design</p>
+                </div>
+                <div class="browse-card">
+                    <h3>Microbrands</h3>
+                    <p>Independent watchmakers offering exceptional value</p>
+                </div>
             </div>
         </div>
     </section>
  
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="logo" style="margin-bottom: 1.5rem;">JW Watches</div>
-                <p style="margin-bottom: 1rem;">Your comprehensive guide to luxury watches across all styles, complications, and price ranges.</p>
-                <p class="disclaimer">
-                    <strong>Affiliate Disclosure:</strong> This website contains affiliate links to watch retailers. 
-                    When you click through and make a purchase, we may earn a commission at no additional cost to you. 
-                    We only recommend retailers we trust and watches we believe offer genuine value to collectors.
-                </p>
-                <p style="margin-top: 2rem; font-size: 0.85rem; color: #999;">
-                    © 2026 JW Watches. All rights reserved.
-                </p>
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">JW WATCHES</div>
+                <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Popular Guides</h4>
+                <ul class="footer-links">
+                    <li><a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a></li>
+                    <li><a href="/best-microbrands.html">Best Microbrands</a></li>
+                    <li><a href="/watches-under-100.html">Best Under $100</a></li>
+                    <li><a href="/dive-watches.html">Best Dive Watches</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>By Price</h4>
+                <ul class="footer-links">
+                    <li><a href="/watches-under-100.html">Under $100</a></li>
+                    <li><a href="/watches-500-1k.html">$500 - $1K</a></li>
+                    <li><a href="/watches-3k-5k.html">$3K - $5K</a></li>
+                    <li><a href="/watches-over-20k.html">$20K+</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We may earn commissions from purchases made through our links.</p>
         </div>
     </footer>
  
     <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const nav = document.getElementById('mainNav');
-            nav.classList.toggle('active');
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
         }
  
-        // Mobile dropdown toggle
-        if (window.innerWidth <= 1024) {
-            document.querySelectorAll('.dropdown-indicator').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle('active');
-                });
-            });
+        // Hero Carousel Rotation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const totalSlides = slides.length;
+ 
+        function rotateHero() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
         }
  
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        setInterval(rotateHero, 7000); // Change slide every 7 seconds
+ 
+        // Featured Watch Auto-Rotation (Changes on page load)
+        const featuredWatches = [
+            {
+                brand: "OMEGA",
+                name: "Seamaster Aqua Terra",
+                description: "A versatile sports-luxury watch that transitions effortlessly from boardroom to boat deck. The Aqua Terra combines Omega's Master Chronometer movement with a stunning teak dial pattern inspired by luxury yacht decks.",
+                price: "$6,200",
+                image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80",
+                specs: {
+                    movement: "Automatic",
+                    case: "41mm Stainless Steel",
+                    waterResist: "150m",
+                    crystal: "Sapphire"
                 }
-            });
-        });
+            },
+            {
+                brand: "ROLEX",
+                name: "Submariner Date",
+                description: "The quintessential luxury dive watch that defined a category. With its iconic Cerachrom bezel and legendary reliability, the Submariner remains the gold standard in professional dive watches.",
+                price: "$10,250",
+                image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80",
+                specs: {
+                    movement: "Automatic",
+                    case: "41mm Oystersteel",
+                    waterResist: "300m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "CHRISTOPHER WARD",
+                name: "C63 Sealander GMT",
+                description: "British microbrand excellence at an accessible price point. The C63 offers true GMT functionality with an in-house movement, proving that microbrands can compete with established luxury names on quality and design.",
+                price: "$1,195",
+                image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80",
+                specs: {
+                    movement: "Automatic GMT",
+                    case: "41mm Stainless Steel",
+                    waterResist: "150m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "GRAND SEIKO",
+                name: "Spring Drive SBGA211",
+                description: "Japanese horological innovation at its finest. The Spring Drive movement combines the best of mechanical and quartz, delivering unparalleled accuracy with the smooth sweep of a traditional mechanical watch.",
+                price: "$5,800",
+                image: "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80",
+                specs: {
+                    movement: "Spring Drive",
+                    case: "41mm Stainless Steel",
+                    waterResist: "100m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "TUDOR",
+                name: "Black Bay Fifty-Eight",
+                description: "Vintage-inspired dive watch with modern reliability. The Black Bay 58 captures the essence of Tudor's dive watch heritage in a perfectly proportioned 39mm case, making it ideal for smaller wrists and vintage enthusiasts.",
+                price: "$3,975",
+                image: "https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80",
+                specs: {
+                    movement: "Automatic",
+                    case: "39mm Stainless Steel",
+                    waterResist: "200m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "ORIS",
+                name: "Aquis Date",
+                description: "Swiss-made dive watch excellence without the luxury price tag. Oris delivers exceptional build quality, stunning ceramic bezels, and reliable movements at a fraction of the cost of comparable luxury brands.",
+                price: "$2,100",
+                image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80",
+                specs: {
+                    movement: "Automatic",
+                    case: "43.5mm Stainless Steel",
+                    waterResist: "300m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "SEIKO",
+                name: "Prospex SPB143",
+                description: "The modern reinterpretation of Seiko's legendary 62MAS diver. Combining vintage aesthetics with contemporary specifications, this watch delivers exceptional value with Seiko's renowned build quality and accuracy.",
+                price: "$1,050",
+                image: "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80",
+                specs: {
+                    movement: "Automatic",
+                    case: "40.5mm Stainless Steel",
+                    waterResist: "200m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "CARTIER",
+                name: "Santos de Cartier",
+                description: "One of the world's first wristwatches, the Santos combines jewelry-grade finishing with aviation heritage. Its distinctive square case and exposed screws make it instantly recognizable and eternally stylish.",
+                price: "$7,400",
+                image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80",
+                specs: {
+                    movement: "Automatic",
+                    case: "39.8mm Stainless Steel",
+                    waterResist: "100m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "ZENITH",
+                name: "Chronomaster Sport",
+                description: "High-beat chronograph excellence with Zenith's legendary El Primero movement. Running at 36,000 vph, this watch offers chronograph accuracy to 1/10th of a second while maintaining a 60-hour power reserve.",
+                price: "$9,900",
+                image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80",
+                specs: {
+                    movement: "El Primero Automatic",
+                    case: "41mm Stainless Steel",
+                    waterResist: "100m",
+                    crystal: "Sapphire"
+                }
+            },
+            {
+                brand: "LONGINES",
+                name: "Spirit Zulu Time",
+                description: "Vintage-inspired GMT functionality with contemporary reliability. The Spirit line represents Longines' return to serious tool watches, offering excellent value with a true GMT movement and classic aesthetic.",
+                price: "$2,850",
+                image: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80",
+                specs: {
+                    movement: "Automatic GMT",
+                    case: "42mm Stainless Steel",
+                    waterResist: "100m",
+                    crystal: "Sapphire"
+                }
+            }
+        ];
+ 
+        // Select random featured watch on page load
+        const randomWatch = featuredWatches[Math.floor(Math.random() * featuredWatches.length)];
+        
+        document.getElementById('featuredWatch').innerHTML = `
+            <div class="watch-image-container">
+                <img src="${randomWatch.image}" alt="${randomWatch.brand} ${randomWatch.name}" class="watch-image">
+            </div>
+            <div class="watch-details">
+                <div class="watch-brand">${randomWatch.brand}</div>
+                <h3 class="watch-name">${randomWatch.name}</h3>
+                <p class="watch-description">${randomWatch.description}</p>
+                <div class="watch-specs">
+                    <div class="spec">
+                        <span class="spec-label">Movement</span>
+                        <span class="spec-value">${randomWatch.specs.movement}</span>
+                    </div>
+                    <div class="spec">
+                        <span class="spec-label">Case Size</span>
+                        <span class="spec-value">${randomWatch.specs.case}</span>
+                    </div>
+                    <div class="spec">
+                        <span class="spec-label">Water Resistance</span>
+                        <span class="spec-value">${randomWatch.specs.waterResist}</span>
+                    </div>
+                    <div class="spec">
+                        <span class="spec-label">Crystal</span>
+                        <span class="spec-value">${randomWatch.specs.crystal}</span>
+                    </div>
+                </div>
+                <div class="watch-price">${randomWatch.price}</div>
+                <a href="#" class="cta-button">View Details</a>
+            </div>
+        `;
     </script>
 </body>
 </html>
+ 
