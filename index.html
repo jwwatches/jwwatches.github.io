@@ -448,7 +448,7 @@
  
         .browse-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
             margin-top: 3rem;
         }
@@ -627,6 +627,12 @@
             }
  
             .browse-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+ 
+        @media (max-width: 480px) {
+            .browse-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -710,22 +716,22 @@
     <section class="hero">
         <div class="hero-carousel">
             <div class="hero-slide active">
-                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=1600&q=80" alt="Watch dial close-up">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Luxury dive watch close-up">
             </div>
             <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1585123334904-845d60e97842?w=1600&q=80" alt="Luxury watch movement">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="Watch movement mechanism">
             </div>
             <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1600&q=80" alt="Watch collection display">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="Elegant wristwatch on wrist">
             </div>
             <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="Elegant timepiece detail">
+                <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=1600&q=80" alt="Watch dial and hands detail">
             </div>
             <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=1600&q=80" alt="Sports chronograph">
+                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=1600&q=80" alt="Dive watch bezel close-up">
             </div>
             <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=1600&q=80" alt="Watch bezel and crown">
+                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=1600&q=80" alt="Watch collection display">
             </div>
         </div>
         <div class="hero-content">
