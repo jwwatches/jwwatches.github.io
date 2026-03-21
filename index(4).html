@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW Watches - Your Complete Watch Guide From $100 to $100,000</title>
+    <meta name="description" content="Expert watch reviews and guides across every budget. From affordable microbrands to luxury Swiss timepieces - find your perfect watch.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-navy: #0a1628;
+            --rich-gold: #d4af37;
+            --cream: #f8f6f1;
+            --slate: #334155;
+            --charcoal: #1e293b;
+            --warm-white: #fefdfb;
+            --accent-bronze: #cd7f32;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--warm-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--deep-navy);
+            color: var(--cream);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-top {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--rich-gold);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-accent {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--cream);
+            opacity: 0.7;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav {
+            background: var(--deep-navy);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu > li > a {
+            display: block;
+            padding: 1.25rem 1.75rem;
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu > li > a:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-bottom-color: var(--rich-gold);
+            color: var(--rich-gold);
+        }
+
+        /* Dropdown Menus */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--charcoal);
+            min-width: 280px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--rich-gold);
+        }
+
+        .nav-menu > li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.875rem 1.5rem;
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown a:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-left-color: var(--rich-gold);
+            color: var(--rich-gold);
+            padding-left: 2rem;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--cream);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section with Rotating Carousel */
+        .hero {
+            position: relative;
+            height: 650px;
+            overflow: hidden;
+            background: var(--deep-navy);
+        }
+
+        .hero-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(10, 22, 40, 0.4) 100%);
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--cream);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--rich-gold);
+            color: var(--rich-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            width: fit-content;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--cream);
+            opacity: 0.9;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+        }
+
+        .stat-card {
+            position: relative;
+            height: 180px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--rich-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .stat-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(10, 22, 40, 0.5) 0%, rgba(10, 22, 40, 0.85) 100%);
+        }
+
+        .stat-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--cream);
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Categories Grid */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--rich-gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--slate);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .categories-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .category-card {
+            position: relative;
+            height: 350px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(10, 22, 40, 0.3) 0%, rgba(10, 22, 40, 0.85) 100%);
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+
+        .category-card:hover::before {
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.3) 0%, rgba(10, 22, 40, 0.9) 100%);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .category-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .category-card:hover .category-bg {
+            transform: scale(1.1);
+        }
+
+        .category-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            z-index: 2;
+            color: var(--cream);
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-count {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Browse Sections */
+        .browse-section {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .browse-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .browse-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--rich-gold);
+            transition: all 0.3s ease;
+            cursor: default;
+            position: relative;
+            opacity: 0.7;
+        }
+
+        .browse-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .browse-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .browse-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .coming-soon-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            color: var(--cream);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--rich-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            color: var(--cream);
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--rich-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--cream);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--rich-gold);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            color: var(--cream);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--charcoal);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu > li > a {
+                padding: 1rem 2rem;
+            }
+
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border-top: none;
+                background: rgba(0,0,0,0.2);
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                height: 150px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .browse-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .browse-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-container">
+                <a href="/" class="logo">
+                    JW WATCHES
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="#dial-color">By Dial Color</a>
+                        <div class="dropdown">
+                            <a href="/white-dial-watches.html">White Dial Watches</a>
+                            <a href="/black-dial-watches.html">Black Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
+                            <a href="/green-dial-watches.html">Green Dial Watches</a>
+                            <a href="/silver-dial-watches.html">Silver Dial Watches</a>
+                            <a href="/gold-dial-watches.html">Gold Dial Watches</a>
+                            <a href="/red-dial-watches.html">Red Dial Watches</a>
+                            <a href="/orange-dial-watches.html">Orange Dial Watches</a>
+                            <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
+                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#complication">By Complication</a>
+                        <div class="dropdown">
+                            <a href="/chronograph-watches.html">Chronograph</a>
+                            <a href="/gmt-watches.html">GMT</a>
+                            <a href="/dive-watches.html">Dive Watches</a>
+                            <a href="/day-date-watches.html">Day-Date</a>
+                            <a href="/moon-phase-watches.html">Moon Phase</a>
+                            <a href="/alarm-timer-watches.html">Alarm/Timer</a>
+                            <a href="/power-reserve-watches.html">Power Reserve</a>
+                            <a href="/jump-hour-watches.html">Jump Hour</a>
+                            <a href="/world-timer-watches.html">World Timer</a>
+                            <a href="/tourbillon-watches.html">Tourbillon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#price">By Price Range</a>
+                        <div class="dropdown">
+                            <a href="/watches-under-100.html">Under $100</a>
+                            <a href="/watches-100-300.html">$100 - $300</a>
+                            <a href="/watches-300-500.html">$300 - $500</a>
+                            <a href="/watches-500-1k.html">$500 - $1K</a>
+                            <a href="/watches-1k-2k.html">$1K - $2K</a>
+                            <a href="/watches-2k-3k.html">$2K - $3K</a>
+                            <a href="/watches-3k-5k.html">$3K - $5K</a>
+                            <a href="/watches-5k-10k.html">$5K - $10K</a>
+                            <a href="/watches-10k-20k.html">$10K - $20K</a>
+                            <a href="/watches-over-20k.html">$20K+</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#top-lists">Top 10 Lists</a>
+                        <div class="dropdown">
+                            <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
+                            <a href="/best-rolex-watches.html">Best Rolex Watches</a>
+                            <a href="/best-omega-watches.html">Best Omega Watches</a>
+                            <a href="/best-oris-watches.html">Best Oris Watches</a>
+                            <a href="/best-tudor-watches.html">Best Tudor Watches</a>
+                            <a href="/best-microbrands.html">Best Microbrands</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Rotating Carousel -->
+    <section class="hero">
+        <div class="hero-carousel">
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Luxury dive watch close-up">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="Watch movement mechanism">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="Elegant wristwatch on wrist">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=1600&q=80" alt="Watch dial and hands detail">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=1600&q=80" alt="Dive watch bezel close-up">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=1600&q=80" alt="Watch collection display">
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Expert Watch Reviews</div>
+            <h1>Your Complete Watch Guide</h1>
+            <p class="hero-tagline">From $100 to $100,000</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&q=80" alt="Luxury dive watch">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Luxury Icons</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=400&q=80" alt="Microbrand watches">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Microbrands</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=400&q=80" alt="Affordable watches">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Budget Picks</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=400&q=80" alt="Watch movements">
+                    <div class="stat-overlay">
+                        <span class="stat-label">Complications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Explore by Category</div>
+                <h2 class="section-title">Find Your Perfect Watch</h2>
+                <p class="section-description">Browse our comprehensive guides organized by dial color, complications, and price range.</p>
+            </div>
+            <div class="categories-grid">
+                <a href="/dial-color.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80" alt="Dial Colors" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">By Dial Color</h3>
+                        <p class="category-count">10 comprehensive guides</p>
+                    </div>
+                </a>
+                <a href="/complications.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&q=80" alt="Complications" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">By Complication</h3>
+                        <p class="category-count">10 function categories</p>
+                    </div>
+                </a>
+                <a href="/price-range.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800&q=80" alt="Price Ranges" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">By Price Range</h3>
+                        <p class="category-count">10 budget tiers</p>
+                    </div>
+                </a>
+                <a href="/top-lists.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800&q=80" alt="Top Lists" class="category-bg">
+                    <div class="category-content">
+                        <h3 class="category-title">Top 10 Lists</h3>
+                        <p class="category-count">Curated collections</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse by Movement Type -->
+    <section class="browse-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">More Ways to Browse</div>
+                <h2 class="section-title">Explore by Movement & Style</h2>
+            </div>
+            <div class="browse-grid">
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Automatic Watches</h3>
+                    <p>Self-winding mechanical movements powered by wrist motion</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Quartz Watches</h3>
+                    <p>Battery-powered precision with minimal maintenance</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Manual Wind</h3>
+                    <p>Traditional hand-wound mechanical timepieces</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Spring Drive</h3>
+                    <p>Seiko's revolutionary hybrid technology</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Dress Watches</h3>
+                    <p>Elegant timepieces for formal occasions</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Sport Watches</h3>
+                    <p>Robust designs for active lifestyles</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Dive Watches</h3>
+                    <p>Water-resistant tools built for underwater</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Pilot Watches</h3>
+                    <p>Aviation-inspired cockpit instruments</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Swiss Made</h3>
+                    <p>Legendary Swiss watchmaking tradition</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Japanese Watches</h3>
+                    <p>Precision and innovation from Japan</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>German Watches</h3>
+                    <p>Bauhaus-inspired minimalist design</p>
+                </div>
+                <div class="browse-card">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h3>Microbrands</h3>
+                    <p>Independent watchmakers offering exceptional value</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">JW WATCHES</div>
+                <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Popular Guides</h4>
+                <ul class="footer-links">
+                    <li><a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a></li>
+                    <li><a href="/best-microbrands.html">Best Microbrands</a></li>
+                    <li><a href="/watches-under-100.html">Best Under $100</a></li>
+                    <li><a href="/dive-watches.html">Best Dive Watches</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>By Price</h4>
+                <ul class="footer-links">
+                    <li><a href="/watches-under-100.html">Under $100</a></li>
+                    <li><a href="/watches-500-1k.html">$500 - $1K</a></li>
+                    <li><a href="/watches-3k-5k.html">$3K - $5K</a></li>
+                    <li><a href="/watches-over-20k.html">$20K+</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We may earn commissions from purchases made through our links.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Hero Carousel Rotation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const totalSlides = slides.length;
+
+        function rotateHero() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(rotateHero, 7000); // Change slide every 7 seconds
+    </script>
+</body>
+</html>
