@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | JW Watches</title>
+    <meta name="description" content="JW Watches privacy policy. Learn how we collect, use, and protect your information, and how our affiliate relationships work.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC1PF5FLNK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SC1PF5FLNK');
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --deep-navy: #0a1628;
+            --rich-gold: #d4af37;
+            --cream: #f8f6f1;
+            --slate: #334155;
+            --charcoal: #1e293b;
+            --warm-white: #fefdfb;
+            --accent-bronze: #cd7f32;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--charcoal); line-height: 1.6; }
+
+        /* Header */
+        header { background: var(--deep-navy); color: var(--cream); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .header-top { border-bottom: 1px solid rgba(212,175,55,0.2); padding: 1rem 0; }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--rich-gold); text-decoration: none; letter-spacing: 0.5px; }
+        nav { background: var(--deep-navy); }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        .nav-menu { list-style: none; display: flex; gap: 0; }
+        .nav-menu > li { position: relative; }
+        .nav-menu > li > a { display: block; padding: 1.25rem 1.75rem; color: var(--cream); text-decoration: none; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.5px; transition: all 0.3s ease; border-bottom: 3px solid transparent; }
+        .nav-menu > li > a:hover { background: rgba(212,175,55,0.1); border-bottom-color: var(--rich-gold); color: var(--rich-gold); }
+        .dropdown { position: absolute; top: 100%; left: 0; background: var(--charcoal); min-width: 280px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; border-top: 3px solid var(--rich-gold); }
+        .nav-menu > li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown a { display: block; padding: 0.875rem 1.5rem; color: var(--cream); text-decoration: none; font-size: 0.9rem; transition: all 0.2s ease; border-left: 3px solid transparent; }
+        .dropdown a:hover { background: rgba(212,175,55,0.15); border-left-color: var(--rich-gold); color: var(--rich-gold); padding-left: 2rem; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; padding: 0.5rem; }
+
+        /* Page Header */
+        .page-header { background: linear-gradient(135deg, #f5f3ef 0%, #ffffff 100%); padding: 0.75rem 2rem 1.5rem 2rem; text-align: center; color: var(--deep-navy); }
+        .page-header-content { max-width: 1400px; margin: 0 auto; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .page-subtitle { font-size: 1rem; opacity: 0.95; margin: 0 auto; line-height: 1.4; max-width: 700px; }
+
+        /* Main Content */
+        .main-content { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--slate);
+            opacity: 0.7;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--rich-gold);
+            display: inline-block;
+        }
+
+        .policy-section p {
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            list-style: none;
+            margin: 1rem 0 1rem 0;
+        }
+
+        .policy-section ul li {
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.8;
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+        }
+
+        .policy-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--rich-gold);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: rgba(212,175,55,0.06);
+            border-left: 4px solid var(--rich-gold);
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--slate);
+            line-height: 1.8;
+        }
+
+        .contact-box {
+            background: var(--deep-navy);
+            color: var(--cream);
+            padding: 2rem;
+            border-radius: 4px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--rich-gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-box p {
+            opacity: 0.85;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border-radius: 2px;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-box a:hover { opacity: 0.85; }
+
+        /* Footer */
+        footer { background: var(--deep-navy); color: var(--cream); padding: 4rem 2rem 2rem; margin-top: 6rem; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 900; color: var(--rich-gold); margin-bottom: 1rem; }
+        .footer-tagline { color: var(--cream); opacity: 0.8; line-height: 1.8; margin-bottom: 1.5rem; }
+        .footer-section h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rich-gold); margin-bottom: 1rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a { color: var(--cream); text-decoration: none; opacity: 0.8; transition: all 0.2s ease; font-size: 0.95rem; }
+        .footer-links a:hover { opacity: 1; color: var(--rich-gold); padding-left: 5px; }
+        .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.2); text-align: center; color: var(--cream); opacity: 0.7; font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--charcoal); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+            .nav-menu.active { display: flex; }
+            .nav-menu > li > a { padding: 1rem 2rem; }
+            .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: none; background: rgba(0,0,0,0.2); }
+            .mobile-menu-toggle { display: block; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .page-title { font-size: 1.75rem; }
+            .main-content { padding: 2.5rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-container">
+                <a href="/" class="logo">JW WATCHES</a>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="/dial-color.html">By Dial Color</a>
+                        <div class="dropdown">
+                            <a href="/white-dial-watches.html">White Dial Watches</a>
+                            <a href="/black-dial-watches.html">Black Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
+                            <a href="/green-dial-watches.html">Green Dial Watches</a>
+                            <a href="/silver-dial-watches.html">Silver Dial Watches</a>
+                            <a href="/gold-dial-watches.html">Gold Dial Watches</a>
+                            <a href="/red-dial-watches.html">Red Dial Watches</a>
+                            <a href="/orange-dial-watches.html">Orange Dial Watches</a>
+                            <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
+                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/complications.html">By Complication</a>
+                        <div class="dropdown">
+                            <a href="/chronograph-watches.html">Chronograph</a>
+                            <a href="/gmt-watches.html">GMT</a>
+                            <a href="/dive-watches.html">Dive Watches</a>
+                            <a href="/day-date-watches.html">Day-Date</a>
+                            <a href="/moon-phase-watches.html">Moon Phase</a>
+                            <a href="/alarm-timer-watches.html">Alarm/Timer</a>
+                            <a href="/power-reserve-watches.html">Power Reserve</a>
+                            <a href="/jump-hour-watches.html">Jump Hour</a>
+                            <a href="/world-timer-watches.html">World Timer</a>
+                            <a href="/tourbillon-watches.html">Tourbillon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/price-range.html">By Price Range</a>
+                        <div class="dropdown">
+                            <a href="/watches-under-100.html">Under $100</a>
+                            <a href="/watches-100-300.html">$100 - $300</a>
+                            <a href="/watches-300-500.html">$300 - $500</a>
+                            <a href="/watches-500-1k.html">$500 - $1K</a>
+                            <a href="/watches-1k-2k.html">$1K - $2K</a>
+                            <a href="/watches-2k-3k.html">$2K - $3K</a>
+                            <a href="/watches-3k-5k.html">$3K - $5K</a>
+                            <a href="/watches-5k-10k.html">$5K - $10K</a>
+                            <a href="/watches-10k-20k.html">$10K - $20K</a>
+                            <a href="/watches-over-20k.html">$20K+</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/top-lists.html">Top 10 Lists</a>
+                        <div class="dropdown">
+                            <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
+                            <a href="/best-rolex-watches.html">Best Rolex Watches</a>
+                            <a href="/best-omega-watches.html">Best Omega Watches</a>
+                            <a href="/best-oris-watches.html">Best Oris Watches</a>
+                            <a href="/best-tudor-watches.html">Best Tudor Watches</a>
+                            <a href="/best-microbrands.html">Best Microbrands</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-subtitle">How we collect, use, and protect your information</p>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <p class="last-updated">Last updated: March 2026</p>
+
+        <div class="policy-section">
+            <h2>Overview</h2>
+            <p>JW Watches ("we", "us", or "our") operates the website at jwwatches.github.io. This Privacy Policy explains what information we collect when you visit our site, how we use it, and your rights regarding that information.</p>
+            <p>We are committed to protecting your privacy. We do not sell your personal data, and we do not collect more information than we need.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Information We Collect</h2>
+            <p>We collect information in two ways — automatically through analytics tools, and directly when you choose to contact us.</p>
+
+            <p><strong>Automatically collected information</strong> includes:</p>
+            <ul>
+                <li>Pages visited and time spent on each page</li>
+                <li>The website or search engine that referred you to us</li>
+                <li>Your general geographic location (country/city level only)</li>
+                <li>Browser type, device type, and operating system</li>
+                <li>Clicks and interactions with page elements</li>
+            </ul>
+
+            <p><strong>Information you provide directly</strong> includes:</p>
+            <ul>
+                <li>Your name and email address if you contact us via our contact form</li>
+                <li>The content of any message you send us</li>
+            </ul>
+
+            <p>We do not collect payment information, social security numbers, or any other sensitive personal data.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Google Analytics</h2>
+            <p>We use Google Analytics to understand how visitors use our website. Google Analytics collects data such as pages visited, time on site, and traffic sources. This data is aggregated and anonymized — we cannot identify you personally from this data.</p>
+
+            <div class="highlight-box">
+                <p>Google Analytics uses cookies to track visitor sessions. You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" style="color: var(--rich-gold);">Google Analytics Opt-out Browser Add-on</a>.</p>
+            </div>
+
+            <p>For more information on how Google uses this data, visit <a href="https://policies.google.com/privacy" style="color: var(--rich-gold);">Google's Privacy Policy</a>.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Cookies</h2>
+            <p>Our website uses cookies — small text files stored on your device — to help us understand site usage and improve your experience. The cookies we use are:</p>
+            <ul>
+                <li><strong>Analytics cookies</strong> — set by Google Analytics to track page visits and user behavior in aggregate</li>
+                <li><strong>Session cookies</strong> — temporary cookies that expire when you close your browser</li>
+            </ul>
+            <p>You can control cookies through your browser settings. Disabling cookies may affect some functionality of the site. Most browsers allow you to refuse cookies or delete existing ones through their settings menus.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Affiliate Disclosure</h2>
+            <p>JW Watches participates in affiliate marketing programs. This means that when you click certain links on our site and make a purchase, we may earn a commission at no additional cost to you.</p>
+
+            <div class="highlight-box">
+                <p>Our affiliate relationships do not influence our editorial content. We recommend watches based on quality, value, and relevance — not based on commission rates. We only link to reputable, established watch retailers.</p>
+            </div>
+
+            <p>Affiliate links on our site are used in place of direct retailer links. When you click "View Details" on a watch listing and complete a purchase, we may receive a commission from the retailer. These commissions help us maintain the site and continue providing free, independent watch guidance.</p>
+
+            <p>We are a participant in affiliate programs operated by commission networks including CJ Affiliate and others. As affiliate program approvals are confirmed, this policy will be updated to name specific retail partners.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Understand which pages and watch categories are most popular</li>
+                <li>Improve our content and site structure based on how visitors navigate</li>
+                <li>Respond to messages sent through our contact form</li>
+                <li>Monitor site performance and fix technical issues</li>
+            </ul>
+            <p>We do not use your information for advertising, we do not share it with third parties for marketing purposes, and we do not build personal profiles of individual visitors.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Third-Party Links</h2>
+            <p>Our website contains links to external retailer websites. Once you leave jwwatches.github.io, this Privacy Policy no longer applies. We encourage you to review the privacy policies of any external sites you visit. We are not responsible for the privacy practices of third-party websites.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Data Retention</h2>
+            <p>Analytics data collected by Google Analytics is retained according to Google's standard data retention policies. Messages sent through our contact form are retained only as long as necessary to respond to your enquiry.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Your Rights</h2>
+            <p>Depending on your location, you may have certain rights regarding your personal data, including:</p>
+            <ul>
+                <li>The right to know what data we hold about you</li>
+                <li>The right to request deletion of your data</li>
+                <li>The right to opt out of analytics tracking</li>
+                <li>The right to lodge a complaint with your local data protection authority</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the form on our Contact page.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Children's Privacy</h2>
+            <p>JW Watches is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time, particularly as our affiliate partnerships are confirmed and expand. Any changes will be reflected on this page with an updated date at the top. We encourage you to review this page periodically.</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>Questions About This Policy?</h3>
+            <p>If you have any questions about how we handle your data or our affiliate relationships, we're happy to explain. Reach out through our contact page.</p>
+            <a href="/contact.html">Contact Us</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">JW WATCHES</div>
+                <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Popular Guides</h4>
+                <ul class="footer-links">
+                    <li><a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a></li>
+                    <li><a href="/best-microbrands.html">Best Microbrands</a></li>
+                    <li><a href="/watches-under-100.html">Best Under $100</a></li>
+                    <li><a href="/dive-watches.html">Best Dive Watches</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>By Price</h4>
+                <ul class="footer-links">
+                    <li><a href="/watches-under-100.html">Under $100</a></li>
+                    <li><a href="/watches-500-1k.html">$500 - $1K</a></li>
+                    <li><a href="/watches-3k-5k.html">$3K - $5K</a></li>
+                    <li><a href="/watches-over-20k.html">$20K+</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We may earn commissions from purchases made through our links.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
