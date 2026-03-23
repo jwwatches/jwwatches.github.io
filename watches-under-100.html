@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Watches Under $100 - From Affordable to Luxury | JW Watches</title>
-    <meta name="description" content="Discover the best watches under $100. Expert reviews of affordable Casio, Timex, and Seiko timepieces with unbeatable value.">
+    <title>Best Watches Under $100 - Unbeatable Value | JW Watches</title>
+    <meta name="description" content="The best watches under $100. Expert picks from Casio, G-Shock, Timex, Invicta, and Rdunae — quality timepieces that prove you don't need to spend a fortune.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,7 +30,6 @@
             --slate: #334155;
             --charcoal: #1e293b;
             --warm-white: #fefdfb;
-            --accent-bronze: #cd7f32;
         }
 
         body {
@@ -168,6 +167,19 @@
             padding-left: 2rem;
         }
 
+        .new-badge {
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+        }
+
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -179,12 +191,12 @@
         }
 
         /* Page Header */
-        /* Page Header */
         .page-header {
-            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
-            padding: 0.75rem 2rem 1.5rem 2rem;
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2f52 100%);
+            padding: 2.5rem 2rem;
             text-align: center;
             color: white;
+            border-bottom: 3px solid var(--rich-gold);
         }
 
         .page-header-content {
@@ -192,64 +204,34 @@
             margin: 0 auto;
         }
 
+        .price-badge {
+            display: inline-block;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 2px;
+            margin-bottom: 1rem;
+        }
+
         .page-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 900;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--cream);
         }
 
         .page-subtitle {
-            font-size: 1rem;
-            opacity: 0.95;
+            font-size: 1.05rem;
+            opacity: 0.85;
             margin: 0 auto;
-            line-height: 1.4;
-            max-width: 700px;
-        }
-
-        /* Hero Carousel */
-        .hero-carousel-section {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            background: var(--deep-navy);
-            border-top: 3px solid white;
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .carousel-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .carousel-slide.active {
-            opacity: 1;
-        }
-
-        .carousel-slide::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(6, 95, 70, 0.5) 0%, rgba(16, 185, 129, 0.4) 100%);
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            line-height: 1.6;
+            max-width: 680px;
+            color: var(--cream);
         }
 
         /* Main Content */
@@ -260,14 +242,29 @@
         }
 
         .intro-text {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--slate);
-            line-height: 1.8;
+            line-height: 1.9;
             margin-bottom: 3rem;
-            max-width: 900px;
+            max-width: 860px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
+        }
+
+        /* Affiliate Disclosure */
+        .affiliate-notice {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 4px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 3rem;
+            font-size: 0.85rem;
+            color: var(--slate);
+            text-align: center;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Watch Grid */
@@ -307,6 +304,11 @@
             height: 100%;
             object-fit: contain;
             padding: 2rem;
+            transition: transform 0.4s ease;
+        }
+
+        .watch-card:hover .watch-image {
+            transform: scale(1.04);
         }
 
         .watch-info {
@@ -317,7 +319,7 @@
         }
 
         .watch-brand {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -327,7 +329,7 @@
 
         .watch-model {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--deep-navy);
             margin-bottom: 1rem;
@@ -345,11 +347,11 @@
         .watch-specs {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 0.85rem;
             margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: rgba(16, 185, 129, 0.05);
-            border-left: 3px solid #10b981;
+            padding: 1.25rem;
+            background: rgba(10, 22, 40, 0.03);
+            border-left: 3px solid var(--rich-gold);
             border-radius: 2px;
         }
 
@@ -359,48 +361,40 @@
         }
 
         .spec-label {
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--slate);
             opacity: 0.7;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
         }
 
         .spec-value {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             color: var(--deep-navy);
         }
 
-        .watch-price {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--rich-gold);
-            margin-bottom: 1.25rem;
-        }
-
-        .view-details-btn {
+        .amazon-btn {
             display: block;
             width: 100%;
             padding: 1rem;
-            background: var(--deep-navy);
-            color: var(--cream);
+            background: #ff9900;
+            color: #111;
             text-decoration: none;
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            border: 2px solid var(--deep-navy);
+            border-radius: 2px;
+            margin-top: auto;
         }
 
-        .view-details-btn:hover {
-            background: transparent;
-            color: var(--deep-navy);
+        .amazon-btn:hover {
+            background: #e68900;
+            color: #000;
         }
 
         /* Footer */
@@ -420,12 +414,16 @@
             margin-bottom: 3rem;
         }
 
-        .footer-brand {
+        .footer-logo {
             font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
             font-weight: 900;
             color: var(--rich-gold);
             margin-bottom: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
         }
 
         .footer-tagline {
@@ -433,6 +431,7 @@
             opacity: 0.8;
             line-height: 1.8;
             margin-bottom: 1.5rem;
+            font-size: 0.95rem;
         }
 
         .footer-section h4 {
@@ -526,20 +525,14 @@
             }
 
             .page-title {
-                font-size: 1.75rem;
-            }
-
-            .page-subtitle {
-                font-size: 0.9rem;
-            }
-
-            .hero-carousel-section {
-                height: 300px;
+                font-size: 1.9rem;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="header-top">
             <div class="header-container">
@@ -551,11 +544,11 @@
             <div class="nav-container">
                 <ul class="nav-menu" id="navMenu">
                     <li>
-                        <a href="#dial-color">By Dial Color</a>
+                        <a href="/dial-color.html">By Dial Color</a>
                         <div class="dropdown">
                             <a href="/white-dial-watches.html">White Dial Watches</a>
                             <a href="/black-dial-watches.html">Black Dial Watches</a>
-                            <a href="/blue-dial-watches.html" style="color: var(--rich-gold);">Blue Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
                             <a href="/green-dial-watches.html">Green Dial Watches</a>
                             <a href="/silver-dial-watches.html">Silver Dial Watches</a>
                             <a href="/gold-dial-watches.html">Gold Dial Watches</a>
@@ -566,7 +559,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#complication">By Complication</a>
+                        <a href="/complications.html">By Complication</a>
                         <div class="dropdown">
                             <a href="/chronograph-watches.html">Chronograph</a>
                             <a href="/gmt-watches.html">GMT</a>
@@ -581,22 +574,22 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#price" class="active">By Price Range</a>
+                        <a href="/price-range.html" class="active">By Price Range</a>
                         <div class="dropdown">
                             <a href="/watches-under-100.html" style="color: var(--rich-gold);">Under $100</a>
-                            <a href="/watches-100-300.html">$100 - $300</a>
-                            <a href="/watches-300-500.html">$300 - $500</a>
-                            <a href="/watches-500-1k.html">$500 - $1K</a>
-                            <a href="/watches-1k-2k.html">$1K - $2K</a>
-                            <a href="/watches-2k-3k.html">$2K - $3K</a>
-                            <a href="/watches-3k-5k.html">$3K - $5K</a>
-                            <a href="/watches-5k-10k.html">$5K - $10K</a>
-                            <a href="/watches-10k-20k.html">$10K - $20K</a>
+                            <a href="/watches-100-300.html">$100 – $300</a>
+                            <a href="/watches-300-500.html">$300 – $500</a>
+                            <a href="/watches-500-1k.html">$500 – $1K</a>
+                            <a href="/watches-1k-2k.html">$1K – $2K</a>
+                            <a href="/watches-2k-3k.html">$2K – $3K</a>
+                            <a href="/watches-3k-5k.html">$3K – $5K</a>
+                            <a href="/watches-5k-10k.html">$5K – $10K</a>
+                            <a href="/watches-10k-20k.html">$10K – $20K</a>
                             <a href="/watches-over-20k.html">$20K+</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#top-lists">Top 10 Lists</a>
+                        <a href="/top-lists.html">Top 10 Lists</a>
                         <div class="dropdown">
                             <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
                             <a href="/best-rolex-watches.html">Best Rolex Watches</a>
@@ -606,53 +599,80 @@
                             <a href="/best-microbrands.html">Best Microbrands</a>
                         </div>
                     </li>
+                    <li>
+                        <a href="/guides.html">Guides <span class="new-badge">NEW</span></a>
+                        <div class="dropdown">
+                            <a href="/automatic-watches.html">Automatic Watches</a>
+                            <a href="/quartz-watches.html">Quartz Watches</a>
+                            <a href="/manual-wind-watches.html">Manual Wind Watches</a>
+                            <a href="/spring-drive-watches.html">Spring Drive Watches</a>
+                            <a href="/dress-watches.html">Dress Watches</a>
+                            <a href="/sport-watches.html">Sport Watches</a>
+                            <a href="/dive-watch-guide.html">Dive Watch Guide</a>
+                            <a href="/pilot-watches.html">Pilot Watches</a>
+                            <a href="/swiss-made.html">Swiss Made — Worth It?</a>
+                            <a href="/japanese-watches.html">Japanese Watches</a>
+                            <a href="/german-watches.html">German Watches</a>
+                            <a href="/microbrand-watches.html">Microbrand Watches</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <!-- PAGE HEADER -->
     <div class="page-header">
         <div class="page-header-content">
-            <h1 class="page-title">Best Watches Under $100</h1>
-            <p class="page-subtitle">Incredible value - quality watches under $100 from Casio, G-Shock, Timex, Invicta and Rdunae</p>
+            <div class="price-badge">Under $100</div>
+            <h1 class="page-title">Watches That Prove Price Isn't Everything</h1>
+            <p class="page-subtitle">Casio, Timex, Invicta, and Rdunae — twelve picks that do exactly what a watch should do, without asking you to apologize for the price tag.</p>
         </div>
     </div>
 
-    <!-- Hero Carousel -->
-    <section class="hero-carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Blue dial luxury watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="Blue dial dive watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=1600&q=80" alt="Blue dial sports watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1600&q=80" alt="Blue dial chronograph">
-            </div>
-        </div>
-    </section>
-
+    <!-- MAIN -->
     <main class="main-content">
-        <p class="intro-text">You don't need to spend a fortune for a quality timepiece. Watches under $100 offer exceptional value from brands like Casio, G-Shock, Timex, Invicta and Rdunae. From reliable quartz movements to entry-level automatics, these affordable watches deliver style and functionality without breaking the bank.</p>
+
+        <p class="intro-text">The under-$100 category gets dismissed by watch snobs and loved by everyone else. Casio builds dive watches here that cost more to service than to buy. Timex has been making reliable daily wearers since before your parents were born. The F-91W is worn by presidents, astronauts, and people who simply don't care what you think about their watch. This list doesn't apologize for a single entry.</p>
+
+        <div class="affiliate-notice">
+            Every watch earns its place on merit, not margin. If a guide helps you find the right watch and you choose to buy through our links, it helps keep the site running — we appreciate the support. Prices are subject to change; always check current pricing at the retailer.
+        </div>
 
         <div class="watch-grid">
+
+            <!-- Watch 1: Casio Duro MDV106 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://m.media-amazon.com/images/I/61nHUVwR65L._AC_SY879_.jpg" alt="Casio Duro MDV106" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61nHUVwR65L._AC_SY879_.jpg" alt="Casio Duro MDV106 Dive Watch" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">Duro MDV106 Dive Watch</h2>
                     <p class="watch-description">The $50 dive watch that Bill Gates wears. 200m water resistance, rotating bezel, screw-down crown. Nothing comes close at this price — nothing.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B009KYJAJY/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">44mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">200m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Mineral</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B009KYJAJY/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 2: Timex Weekender Chronograph -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/513ZgCXm14L._AC_SX679_.jpg" alt="Timex Weekender Chronograph" class="watch-image">
@@ -661,24 +681,60 @@
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Weekender Chronograph</h2>
                     <p class="watch-description">America's favourite casual watch. Interchangeable slip-thru straps, 30-minute chronograph, Indiglo backlight. Versatile, reliable, iconic.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B072L3ZW39/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">40mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Chrono</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">50m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Acrylic</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B072L3ZW39/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 3: Casio F-91W -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://m.media-amazon.com/images/I/611typKnTvL._AC_SY879_.jpg" alt="Casio F-91W Digital" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/611typKnTvL._AC_SY879_.jpg" alt="Casio F-91W Digital Classic" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">F-91W Digital Classic</h2>
                     <p class="watch-description">The most recognised watch on earth. Alarm, stopwatch, Illuminator backlight, 7-year battery. $20 and absolutely zero apologies.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000GAWSDG/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">38mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">30m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Battery Life</span>
+                            <span class="spec-value">~7 years</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B000GAWSDG/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 4: Timex Expedition Scout -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/71spWNT8LEL._AC_SX679_.jpg" alt="Timex Expedition Scout" class="watch-image">
@@ -687,24 +743,60 @@
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Expedition Scout</h2>
                     <p class="watch-description">The field watch that does everything right. 50m water resistance, date display, Indiglo, nylon strap. Built for adventure, priced for everyone.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B0194LW5BM/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">40mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">50m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Acrylic</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B0194LW5BM/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 5: Casio G-Shock DW5600E -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://m.media-amazon.com/images/I/6146W+Fmr5L._AC_SX679_.jpg" alt="Casio G-Shock DW5600E" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/6146W+Fmr5L._AC_SX679_.jpg" alt="Casio G-Shock DW5600E Classic" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO G-SHOCK</div>
                     <h2 class="watch-model">DW5600E Classic</h2>
                     <p class="watch-description">The original tough watch. 200m water resistance, shock resistant, 2-year battery, world time. The one that started it all — still the benchmark.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000GAYQKY/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">42mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">200m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Mineral</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B000GAYQKY/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 6: Casio MRW200H -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/51ExcVpkZzL._AC_SX679_.jpg" alt="Casio MRW200H Sport Diver" class="watch-image">
@@ -713,11 +805,29 @@
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">MRW200H Sport Diver</h2>
                     <p class="watch-description">Casio's unsung hero. 100m water resistance, rotating bezel, date display, LED backlight. A proper sport diver for under $30 — absurd value.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B005JVP0LE/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">43mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">100m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Mineral</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B005JVP0LE/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 7: Timex Easy Reader -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/71OjR7qsUlL._AC_SX679_.jpg" alt="Timex Easy Reader" class="watch-image">
@@ -726,11 +836,29 @@
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Easy Reader</h2>
                     <p class="watch-description">Fifty years of doing one thing perfectly. Large clear numerals, Indiglo backlight, leather strap. The watch your dad had. The watch you'll keep.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000B55AEA/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">35mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">30m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Acrylic</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B000B55AEA/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 8: Casio A168 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/613BThUhjoL._AC_SX679_.jpg" alt="Casio A168 Vintage Digital" class="watch-image">
@@ -739,11 +867,29 @@
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">A168 Vintage Digital</h2>
                     <p class="watch-description">Retro stainless steel bracelet, EL backlight, stopwatch, alarm. The watch that defined the 80s aesthetic — still looks better than most things made today.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000LAKYW8/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">36mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">30m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Mineral</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B000LAKYW8/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 9: Invicta Pro Diver -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/71NHlPcIT4L._AC_SY879_.jpg" alt="Invicta Pro Diver Quartz" class="watch-image">
@@ -752,11 +898,29 @@
                     <div class="watch-brand">INVICTA</div>
                     <h2 class="watch-model">Pro Diver Quartz</h2>
                     <p class="watch-description">A Submariner silhouette at a fraction of the price. Flame-fusion crystal, 200m water resistance, magnified date, stainless bracelet. Hard to argue with $30.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B07RHBY8MG/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">40mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">200m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Flame Fusion</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B07RHBY8MG/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 10: Timex Ironman Classic 30 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/71XOK6Ur6zL._AC_SX679_.jpg" alt="Timex Ironman Classic 30" class="watch-image">
@@ -765,11 +929,29 @@
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Ironman Classic 30</h2>
                     <p class="watch-description">30-lap memory, countdown timer, Indiglo, 100m water resistance. The watch that crossed every finish line in the 1980s — still the best sports watch under $60.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B00LW3QZLM/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">38mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">100m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Lap Memory</span>
+                            <span class="spec-value">30 laps</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B00LW3QZLM/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 11: Rdunae RA02 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/41ziwyEv1TL._AC_.jpg" alt="Rdunae RA02 Military Field Watch" class="watch-image">
@@ -778,11 +960,29 @@
                     <div class="watch-brand">RDUNAE</div>
                     <h2 class="watch-model">RA02 Military Field Watch</h2>
                     <p class="watch-description">A faithful recreation of the legendary British military G10. Miyota quartz, SuperLuminova, 316L steel, domed K1 crystal. Under $50 and nothing else comes close.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B0DMNYCD95/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">38mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Miyota Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">50m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Domed K1</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B0DMNYCD95/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
+
+            <!-- Watch 12: Casio MQ24 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
                     <img src="https://m.media-amazon.com/images/I/71WD3EHz4mL._AC_SX679_.jpg" alt="Casio MQ24 Analog" class="watch-image">
@@ -791,25 +991,44 @@
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">MQ24 Analog</h2>
                     <p class="watch-description">The ultimate minimalist watch. Simple three-hand analog, water resistant, featherlight. At $15 it's the most honest watch ever made — time, nothing more.</p>
-                    <div class="watch-actions">
-                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000X8QTPY/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">34mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">30m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Acrylic</span>
+                        </div>
                     </div>
+                    <a href="https://www.amazon.com/dp/B000X8QTPY/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
-        </div>
+
+        </div><!-- end watch-grid -->
+
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div>
-                <a href="/" class="logo" style="text-decoration:none; margin-bottom:1rem; display:inline-flex;"><span class="logo-circle">JW</span> WATCHES</a>
+                <a href="/" class="footer-logo"><span class="logo-circle">JW</span> WATCHES</a>
                 <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/about.html">About</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                     <li><a href="/privacy.html">Privacy Policy</a></li>
                 </ul>
@@ -817,24 +1036,24 @@
             <div class="footer-section">
                 <h4>Popular Guides</h4>
                 <ul class="footer-links">
-                    <li><a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a></li>
-                    <li><a href="/best-microbrands.html">Best Microbrands</a></li>
-                    <li><a href="/watches-under-100.html">Best Under $100</a></li>
-                    <li><a href="/dive-watches.html">Best Dive Watches</a></li>
+                    <li><a href="/automatic-watches.html">Automatic Watches</a></li>
+                    <li><a href="/dive-watch-guide.html">Dive Watch Guide</a></li>
+                    <li><a href="/japanese-watches.html">Japanese Watches</a></li>
+                    <li><a href="/microbrand-watches.html">Microbrand Watches</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>By Price</h4>
                 <ul class="footer-links">
-                    <li><a href="/watches-under-100.html" style="color: var(--rich-gold);">Under $100</a></li>
-                    <li><a href="/watches-500-1k.html">$500 - $1K</a></li>
-                    <li><a href="/watches-3k-5k.html">$3K - $5K</a></li>
-                    <li><a href="/watches-over-20k.html">$20K+</a></li>
+                    <li><a href="/watches-under-100.html">Under $100</a></li>
+                    <li><a href="/watches-100-300.html">$100 – $300</a></li>
+                    <li><a href="/watches-300-500.html">$300 – $500</a></li>
+                    <li><a href="/watches-500-1k.html">$500 – $1K</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We may earn commissions from purchases made through our links.</p>
+            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We earn commissions from qualifying purchases made through our links. Prices subject to change — always check current pricing at the retailer.</p>
         </div>
     </footer>
 
@@ -843,19 +1062,7 @@
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
         }
-
-        // Carousel rotation
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        function rotateCarousel() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(rotateCarousel, 5000); // Change slide every 5 seconds
     </script>
+
 </body>
 </html>
