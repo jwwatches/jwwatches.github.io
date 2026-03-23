@@ -72,6 +72,24 @@
             color: var(--rich-gold);
             text-decoration: none;
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-circle {
+            width: 38px;
+            height: 38px;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            letter-spacing: 0;
         }
 
         nav {
@@ -520,27 +538,12 @@
             }
         }
     </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"Best Watches Under $100","description":"The best watches under $100 including Casio, Timex, and Vostok — accurate specs and honest reviews.","url":"https://jwwatches.github.io/watches-under-100.html","numberOfItems":12,"itemListElement":[
-{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Casio Duro MDV106","brand":{"@type":"Brand","name":"Casio"},"description":"Legendary value dive watch. 200m water resistance, rotating bezel.","offers":{"@type":"Offer","price":"55","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Timex Weekender Chronograph","brand":{"@type":"Brand","name":"Timex"},"description":"Classic American casual watch. Interchangeable straps, Indiglo backlight.","offers":{"@type":"Offer","price":"45","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Casio F-91W Digital Classic","brand":{"@type":"Brand","name":"Casio"},"description":"Iconic retro digital. Alarm, stopwatch, LED backlight, legendary reliability.","offers":{"@type":"Offer","price":"20","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Timex Expedition Scout","brand":{"@type":"Brand","name":"Timex"},"description":"Field watch classic. Date function, Indiglo backlight, nylon strap.","offers":{"@type":"Offer","price":"50","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Casio W800H Sport Watch","brand":{"@type":"Brand","name":"Casio"},"description":"Dual time zones, alarm, stopwatch. Perfect sports watch for active lifestyles.","offers":{"@type":"Offer","price":"25","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Vostok Komandirskie Military","brand":{"@type":"Brand","name":"Vostok"},"description":"Russian military watch. Automatic movement, unique styling, cult following.","offers":{"@type":"Offer","price":"70","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Timex Easy Reader","brand":{"@type":"Brand","name":"Timex"},"description":"Large numerals for easy reading. Classic dress watch, Indiglo backlight.","offers":{"@type":"Offer","price":"35","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Casio A168 Digital Retro","brand":{"@type":"Brand","name":"Casio"},"description":"80s aesthetic gold-tone digital. Alarm, stopwatch, LED backlight.","offers":{"@type":"Offer","price":"30","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Lorus Sports Watch","brand":{"@type":"Brand","name":"Lorus"},"description":"Seiko affordable brand. Reliable quartz, 100m water resistance.","offers":{"@type":"Offer","price":"60","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":10,"item":{"@type":"Product","name":"Timex Ironman Classic 30","brand":{"@type":"Brand","name":"Timex"},"description":"30-lap memory, Indiglo, interval timer. The original triathlon watch.","offers":{"@type":"Offer","price":"55","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":11,"item":{"@type":"Product","name":"Casio MQ24 Analog","brand":{"@type":"Brand","name":"Casio"},"description":"The ultimate minimalist. Thin profile, simple three-hand design.","offers":{"@type":"Offer","price":"15","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":12,"item":{"@type":"Product","name":"Timex Standard","brand":{"@type":"Brand","name":"Timex"},"description":"Modern field watch aesthetic. Clean dial, reliable quartz, everyday wear.","offers":{"@type":"Offer","price":"65","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
-]}</script>
 </head>
 <body>
     <header>
         <div class="header-top">
             <div class="header-container">
-                <a href="/" class="logo">JW WATCHES</a>
+                <a href="/" class="logo"><span class="logo-circle">JW</span> WATCHES</a>
                 <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -611,7 +614,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <h1 class="page-title">Best Watches Under $100</h1>
-            <p class="page-subtitle">Incredible value - quality watches under $100 from trusted brands like Casio, Timex, and Seiko</p>
+            <p class="page-subtitle">Incredible value - quality watches under $100 from Casio, G-Shock, Timex, Invicta and Rdunae</p>
         </div>
     </div>
 
@@ -634,390 +637,163 @@
     </section>
 
     <main class="main-content">
-        <p class="intro-text">You don't need to spend a fortune for a quality timepiece. Watches under $100 offer exceptional value from legendary brands like Casio, Timex, and Seiko. From reliable quartz movements to entry-level automatics, these affordable watches deliver style and functionality without breaking the bank.</p>
+        <p class="intro-text">You don't need to spend a fortune for a quality timepiece. Watches under $100 offer exceptional value from brands like Casio, G-Shock, Timex, Invicta and Rdunae. From reliable quartz movements to entry-level automatics, these affordable watches deliver style and functionality without breaking the bank.</p>
 
         <div class="watch-grid">
-            <!-- Watch 1: Casio Duro MDV106 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Casio Duro MDV106" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61nHUVwR65L._AC_SY879_.jpg" alt="Casio Duro MDV106" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">Duro MDV106 Dive Watch</h2>
-                    <p class="watch-description">Legendary value dive watch. 200m water resistance, rotating bezel, quartz movement, unbeatable at this price.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">44mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                    <p class="watch-description">The $50 dive watch that Bill Gates wears. 200m water resistance, rotating bezel, screw-down crown. Nothing comes close at this price — nothing.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B009KYJAJY/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$55</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 2: Timex Weekender -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Timex Weekender" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/513ZgCXm14L._AC_SX679_.jpg" alt="Timex Weekender Chronograph" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Weekender Chronograph</h2>
-                    <p class="watch-description">Classic American casual watch. Interchangeable straps, Indiglo backlight, reliable quartz, perfect everyday watch.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
+                    <p class="watch-description">America's favourite casual watch. Interchangeable slip-thru straps, 30-minute chronograph, Indiglo backlight. Versatile, reliable, iconic.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B072L3ZW39/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$45</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 3: Casio F-91W Digital -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Casio F-91W" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/611typKnTvL._AC_SY879_.jpg" alt="Casio F-91W Digital" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">F-91W Digital Classic</h2>
-                    <p class="watch-description">Iconic retro digital. Alarm, stopwatch, LED backlight, legendary durability, worn by presidents and soldiers.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Resin</span>
-                        </div>
+                    <p class="watch-description">The most recognised watch on earth. Alarm, stopwatch, Illuminator backlight, 7-year battery. $20 and absolutely zero apologies.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000GAWSDG/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$20</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 4: Timex Expedition Scout -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Timex Expedition Scout" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71spWNT8LEL._AC_SX679_.jpg" alt="Timex Expedition Scout" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Expedition Scout</h2>
-                    <p class="watch-description">Field watch classic. Date function, Indiglo backlight, nylon strap, adventure-ready at unbeatable price.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
+                    <p class="watch-description">The field watch that does everything right. 50m water resistance, date display, Indiglo, nylon strap. Built for adventure, priced for everyone.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B0194LW5BM/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$50</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 5: Casio W800H Sport -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Casio W800H" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/6146W+Fmr5L._AC_SX679_.jpg" alt="Casio G-Shock DW5600E" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">CASIO G-SHOCK</div>
+                    <h2 class="watch-model">DW5600E Classic</h2>
+                    <p class="watch-description">The original tough watch. 200m water resistance, shock resistant, 2-year battery, world time. The one that started it all — still the benchmark.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000GAYQKY/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/51ExcVpkZzL._AC_SX679_.jpg" alt="Casio MRW200H Sport Diver" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
-                    <h2 class="watch-model">W800H Sport Watch</h2>
-                    <p class="watch-description">Dual time zones, alarm, stopwatch. Perfect sports watch for running, swimming, daily training.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Resin</span>
-                        </div>
+                    <h2 class="watch-model">MRW200H Sport Diver</h2>
+                    <p class="watch-description">Casio's unsung hero. 100m water resistance, rotating bezel, date display, LED backlight. A proper sport diver for under $30 — absurd value.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B005JVP0LE/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$25</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 6: Vostok Komandirskie -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Vostok Komandirskie" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">VOSTOK</div>
-                    <h2 class="watch-model">Komandirskie Military</h2>
-                    <p class="watch-description">Russian military watch. Automatic movement, unique styling, Cold War heritage, cult classic.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">34mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$70</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 7: Timex Easy Reader -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Timex Easy Reader" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71OjR7qsUlL._AC_SX679_.jpg" alt="Timex Easy Reader" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Easy Reader</h2>
-                    <p class="watch-description">Large numerals for easy reading. Classic dress watch, Indiglo backlight, perfect gift watch.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                    <p class="watch-description">Fifty years of doing one thing perfectly. Large clear numerals, Indiglo backlight, leather strap. The watch your dad had. The watch you'll keep.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000B55AEA/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$35</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 8: Casio A168 Digital Retro -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Casio A168" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/613BThUhjoL._AC_SX679_.jpg" alt="Casio A168 Vintage Digital" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
-                    <h2 class="watch-model">A168 Digital Retro</h2>
-                    <p class="watch-description">80s aesthetic gold-tone digital. Alarm, stopwatch, LED backlight, nostalgic style.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">36mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
+                    <h2 class="watch-model">A168 Vintage Digital</h2>
+                    <p class="watch-description">Retro stainless steel bracelet, EL backlight, stopwatch, alarm. The watch that defined the 80s aesthetic — still looks better than most things made today.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000LAKYW8/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$30</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 9: Lorus Sports -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80" alt="Lorus Sports" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71NHlPcIT4L._AC_SY879_.jpg" alt="Invicta Pro Diver Quartz" class="watch-image">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">LORUS</div>
-                    <h2 class="watch-model">Sports Watch</h2>
-                    <p class="watch-description">Seiko's affordable brand. Reliable quartz, 100m water resistance, sporty styling.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                    <div class="watch-brand">INVICTA</div>
+                    <h2 class="watch-model">Pro Diver Quartz</h2>
+                    <p class="watch-description">A Submariner silhouette at a fraction of the price. Flame-fusion crystal, 200m water resistance, magnified date, stainless bracelet. Hard to argue with $30.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B07RHBY8MG/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$60</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 10: Timex Ironman Classic 30 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Timex Ironman" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71XOK6Ur6zL._AC_SX679_.jpg" alt="Timex Ironman Classic 30" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">TIMEX</div>
                     <h2 class="watch-model">Ironman Classic 30</h2>
-                    <p class="watch-description">30-lap memory, Indiglo, interval timer. The original triathlon watch, legendary reliability.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
+                    <p class="watch-description">30-lap memory, countdown timer, Indiglo, 100m water resistance. The watch that crossed every finish line in the 1980s — still the best sports watch under $60.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B00LW3QZLM/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$55</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Watch 11: Casio MQ24 Analog -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1585123334904-845d60e97842?w=600&q=80" alt="Casio MQ24" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/41ziwyEv1TL._AC_.jpg" alt="Rdunae RA02 Military Field Watch" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">RDUNAE</div>
+                    <h2 class="watch-model">RA02 Military Field Watch</h2>
+                    <p class="watch-description">A faithful recreation of the legendary British military G10. Miyota quartz, SuperLuminova, 316L steel, domed K1 crystal. Under $50 and nothing else comes close.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B0DMNYCD95/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/71WD3EHz4mL._AC_SX679_.jpg" alt="Casio MQ24 Analog" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
                     <h2 class="watch-model">MQ24 Analog</h2>
-                    <p class="watch-description">The ultimate minimalist. Thin profile, simple three-hand design, impossibly cheap.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Resin</span>
-                        </div>
+                    <p class="watch-description">The ultimate minimalist watch. Simple three-hand analog, water resistant, featherlight. At $15 it's the most honest watch ever made — time, nothing more.</p>
+                    <div class="watch-actions">
+                        <a target="_blank" rel="nofollow sponsored" href="https://www.amazon.com/dp/B000X8QTPY/?tag=jwwatches-20" class="view-details-btn btn-primary">Check Price on Amazon &rarr;</a>
                     </div>
-                    <div class="watch-price">$15</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 12: Timex Standard -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1590222134732-7c4c9c4c8f3f?w=600&q=80" alt="Timex Standard" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">TIMEX</div>
-                    <h2 class="watch-model">Standard</h2>
-                    <p class="watch-description">Modern field watch aesthetic. Clean dial, reliable quartz, everyday wear perfection.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$65</div>
-                    <a href="#" class="view-details-btn">View Details</a>
                 </div>
             </div>
         </div>
@@ -1026,7 +802,7 @@
     <footer>
         <div class="footer-content">
             <div>
-                <div class="footer-brand">JW WATCHES</div>
+                <a href="/" class="logo" style="text-decoration:none; margin-bottom:1rem; display:inline-flex;"><span class="logo-circle">JW</span> WATCHES</a>
                 <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
             <div class="footer-section">
