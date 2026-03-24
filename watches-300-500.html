@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Watches $300-$500 - From Affordable to Luxury | JW Watches</title>
-    <meta name="description" content="Discover the best watches in the $300-$500 range. Expert reviews of Hamilton, Tissot, and premium Seiko timepieces.">
+    <title>Best Watches $300-$500 - Swiss & Japanese Icons | JW Watches</title>
+    <meta name="description" content="The best watches from $300 to $500. Expert picks from Seiko, Tissot, Hamilton, Orient, Luminox, Bulova, and Spinnaker — serious watchmaking at accessible prices.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,11 +17,7 @@
         gtag('config', 'G-SC1PF5FLNK');
     </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --deep-navy: #0a1628;
@@ -30,517 +26,92 @@
             --slate: #334155;
             --charcoal: #1e293b;
             --warm-white: #fefdfb;
-            --accent-bronze: #cd7f32;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--warm-white);
-            color: var(--charcoal);
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--charcoal); line-height: 1.6; }
 
-        /* Header & Navigation */
-        header {
-            background: var(--deep-navy);
-            color: var(--cream);
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
+        header { background: var(--deep-navy); color: var(--cream); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .header-top { border-bottom: 1px solid rgba(212,175,55,0.2); padding: 1rem 0; }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
 
-        .header-top {
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 1rem 0;
-        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--rich-gold); text-decoration: none; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.6rem; }
+        .logo-circle { width: 38px; height: 38px; background: var(--rich-gold); color: var(--deep-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        nav { background: var(--deep-navy); }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        .nav-menu { list-style: none; display: flex; gap: 0; }
+        .nav-menu > li { position: relative; }
+        .nav-menu > li > a { display: block; padding: 1.25rem 1.75rem; color: var(--cream); text-decoration: none; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.5px; transition: all 0.3s ease; border-bottom: 3px solid transparent; }
+        .nav-menu > li > a:hover, .nav-menu > li > a.active { background: rgba(212,175,55,0.1); border-bottom-color: var(--rich-gold); color: var(--rich-gold); }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--rich-gold);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
+        .dropdown { position: absolute; top: 100%; left: 0; background: var(--charcoal); min-width: 280px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; border-top: 3px solid var(--rich-gold); }
+        .nav-menu > li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown a { display: block; padding: 0.875rem 1.5rem; color: var(--cream); text-decoration: none; font-size: 0.9rem; transition: all 0.2s ease; border-left: 3px solid transparent; }
+        .dropdown a:hover { background: rgba(212,175,55,0.15); border-left-color: var(--rich-gold); color: var(--rich-gold); padding-left: 2rem; }
 
-        nav {
-            background: var(--deep-navy);
-        }
+        .new-badge { background: var(--rich-gold); color: var(--deep-navy); font-size: 0.6rem; font-weight: 700; padding: 0.15rem 0.4rem; border-radius: 3px; letter-spacing: 0.5px; text-transform: uppercase; margin-left: 0.4rem; vertical-align: middle; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; padding: 0.5rem; }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        .page-header { background: linear-gradient(135deg, var(--deep-navy) 0%, #1a2f52 100%); padding: 2.5rem 2rem; text-align: center; color: white; border-bottom: 3px solid var(--rich-gold); }
+        .page-header-content { max-width: 1400px; margin: 0 auto; }
+        .price-badge { display: inline-block; background: var(--rich-gold); color: var(--deep-navy); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: 1rem; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; margin-bottom: 0.75rem; color: var(--cream); }
+        .page-subtitle { font-size: 1.05rem; opacity: 0.85; margin: 0 auto; line-height: 1.6; max-width: 680px; color: var(--cream); }
 
-        .nav-menu {
-            list-style: none;
-            display: flex;
-            gap: 0;
-        }
+        .main-content { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; }
+        .intro-text { font-size: 1.05rem; color: var(--slate); line-height: 1.9; margin-bottom: 3rem; max-width: 860px; margin-left: auto; margin-right: auto; text-align: center; }
 
-        .nav-menu > li {
-            position: relative;
-        }
+        .affiliate-notice { background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.25); border-radius: 4px; padding: 1rem 1.5rem; margin-bottom: 3rem; font-size: 0.85rem; color: var(--slate); text-align: center; max-width: 860px; margin-left: auto; margin-right: auto; }
 
-        .nav-menu > li > a {
-            display: block;
-            padding: 1.25rem 1.75rem;
-            color: var(--cream);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
+        .watch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+        .watch-card { background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .watch-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+        .watch-image-wrapper { position: relative; width: 100%; height: 300px; background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%); overflow: hidden; flex-shrink: 0; }
+        .watch-image { width: 100%; height: 100%; object-fit: contain; padding: 2rem; transition: transform 0.4s ease; }
+        .watch-card:hover .watch-image { transform: scale(1.04); }
+        .watch-info { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .watch-brand { font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--rich-gold); margin-bottom: 0.5rem; }
+        .watch-model { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--deep-navy); margin-bottom: 1rem; line-height: 1.3; }
+        .watch-description { font-size: 0.95rem; color: var(--slate); line-height: 1.7; margin-bottom: 1.5rem; flex-grow: 1; }
+        .watch-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1.5rem; padding: 1.25rem; background: rgba(10,22,40,0.03); border-left: 3px solid var(--rich-gold); border-radius: 2px; }
+        .spec-item { display: flex; flex-direction: column; }
+        .spec-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); opacity: 0.7; margin-bottom: 0.2rem; }
+        .spec-value { font-size: 0.88rem; font-weight: 600; color: var(--deep-navy); }
+        .amazon-btn { display: block; width: 100%; padding: 1rem; background: #ff9900; color: #111; text-decoration: none; text-align: center; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; transition: all 0.3s ease; border-radius: 2px; margin-top: auto; }
+        .amazon-btn:hover { background: #e68900; color: #000; }
 
-        .nav-menu > li > a:hover,
-        .nav-menu > li > a.active {
-            background: rgba(212, 175, 55, 0.1);
-            border-bottom-color: var(--rich-gold);
-            color: var(--rich-gold);
-        }
+        footer { background: var(--deep-navy); color: var(--cream); padding: 4rem 2rem 2rem; margin-top: 6rem; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 900; color: var(--rich-gold); margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+        .footer-tagline { color: var(--cream); opacity: 0.8; line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .footer-section h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rich-gold); margin-bottom: 1rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a { color: var(--cream); text-decoration: none; opacity: 0.8; transition: all 0.2s ease; font-size: 0.95rem; }
+        .footer-links a:hover { opacity: 1; color: var(--rich-gold); padding-left: 5px; }
+        .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.2); text-align: center; color: var(--cream); opacity: 0.7; font-size: 0.9rem; }
 
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--charcoal);
-            min-width: 280px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            border-top: 3px solid var(--rich-gold);
-        }
-
-        .nav-menu > li:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 0.875rem 1.5rem;
-            color: var(--cream);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-            border-left: 3px solid transparent;
-        }
-
-        .dropdown a:hover {
-            background: rgba(212, 175, 55, 0.15);
-            border-left-color: var(--rich-gold);
-            color: var(--rich-gold);
-            padding-left: 2rem;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--cream);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        /* Page Header */
-        /* Page Header */
-        .page-header {
-            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
-            padding: 0.75rem 2rem 1.5rem 2rem;
-            text-align: center;
-            color: white;
-        }
-
-        .page-header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .page-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-subtitle {
-            font-size: 1rem;
-            opacity: 0.95;
-            margin: 0 auto;
-            line-height: 1.4;
-            max-width: 700px;
-        }
-
-        /* Hero Carousel */
-        .hero-carousel-section {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            background: var(--deep-navy);
-            border-top: 3px solid white;
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .carousel-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .carousel-slide.active {
-            opacity: 1;
-        }
-
-        .carousel-slide::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(6, 95, 70, 0.5) 0%, rgba(16, 185, 129, 0.4) 100%);
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Main Content */
-        .main-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .intro-text {
-            font-size: 1.1rem;
-            color: var(--slate);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        /* Watch Grid */
-        .watch-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-        }
-
-        .watch-card {
-            background: white;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .watch-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-
-        .watch-image-wrapper {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        .watch-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 2rem;
-        }
-
-        .watch-info {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .watch-brand {
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--rich-gold);
-            margin-bottom: 0.5rem;
-        }
-
-        .watch-model {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--deep-navy);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .watch-description {
-            font-size: 0.95rem;
-            color: var(--slate);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .watch-specs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: rgba(16, 185, 129, 0.05);
-            border-left: 3px solid #10b981;
-            border-radius: 2px;
-        }
-
-        .spec-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .spec-label {
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--slate);
-            opacity: 0.7;
-            margin-bottom: 0.25rem;
-        }
-
-        .spec-value {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--deep-navy);
-        }
-
-        .watch-price {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--rich-gold);
-            margin-bottom: 1.25rem;
-        }
-
-        .view-details-btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: var(--deep-navy);
-            color: var(--cream);
-            text-decoration: none;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            border: 2px solid var(--deep-navy);
-        }
-
-        .view-details-btn:hover {
-            background: transparent;
-            color: var(--deep-navy);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--deep-navy);
-            color: var(--cream);
-            padding: 4rem 2rem 2rem;
-            margin-top: 6rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            font-weight: 900;
-            color: var(--rich-gold);
-            margin-bottom: 1rem;
-        }
-
-        .footer-tagline {
-            color: var(--cream);
-            opacity: 0.8;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-section h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: var(--rich-gold);
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-links a {
-            color: var(--cream);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: all 0.2s ease;
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-            color: var(--rich-gold);
-            padding-left: 5px;
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            text-align: center;
-            color: var(--cream);
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
         @media (max-width: 1024px) {
-            .watch-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--charcoal);
-                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu > li > a {
-                padding: 1rem 2rem;
-            }
-
-            .dropdown {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                border-top: none;
-                background: rgba(0,0,0,0.2);
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .watch-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--charcoal); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+            .nav-menu.active { display: flex; }
+            .nav-menu > li > a { padding: 1rem 2rem; }
+            .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: none; background: rgba(0,0,0,0.2); }
+            .mobile-menu-toggle { display: block; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
         }
-
         @media (max-width: 768px) {
-            .watch-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .page-title {
-                font-size: 1.75rem;
-            }
-
-            .page-subtitle {
-                font-size: 0.9rem;
-            }
-
-            .hero-carousel-section {
-                height: 300px;
-            }
+            .watch-grid { grid-template-columns: 1fr; }
+            .page-title { font-size: 1.9rem; }
         }
     </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"Best Watches $300-$500","description":"The best watches between $300 and $500 including Hamilton, Tissot, Seiko Presage, and more.","url":"https://jwwatches.github.io/watches-300-500.html","numberOfItems":12,"itemListElement":[
-{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Seiko Presage Cocktail Time","brand":{"@type":"Brand","name":"Seiko"},"description":"Sunburst dial perfection. 4R35 movement, dress watch elegance.","offers":{"@type":"Offer","price":"425","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Orient Star Open Heart","brand":{"@type":"Brand","name":"Orient Star"},"description":"Visible balance wheel. In-house movement, sapphire crystal, exhibition back.","offers":{"@type":"Offer","price":"385","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Citizen Promaster Tough BN0151","brand":{"@type":"Brand","name":"Citizen"},"description":"Eco-Drive field watch. Solar-powered, nylon strap, adventure ready.","offers":{"@type":"Offer","price":"395","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Hamilton Khaki Field Mechanical","brand":{"@type":"Brand","name":"Hamilton"},"description":"Hand-wind military watch. Swiss movement, vintage styling, 80-hour reserve.","offers":{"@type":"Offer","price":"495","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Seiko Samurai SRPB","brand":{"@type":"Brand","name":"Seiko"},"description":"Bold dive watch design. Angular case, 4R35 movement, 200m rated.","offers":{"@type":"Offer","price":"450","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Tissot PRX Powermatic 80","brand":{"@type":"Brand","name":"Tissot"},"description":"Integrated bracelet classic. Swiss automatic, 80-hour reserve, 1970s design.","offers":{"@type":"Offer","price":"425","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Orient Kamasu","brand":{"@type":"Brand","name":"Orient"},"description":"Refined dive watch. Sapphire crystal, hacking and hand-winding, 200m.","offers":{"@type":"Offer","price":"285","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Casio Oceanus OCW-T200S","brand":{"@type":"Brand","name":"Casio"},"description":"Japanese domestic titanium. Solar-powered, atomic timekeeping, premium.","offers":{"@type":"Offer","price":"480","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Seiko SKX013","brand":{"@type":"Brand","name":"Seiko"},"description":"Compact dive watch icon. Discontinued classic, 7S26 movement, 200m.","offers":{"@type":"Offer","price":"320","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":10,"item":{"@type":"Product","name":"Bulova Lunar Pilot","brand":{"@type":"Brand","name":"Bulova"},"description":"Moon watch chronograph. High-frequency quartz, 262kHz movement, space heritage.","offers":{"@type":"Offer","price":"450","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":11,"item":{"@type":"Product","name":"Citizen Promaster Nighthawk","brand":{"@type":"Brand","name":"Citizen"},"description":"Pilot's watch with dual time. Eco-Drive solar, rotating slide rule bezel.","offers":{"@type":"Offer","price":"350","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-{"@type":"ListItem","position":12,"item":{"@type":"Product","name":"Certina DS Action","brand":{"@type":"Brand","name":"Certina"},"description":"Swiss sports watch. Powermatic 80 movement, 80-hour reserve, 200m rated.","offers":{"@type":"Offer","price":"495","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
-]}</script>
 </head>
 <body>
+
     <header>
         <div class="header-top">
             <div class="header-container">
-                <a href="/" class="logo">JW WATCHES</a>
+                <a href="/" class="logo"><span class="logo-circle">JW</span> WATCHES</a>
                 <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -548,11 +119,11 @@
             <div class="nav-container">
                 <ul class="nav-menu" id="navMenu">
                     <li>
-                        <a href="#dial-color">By Dial Color</a>
+                        <a href="/dial-color.html">By Dial Color</a>
                         <div class="dropdown">
                             <a href="/white-dial-watches.html">White Dial Watches</a>
                             <a href="/black-dial-watches.html">Black Dial Watches</a>
-                            <a href="/blue-dial-watches.html" style="color: var(--rich-gold);">Blue Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
                             <a href="/green-dial-watches.html">Green Dial Watches</a>
                             <a href="/silver-dial-watches.html">Silver Dial Watches</a>
                             <a href="/gold-dial-watches.html">Gold Dial Watches</a>
@@ -563,7 +134,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#complication">By Complication</a>
+                        <a href="/complications.html">By Complication</a>
                         <div class="dropdown">
                             <a href="/chronograph-watches.html">Chronograph</a>
                             <a href="/gmt-watches.html">GMT</a>
@@ -578,22 +149,22 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#price" class="active">By Price Range</a>
+                        <a href="/price-range.html" class="active">By Price Range</a>
                         <div class="dropdown">
                             <a href="/watches-under-100.html">Under $100</a>
-                            <a href="/watches-100-300.html">$100 - $300</a>
-                            <a href="/watches-300-500.html" style="color: var(--rich-gold);">$300 - $500</a>
-                            <a href="/watches-500-1k.html">$500 - $1K</a>
-                            <a href="/watches-1k-2k.html">$1K - $2K</a>
-                            <a href="/watches-2k-3k.html">$2K - $3K</a>
-                            <a href="/watches-3k-5k.html">$3K - $5K</a>
-                            <a href="/watches-5k-10k.html">$5K - $10K</a>
-                            <a href="/watches-10k-20k.html">$10K - $20K</a>
+                            <a href="/watches-100-300.html">$100 – $300</a>
+                            <a href="/watches-300-500.html" style="color: var(--rich-gold);">$300 – $500</a>
+                            <a href="/watches-500-1k.html">$500 – $1K</a>
+                            <a href="/watches-1k-2k.html">$1K – $2K</a>
+                            <a href="/watches-2k-3k.html">$2K – $3K</a>
+                            <a href="/watches-3k-5k.html">$3K – $5K</a>
+                            <a href="/watches-5k-10k.html">$5K – $10K</a>
+                            <a href="/watches-10k-20k.html">$10K – $20K</a>
                             <a href="/watches-over-20k.html">$20K+</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#top-lists">Top 10 Lists</a>
+                        <a href="/top-lists.html">Top 10 Lists</a>
                         <div class="dropdown">
                             <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
                             <a href="/best-rolex-watches.html">Best Rolex Watches</a>
@@ -603,6 +174,23 @@
                             <a href="/best-microbrands.html">Best Microbrands</a>
                         </div>
                     </li>
+                    <li>
+                        <a href="/guides.html">Guides <span class="new-badge">NEW</span></a>
+                        <div class="dropdown">
+                            <a href="/automatic-watches.html">Automatic Watches</a>
+                            <a href="/quartz-watches.html">Quartz Watches</a>
+                            <a href="/manual-wind-watches.html">Manual Wind Watches</a>
+                            <a href="/spring-drive-watches.html">Spring Drive Watches</a>
+                            <a href="/dress-watches.html">Dress Watches</a>
+                            <a href="/sport-watches.html">Sport Watches</a>
+                            <a href="/dive-watch-guide.html">Dive Watch Guide</a>
+                            <a href="/pilot-watches.html">Pilot Watches</a>
+                            <a href="/swiss-made.html">Swiss Made — Worth It?</a>
+                            <a href="/japanese-watches.html">Japanese Watches</a>
+                            <a href="/german-watches.html">German Watches</a>
+                            <a href="/microbrand-watches.html">Microbrand Watches</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -610,430 +198,246 @@
 
     <div class="page-header">
         <div class="page-header-content">
-            <h1 class="page-title">Best Watches $300-$500</h1>
-            <p class="page-subtitle">Entry luxury - Swiss automatics and premium Japanese watches from $300 to $500</p>
+            <div class="price-badge">$300 – $500</div>
+            <h1 class="page-title">Where Swiss and Japanese Icons Meet</h1>
+            <p class="page-subtitle">Sapphire crystals, Swiss movements, and Japanese craftsmanship — eleven watches that make a genuine statement without crossing into luxury territory.</p>
         </div>
     </div>
 
-    <!-- Hero Carousel -->
-    <section class="hero-carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Blue dial luxury watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="Blue dial dive watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=1600&q=80" alt="Blue dial sports watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1600&q=80" alt="Blue dial chronograph">
-            </div>
-        </div>
-    </section>
-
     <main class="main-content">
-        <p class="intro-text">The $300-$500 range marks the entry into Swiss watchmaking with brands like Tissot and Hamilton, alongside premium Japanese offerings from Seiko and Citizen. Expect automatic movements, sapphire crystals, and designs that rival watches costing thousands more.</p>
+
+        <p class="intro-text">The $300–$500 range is where the watch world stops making excuses. Sapphire crystals become standard. Swiss movements appear. Japanese brands flex engineering that embarrasses watches costing twice as much. This is also where personality enters the conversation — a Seiko Presage Cocktail Time tells a different story than a Hamilton Khaki Field, and both are correct answers depending on who's wearing them.</p>
+
+        <div class="affiliate-notice">
+            Every watch earns its place on merit, not margin. If a guide helps you find the right watch and you choose to buy through our links, it helps keep the site running — we appreciate the support. Prices are subject to change; always check current pricing at the retailer.
+        </div>
 
         <div class="watch-grid">
-            <!-- Watch 1: Seiko Presage Cocktail Time -->
+
+            <!-- Watch 1: Seiko 5 Sports SRPD -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Seiko Presage Cocktail Time" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61NzC3kuEkL._AC_SY879_.jpg" alt="Seiko 5 Sports SRPD Automatic" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">SEIKO</div>
+                    <h2 class="watch-model">5 Sports SRPD</h2>
+                    <p class="watch-description">The modern Seiko 5 Sports — automatic movement, day/date, LumiBrite lume, rotating bezel, 100m water resistance, exhibition caseback. Available in so many colorways that choosing one becomes the only real difficulty. The benchmark sports automatic under $400.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic (4R36)</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Hardlex</span></div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B07WGMD9ND/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 2: Tissot Classic Dream -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/81IVU-ROmpL._AC_SX679_.jpg" alt="Tissot Classic Dream Swiss Quartz" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">TISSOT</div>
+                    <h2 class="watch-model">Classic Dream</h2>
+                    <p class="watch-description">Swiss-made dress watch with a sapphire crystal at a price that shouldn't exist. Clean dial, slender profile, stainless bracelet. When someone says they want a Swiss watch for formal occasions but doesn't want to spend four figures, this is the answer. Tissot's quiet workhorse.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Swiss Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B08JVHQF7H/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 3: Orient Kamasu -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61SZSflqb-L._AC_SY879_.jpg" alt="Orient Kamasu Automatic Diver Sapphire" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">ORIENT</div>
+                    <h2 class="watch-model">Kamasu Diver</h2>
+                    <p class="watch-description">Sapphire crystal on an automatic diver at this price is genuinely remarkable. In-house Orient F6922 movement with hacking and hand-winding, 200m water resistance, 120-click bezel. Named for the Japanese word for barracuda — the tooth-shaped hands make sense once you know. One of the best value propositions in watches today.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">41.8mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic In-House</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B07QHNB9JS/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 4: Seiko Presage Cocktail Time -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61xjD+DW2HL._AC_SY695_.jpg" alt="Seiko Presage Cocktail Time Automatic" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">SEIKO</div>
                     <h2 class="watch-model">Presage Cocktail Time</h2>
-                    <p class="watch-description">Sunburst dial perfection. 4R35 movement, dress watch elegance, Japanese craftsmanship.</p>
+                    <p class="watch-description">Every dial is inspired by a cocktail — the gradient enamel-like finish catches light in ways that photographs can't capture. Automatic movement, exhibition caseback, Japanese craftsmanship applied to something that genuinely looks like it belongs in a display case. A dress watch that earns its price with artistry, not brand name.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40.5mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic (4R35)</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Hardlex</span></div>
                     </div>
-                    <div class="watch-price">$425</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <a href="https://www.amazon.com/dp/B0D6WWWX1C/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
 
-            <!-- Watch 2: Orient Star Open Heart -->
+            <!-- Watch 5: Orient Sun & Moon -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Orient Star Open Heart" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">ORIENT STAR</div>
-                    <h2 class="watch-model">Open Heart</h2>
-                    <p class="watch-description">Visible balance wheel. In-house movement, sapphire crystal, dress watch with character.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">39mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$385</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 3: Citizen Promaster Tough BN0151 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Citizen Promaster Tough" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">CITIZEN</div>
-                    <h2 class="watch-model">Promaster Tough BN0151</h2>
-                    <p class="watch-description">Eco-Drive field watch. Solar-powered, nylon strap, adventure-ready durability.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Solar Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$395</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 4: Hamilton Khaki Field Mechanical -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Hamilton Khaki Field Mechanical" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">HAMILTON</div>
-                    <h2 class="watch-model">Khaki Field Mechanical</h2>
-                    <p class="watch-description">Hand-wind military watch. Swiss movement, vintage styling, 80-hour power reserve.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Manual Wind</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$495</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 5: Seiko Samurai SRPB -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Seiko Samurai SRPB" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">SEIKO</div>
-                    <h2 class="watch-model">Samurai SRPB</h2>
-                    <p class="watch-description">Bold dive watch design. Angular case, 4R35 movement, 200m rated, unique aesthetics.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">43.8mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Hardlex</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$450</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 6: Tissot PRX Powermatic 80 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Tissot PRX Powermatic 80" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">TISSOT</div>
-                    <h2 class="watch-model">PRX Powermatic 80</h2>
-                    <p class="watch-description">Integrated bracelet classic. Swiss automatic, 80-hour reserve, 1970s styling.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$425</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 7: Orient Kamasu -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Orient Kamasu" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71HrBtc2vqL._AC_SY695_.jpg" alt="Orient Sun & Moon Automatic" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">ORIENT</div>
-                    <h2 class="watch-model">Kamasu</h2>
-                    <p class="watch-description">Refined dive watch. Sapphire crystal, hacking/hand-winding, 200m rated, excellent value.</p>
+                    <h2 class="watch-model">Sun & Moon</h2>
+                    <p class="watch-description">A complication that most watches at five times the price don't offer. The day/night subdial tracks AM and PM with a sun and moon indicator — automatic movement, exhibition caseback, domed crystal. It brings a storytelling quality to the wrist that few watches in this price range can match.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41.8mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic In-House</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Complication</span><span class="spec-value">Sun & Moon</span></div>
                     </div>
-                    <div class="watch-price">$285</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <a href="https://www.amazon.com/dp/B0028BVXOS/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
 
-            <!-- Watch 8: Casio Oceanus OCW-T200S -->
+            <!-- Watch 6: Luminox Original Navy SEAL -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Casio Oceanus OCW-T200S" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61scpnO+0DL._AC_SX679_.jpg" alt="Luminox Original Navy SEAL 3001" class="watch-image">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">CASIO</div>
-                    <h2 class="watch-model">Oceanus OCW-T200S</h2>
-                    <p class="watch-description">Japanese domestic titanium. Solar-powered, atomic timekeeping, sapphire, refined finishing.</p>
+                    <div class="watch-brand">LUMINOX</div>
+                    <h2 class="watch-model">Original Navy SEAL</h2>
+                    <p class="watch-description">The watch US Navy SEALs actually carried into combat. Swiss-made, 200m water resistance, CARBONOX case that's lighter than steel and stronger than you'd expect, and Luminox Light Technology that glows for 25 years without a battery. No frills, no unnecessary design — pure function with Swiss credibility behind it.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">39mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Solar Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">45mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Swiss Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Case Material</span><span class="spec-value">CARBONOX</span></div>
                     </div>
-                    <div class="watch-price">$480</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <a href="https://www.amazon.com/dp/B0015T2LXS/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
 
-            <!-- Watch 9: Seiko SKX013 -->
+            <!-- Watch 7: Bulova Lunar Pilot -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80" alt="Seiko SKX013" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">SEIKO</div>
-                    <h2 class="watch-model">SKX013</h2>
-                    <p class="watch-description">Compact dive watch icon. Discontinued classic, 7S26 movement, 200m rated, collectible.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Hardlex</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$320</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 10: Bulova Lunar Pilot -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Bulova Lunar Pilot" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61MGD1ZcvdL._AC_SX679_.jpg" alt="Bulova Lunar Pilot Chronograph" class="watch-image">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">BULOVA</div>
-                    <h2 class="watch-model">Lunar Pilot</h2>
-                    <p class="watch-description">Moon watch chronograph. High-frequency quartz, 262kHz movement, space heritage.</p>
+                    <h2 class="watch-model">Lunar Pilot Chronograph</h2>
+                    <p class="watch-description">A recreation of the watch NASA astronauts wore on the moon — powered by Bulova's high-frequency quartz movement that beats at 262kHz, making it more accurate than most mechanicals. Six-hand layout, slide rule bezel, heritage pedigree that no other watch at this price can claim. The Lunar Pilot has been to the moon. What have you done today?</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">45mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">45mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">High-Freq Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Functions</span><span class="spec-value">6-Hand Chrono</span></div>
                     </div>
-                    <div class="watch-price">$450</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <a href="https://www.amazon.com/dp/B08D7VDZHD/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
 
-            <!-- Watch 11: Citizen Promaster Nighthawk -->
+            <!-- Watch 8: Spinnaker Dumas GMT -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1585123334904-845d60e97842?w=600&q=80" alt="Citizen Promaster Nighthawk" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71dicWCpl2L._AC_SY695_.jpg" alt="Spinnaker Dumas GMT Automatic Dive Watch" class="watch-image">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">CITIZEN</div>
-                    <h2 class="watch-model">Promaster Nighthawk</h2>
-                    <p class="watch-description">Pilot's watch with dual time. Eco-Drive solar, rotating slide-rule bezel, functionality.</p>
+                    <div class="watch-brand">SPINNAKER</div>
+                    <h2 class="watch-model">Dumas GMT</h2>
+                    <p class="watch-description">A GMT automatic dive watch under $500 is a rarity — the Dumas delivers it. Seiko NH34 movement tracks two time zones, 300m water resistance, bi-colour bezel, sapphire crystal, comes with both a bracelet and a rubber strap. Named for pioneering diver Frédéric Dumas. A microbrand overdelivering at every spec point.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Solar Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">44mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic GMT (NH34)</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">300m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$350</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <a href="https://www.amazon.com/dp/B0C5MXDDXG/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
 
-            <!-- Watch 12: Certina DS Action -->
+            <!-- Watch 9: Hamilton Khaki Field Quartz -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1590222134732-7c4c9c4c8f3f?w=600&q=80" alt="Certina DS Action" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71FY5+azz6L._AC_SY879_.jpg" alt="Hamilton Khaki Field Quartz 38mm Swiss" class="watch-image">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">CERTINA</div>
-                    <h2 class="watch-model">DS Action</h2>
-                    <p class="watch-description">Swiss sports watch. Powermatic 80 movement, 80-hour reserve, excellent finishing.</p>
+                    <div class="watch-brand">HAMILTON</div>
+                    <h2 class="watch-model">Khaki Field Quartz</h2>
+                    <p class="watch-description">Swiss-made, sapphire crystal, Super-LumiNova, NATO strap — and a design lineage that runs directly back to WWII military-issue watches. The Khaki Field is one of the most copied watch designs on earth, and this is the original. At 38mm it sits correctly on the wrist without announcement. Worn by people who know watches and people who just want something that works.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Swiss Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$495</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <a href="https://www.amazon.com/dp/B0DQST69QB/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
                 </div>
             </div>
-        </div>
+
+            <!-- Watch 10: Tissot PRX Quartz -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61vT+XaxmRL._AC_SX679_.jpg" alt="Tissot PRX Quartz Grey Swiss" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">TISSOT</div>
+                    <h2 class="watch-model">PRX Quartz</h2>
+                    <p class="watch-description">Integrated bracelet, sapphire crystal, Swiss quartz — a design that openly references the Audemars Piguet Royal Oak at a fraction of the price, and does it without embarrassment. The PRX is the aspirational watch for people who understand what they're looking at. One of Tissot's best designs in decades, and it's outselling everything else in the range.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Swiss Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B09NW5MBV3/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 11: Bulova Marc Anthony Marine Star -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/81tO6250gqL._AC_SX679_.jpg" alt="Bulova Marc Anthony Marine Star Automatic" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">BULOVA</div>
+                    <h2 class="watch-model">Marc Anthony Marine Star</h2>
+                    <p class="watch-description">Open aperture skeleton dial with an automatic movement — the Marine Star shows off its mechanics while staying water-resistant to 200m. A watch for someone who wants automatic movement drama in a sport-capable package. Bold, unapologetic, and genuinely interesting to look at on the wrist.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">44mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resistance</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Dial</span><span class="spec-value">Open Aperture</span></div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B08CQWCWKQ/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+        </div><!-- end watch-grid -->
+
     </main>
 
     <footer>
         <div class="footer-content">
             <div>
-                <div class="footer-brand">JW WATCHES</div>
+                <a href="/" class="footer-logo"><span class="logo-circle">JW</span> WATCHES</a>
                 <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/about.html">About</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                     <li><a href="/privacy.html">Privacy Policy</a></li>
                 </ul>
@@ -1041,45 +445,31 @@
             <div class="footer-section">
                 <h4>Popular Guides</h4>
                 <ul class="footer-links">
-                    <li><a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a></li>
-                    <li><a href="/best-microbrands.html">Best Microbrands</a></li>
-                    <li><a href="/watches-under-100.html">Best Under $100</a></li>
-                    <li><a href="/dive-watches.html">Best Dive Watches</a></li>
+                    <li><a href="/automatic-watches.html">Automatic Watches</a></li>
+                    <li><a href="/dive-watch-guide.html">Dive Watch Guide</a></li>
+                    <li><a href="/swiss-made.html">Swiss Made — Worth It?</a></li>
+                    <li><a href="/japanese-watches.html">Japanese Watches</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>By Price</h4>
                 <ul class="footer-links">
                     <li><a href="/watches-under-100.html">Under $100</a></li>
-                    <li><a href="/watches-500-1k.html">$500 - $1K</a></li>
-                    <li><a href="/watches-3k-5k.html">$3K - $5K</a></li>
-                    <li><a href="/watches-over-20k.html">$20K+</a></li>
+                    <li><a href="/watches-100-300.html">$100 – $300</a></li>
+                    <li><a href="/watches-300-500.html">$300 – $500</a></li>
+                    <li><a href="/watches-500-1k.html">$500 – $1K</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We may earn commissions from purchases made through our links.</p>
+            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We earn commissions from qualifying purchases made through our links. Prices subject to change — always check current pricing at the retailer.</p>
         </div>
     </footer>
 
     <script>
         function toggleMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
+            document.getElementById('navMenu').classList.toggle('active');
         }
-
-        // Carousel rotation
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        function rotateCarousel() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(rotateCarousel, 5000); // Change slide every 5 seconds
     </script>
 </body>
 </html>
