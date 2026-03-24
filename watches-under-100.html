@@ -290,26 +290,11 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        .watch-image-wrapper {
-            position: relative;
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
-            overflow: hidden;
-            flex-shrink: 0;
-        }
+        .watch-image-wrapper { width: 100%; height: 280px; background: #f8f9fb; overflow: hidden; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 
-        .watch-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 2rem;
-            transition: transform 0.4s ease;
-        }
+        .watch-image { width: 100%; height: 100%; object-fit: contain; object-position: center center; padding: 0.75rem; transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
 
-        .watch-card:hover .watch-image {
-            transform: scale(1.04);
-        }
+        .watch-card:hover .watch-image { width: 100%; height: 100%; object-fit: contain; object-position: center center; padding: 0.75rem; transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
 
         .watch-info {
             padding: 2rem;
@@ -480,6 +465,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            /* Mobile accordion nav */
             .nav-menu {
                 display: none;
                 flex-direction: column;
@@ -487,28 +473,62 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: var(--charcoal);
-                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                background: #0e1e36;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+                z-index: 999;
+                max-height: 80vh;
+                overflow-y: auto;
             }
-
             .nav-menu.active {
                 display: flex;
             }
-
-            .nav-menu > li > a {
-                padding: 1rem 2rem;
+            .nav-menu > li {
+                border-bottom: 1px solid rgba(255,255,255,0.07);
             }
-
+            .nav-menu > li > a {
+                padding: 1rem 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1rem;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+            }
+            .nav-menu > li > a::after {
+                content: '+';
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: var(--rich-gold);
+                transition: transform 0.2s;
+                margin-left: 0.5rem;
+            }
+            .nav-menu > li.open > a::after {
+                content: '−';
+            }
             .dropdown {
+                display: none;
                 position: static;
                 opacity: 1;
                 visibility: visible;
                 transform: none;
                 box-shadow: none;
-                border-top: none;
-                background: rgba(0,0,0,0.2);
+                border-top: 1px solid rgba(255,255,255,0.05);
+                background: rgba(0,0,0,0.25);
+                padding: 0.25rem 0;
             }
-
+            .nav-menu > li.open .dropdown {
+                display: block;
+            }
+            .dropdown a {
+                padding: 0.7rem 2.5rem;
+                font-size: 0.9rem;
+                border-left: none;
+            }
+            .dropdown a:hover {
+                padding-left: 2.8rem;
+                background: rgba(212,175,55,0.1);
+                color: var(--rich-gold);
+            }
             .mobile-menu-toggle {
                 display: block;
             }
@@ -626,7 +646,7 @@
         <div class="page-header-content">
             <div class="price-badge">Under $100</div>
             <h1 class="page-title">Watches That Prove Price Isn't Everything</h1>
-            <p class="page-subtitle">Casio, Timex, Invicta, and Rdunae — twelve picks that do exactly what a watch should do, without asking you to apologize for the price tag.</p>
+            <p class="page-subtitle">Casio, Timex, Invicta, and Rdunae — sixteen picks that do exactly what a watch should do, without asking you to apologize for the price tag.</p>
         </div>
     </div>
 
@@ -1013,6 +1033,130 @@
                 </div>
             </div>
 
+            <!-- Watch 13: Casio A158WEA Gold Vintage -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/51e6yA3P5ML._AC_SY879_.jpg" alt="Casio A158WEA Gold Vintage Digital" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">CASIO</div>
+                    <h2 class="watch-model">A158WEA Gold Vintage</h2>
+                    <p class="watch-description">The A168's gold-tone cousin — same DNA, warmer personality. EL backlight, stopwatch, alarm, stainless bracelet. Pairs with everything from a white shirt to a suit, and costs less than a decent lunch in most cities.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">33mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">30m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Battery Life</span>
+                            <span class="spec-value">~7 years</span>
+                        </div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B005JVP2NU/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 14: Casio AE-1200WHD World Time -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61U3j88iDBL._AC_SX679_.jpg" alt="Casio AE-1200WHD World Time" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">CASIO</div>
+                    <h2 class="watch-model">AE-1200WHD World Time</h2>
+                    <p class="watch-description">Known in watch circles as the "Casio Royale." World time across 48 cities, analog-style LCD display, 100m water resistance, 10-year battery. It looks like it does more than any watch in this price range should — because it does.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">45mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">100m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Battery Life</span>
+                            <span class="spec-value">~10 years</span>
+                        </div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B0094B79CI/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 15: Casio DW9052 G-Shock Round -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/51M6FPBw6oL._AC_SX679_.jpg" alt="Casio G-Shock DW9052" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">CASIO G-SHOCK</div>
+                    <h2 class="watch-model">DW9052</h2>
+                    <p class="watch-description">The round G-Shock — rounder case, cleaner profile than the square DW5600E, same legendary toughness. Shock resistant, 200m water resistant, EL backlight. For people who want G-Shock protection with a slightly more refined silhouette.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">46mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Quartz Digital</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">200m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Mineral</span>
+                        </div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B004IYZ17Q/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
+            <!-- Watch 16: Invicta Pro Diver Automatic 5053 -->
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61+bE7XdnsL._AC_SY879_.jpg" alt="Invicta Pro Diver Automatic 5053" class="watch-image">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">INVICTA</div>
+                    <h2 class="watch-model">Pro Diver Automatic</h2>
+                    <p class="watch-description">The only automatic movement on this entire page. Self-winding NH35A movement, exhibition caseback so you can watch it work, 200m water resistance. Under $100 for a mechanical watch with a see-through back is either a miracle or a steal — probably both.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Case Size</span>
+                            <span class="spec-value">40mm</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Movement</span>
+                            <span class="spec-value">Automatic (NH35A)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Water Resistance</span>
+                            <span class="spec-value">200m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Crystal</span>
+                            <span class="spec-value">Mineral</span>
+                        </div>
+                    </div>
+                    <a href="https://www.amazon.com/dp/B000JQFX1G/?tag=jwwatches-20" class="amazon-btn" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+                </div>
+            </div>
+
         </div><!-- end watch-grid -->
 
     </main>
@@ -1061,7 +1205,24 @@
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
+            if (!navMenu.classList.contains('active')) {
+                navMenu.querySelectorAll('li.open').forEach(li => li.classList.remove('open'));
+            }
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+                const link = li.querySelector(':scope > a');
+                const dropdown = li.querySelector('.dropdown');
+                if (!dropdown) return;
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth > 1024) return;
+                    e.preventDefault();
+                    const isOpen = li.classList.contains('open');
+                    document.querySelectorAll('.nav-menu > li').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) li.classList.add('open');
+                });
+            });
+        });
     </script>
 
 </body>
