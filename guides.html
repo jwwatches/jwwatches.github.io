@@ -281,7 +281,23 @@
         }
 
         /* Coming soon cards */
-        
+        .article-card.coming-soon {
+            opacity: 0.6;
+            cursor: default;
+            pointer-events: none;
+        }
+        .article-card.coming-soon:hover { transform: none; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+        .coming-soon-overlay {
+            background: var(--deep-navy);
+            color: var(--rich-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 2px;
+            width: fit-content;
+        }
 
         /* Footer */
         footer { background: var(--deep-navy); color: var(--cream); padding: 4rem 2rem 2rem; margin-top: 0; border-top: 1px solid rgba(212,175,55,0.2); }
@@ -299,10 +315,16 @@
             .articles-grid { grid-template-columns: repeat(2, 1fr); }
             .featured-article { grid-template-columns: 1fr; }
             .featured-image { min-height: 260px; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--charcoal); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+                        .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
             .nav-menu.active { display: flex; }
-            .nav-menu > li > a { padding: 1rem 2rem; }
-            .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: none; background: rgba(0,0,0,0.2); }
+            .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+            .nav-menu > li > a { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 600; }
+            .nav-menu > li > a::after { content: '+'; font-size: 1.2rem; font-weight: 300; color: var(--rich-gold, #d4af37); margin-left: 0.5rem; }
+            .nav-menu > li.open > a::after { content: '−'; }
+            .dropdown { display: none; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.25); padding: 0.25rem 0; }
+            .nav-menu > li.open .dropdown { display: block; }
+            .dropdown a { padding: 0.7rem 2.5rem; font-size: 0.9rem; }
+            .dropdown a:hover { padding-left: 2.8rem; background: rgba(212,175,55,0.1); color: #d4af37; }
             .mobile-menu-toggle { display: block; }
             .footer-content { grid-template-columns: 1fr; gap: 2rem; }
         }
@@ -472,9 +494,10 @@
             </a>
 
             <!-- Dress Watches - Coming Soon -->
-            <a href="/dress-watches.html" class="article-card">
+            <a href="/dress-watches.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Dress watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">The One Watch That Works With Everything</div>
                     <p class="card-excerpt">Dress watches explained — what they are, when to wear them, and why the category is far more interesting than it sounds.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -482,9 +505,10 @@
             </a>
 
             <!-- Sport Watches - Coming Soon -->
-            <a href="/sport-watches.html" class="article-card">
+            <a href="/sport-watches.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Sport watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">Built To Survive Anything — Sport Watches Worth Your Money</div>
                     <p class="card-excerpt">The best sport watches across every budget, and how to choose the right one for what you actually do.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -492,9 +516,10 @@
             </a>
 
             <!-- Dive Watches - Coming Soon -->
-            <a href="/dive-watch-guide.html" class="article-card">
+            <a href="/dive-watch-guide.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Dive watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">You'll Never Scuba Dive. Buy One Anyway.</div>
                     <p class="card-excerpt">Why dive watches are the most versatile, most wearable, most practical category in watchmaking — and you don't need to go near water to justify one.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -502,9 +527,10 @@
             </a>
 
             <!-- Pilot Watches - Coming Soon -->
-            <a href="/pilot-watches.html" class="article-card">
+            <a href="/pilot-watches.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Pilot watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">Designed For Cockpits, Perfect For Real Life</div>
                     <p class="card-excerpt">Pilot watches left the cockpit decades ago and never looked back. Here's why they work so well everywhere else.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -512,9 +538,10 @@
             </a>
 
             <!-- Swiss Made - Coming Soon -->
-            <a href="/swiss-made.html" class="article-card">
+            <a href="/swiss-made.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Swiss watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">Is Swiss Made Worth The Premium? We Did The Math.</div>
                     <p class="card-excerpt">Swiss Made is on the dial of watches from $200 to $200,000. JW investigates what it actually means — and when it matters.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -522,9 +549,10 @@
             </a>
 
             <!-- Japan vs Switzerland - Coming Soon -->
-            <a href="/japanese-watches.html" class="article-card">
+            <a href="/japanese-watches.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Japanese watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">Japan vs Switzerland: The Watch War Nobody Talks About</div>
                     <p class="card-excerpt">Two watchmaking traditions. Completely different philosophies. One winner at each price point — and it might not be the one you expect.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -532,9 +560,10 @@
             </a>
 
             <!-- German Watches - Coming Soon -->
-            <a href="/german-watches.html" class="article-card">
+            <a href="/german-watches.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="German watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">Why German Watches Are The Best Kept Secret In Horology</div>
                     <p class="card-excerpt">Glashütte. Nomos. Sinn. A. Lange &amp; Söhne. Germany produces some of the finest watches in the world. Most people walk right past them.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -542,9 +571,10 @@
             </a>
 
             <!-- Microbrands - Coming Soon -->
-            <a href="/microbrand-watches.html" class="article-card">
+            <a href="/microbrand-watches.html" class="article-card coming-soon">
                 <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Microbrand watch" class="card-image">
                 <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
                     <div class="card-title">How Unknown Watch Brands Are Beating Rolex At Their Own Game</div>
                     <p class="card-excerpt">Microbrands are producing watches that rival Swiss luxury at a fraction of the price. Here's how they do it — and which ones are worth your money.</p>
                     <div class="card-meta"><span>By JW</span></div>
@@ -566,7 +596,7 @@
     <footer>
         <div class="footer-content">
             <div>
-                <div class="footer-brand">JW WATCHES</div>
+                <a href="/" class="logo" style="margin-bottom:0.8rem;display:inline-flex;"><span class="logo-circle">JW</span> WATCHES</a>
                 <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
             <div class="footer-section">
@@ -604,8 +634,26 @@
 
     <script>
         function toggleMenu() {
-            document.getElementById('navMenu').classList.toggle('active');
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+            if (!navMenu.classList.contains('active')) {
+                navMenu.querySelectorAll('li.open').forEach(li => li.classList.remove('open'));
+            }
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+                const link = li.querySelector(':scope > a');
+                const dropdown = li.querySelector('.dropdown');
+                if (!dropdown) return;
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth > 1024) return;
+                    e.preventDefault();
+                    const isOpen = li.classList.contains('open');
+                    document.querySelectorAll('.nav-menu > li').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) li.classList.add('open');
+                });
+            });
+        });
     </script>
 </body>
 </html>
