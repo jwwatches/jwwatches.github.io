@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Guides — Expert Articles By JW | JW Watches</title>
+    <meta name="description" content="In-depth watch guides by JW — covering automatic, quartz, manual wind, Spring Drive, dive watches, pilot watches, Swiss vs Japanese, and more. Honest. Opinionated. Useful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC1PF5FLNK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SC1PF5FLNK');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Watch Guides by JW",
+      "description": "In-depth watch guides covering automatic, quartz, manual wind, Spring Drive, dive watches, pilot watches, and more.",
+      "url": "https://jwwatches.github.io/guides.html",
+      "publisher": {"@type": "Organization", "name": "JW Watches", "url": "https://jwwatches.github.io"}
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --deep-navy: #0a1628;
+            --rich-gold: #d4af37;
+            --cream: #f8f6f1;
+            --slate: #334155;
+            --charcoal: #1e293b;
+            --warm-white: #fefdfb;
+            --accent-bronze: #cd7f32;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--charcoal); line-height: 1.6; }
+
+        /* Header */
+        header { background: var(--deep-navy); color: var(--cream); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .header-top { border-bottom: 1px solid rgba(212,175,55,0.2); padding: 1rem 0; }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--rich-gold); text-decoration: none; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.6rem; }
+        .logo-circle { width: 38px; height: 38px; background: var(--rich-gold); color: var(--deep-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
+        nav { background: var(--deep-navy); }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        .nav-menu { list-style: none; display: flex; gap: 0; }
+        .nav-menu > li { position: relative; }
+        .nav-menu > li > a { display: block; padding: 1.25rem 1.75rem; color: var(--cream); text-decoration: none; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.5px; transition: all 0.3s ease; border-bottom: 3px solid transparent; }
+        .nav-menu > li > a:hover, .nav-menu > li > a.active { background: rgba(212,175,55,0.1); border-bottom-color: var(--rich-gold); color: var(--rich-gold); }
+        .dropdown { position: absolute; top: 100%; left: 0; background: var(--charcoal); min-width: 280px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; border-top: 3px solid var(--rich-gold); }
+        .nav-menu > li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown a { display: block; padding: 0.875rem 1.5rem; color: var(--cream); text-decoration: none; font-size: 0.9rem; transition: all 0.2s ease; border-left: 3px solid transparent; }
+        .dropdown a:hover { background: rgba(212,175,55,0.15); border-left-color: var(--rich-gold); color: var(--rich-gold); padding-left: 2rem; }
+        .nav-new-badge { display: inline-block; background: var(--rich-gold); color: var(--deep-navy); font-size: 0.6rem; font-weight: 700; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.5px; margin-left: 6px; vertical-align: middle; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; padding: 0.5rem; }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #1e293b 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--cream);
+            border-bottom: 3px solid var(--rich-gold);
+        }
+        .page-header-content { max-width: 1400px; margin: 0 auto; }
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.75rem;
+            color: var(--rich-gold);
+        }
+        .page-subtitle {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin: 0 auto;
+            line-height: 1.6;
+            max-width: 600px;
+            color: var(--cream);
+        }
+
+        /* Author intro */
+        .author-intro {
+            background: var(--deep-navy);
+            color: var(--cream);
+            padding: 2rem 2rem 2.5rem;
+            text-align: center;
+        }
+        .author-intro-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .author-initial {
+            width: 52px;
+            height: 52px;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+        }
+        .author-intro h2 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--rich-gold);
+            margin-bottom: 0.75rem;
+        }
+        .author-intro p {
+            color: var(--cream);
+            opacity: 0.85;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Main content */
+        .main-content { max-width: 1400px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+        /* Featured article */
+        .featured-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--rich-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.3s ease;
+        }
+        .featured-article:hover { box-shadow: 0 16px 60px rgba(0,0,0,0.15); }
+        .featured-image {
+            height: 100%;
+            min-height: 380px;
+            object-fit: cover;
+            display: block;
+            width: 100%;
+        }
+        .featured-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .article-tag {
+            display: inline-block;
+            background: rgba(212,175,55,0.12);
+            color: var(--rich-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 2px;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+        .article-tag.new { background: var(--rich-gold); color: var(--deep-navy); }
+        .featured-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .featured-content p {
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .featured-meta {
+            font-size: 0.85rem;
+            color: var(--slate);
+            opacity: 0.65;
+            margin-bottom: 1.5rem;
+        }
+        .read-btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: var(--deep-navy);
+            color: var(--cream);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: background 0.2s;
+            width: fit-content;
+        }
+        .read-btn:hover { background: var(--rich-gold); color: var(--deep-navy); }
+
+        /* Section heading */
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--rich-gold);
+            display: inline-block;
+        }
+
+        /* Articles grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .article-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .card-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-content .article-tag { margin-bottom: 0.75rem; }
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 0.75rem;
+            line-height: 1.35;
+            flex-grow: 1;
+        }
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--slate);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--slate);
+            opacity: 0.6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        /* Coming soon cards */
+        .article-card.coming-soon {
+            opacity: 0.6;
+            cursor: default;
+            pointer-events: none;
+        }
+        .article-card.coming-soon:hover { transform: none; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+        .coming-soon-overlay {
+            background: var(--deep-navy);
+            color: var(--rich-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 2px;
+            width: fit-content;
+        }
+
+        /* Footer */
+        footer { background: var(--deep-navy); color: var(--cream); padding: 4rem 2rem 2rem; margin-top: 0; border-top: 1px solid rgba(212,175,55,0.2); }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 900; color: var(--rich-gold); margin-bottom: 1rem; }
+        .footer-tagline { color: var(--cream); opacity: 0.8; line-height: 1.8; margin-bottom: 1.5rem; }
+        .footer-section h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rich-gold); margin-bottom: 1rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a { color: var(--cream); text-decoration: none; opacity: 0.8; transition: all 0.2s ease; font-size: 0.95rem; }
+        .footer-links a:hover { opacity: 1; color: var(--rich-gold); padding-left: 5px; }
+        .footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.2); text-align: center; color: var(--cream); opacity: 0.7; font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            .articles-grid { grid-template-columns: repeat(2, 1fr); }
+            .featured-article { grid-template-columns: 1fr; }
+            .featured-image { min-height: 260px; }
+                        .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
+            .nav-menu.active { display: flex; }
+            .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+            .nav-menu > li > a { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 600; }
+            .nav-menu > li > a::after { content: '+'; font-size: 1.2rem; font-weight: 300; color: var(--rich-gold, #d4af37); margin-left: 0.5rem; }
+            .nav-menu > li.open > a::after { content: '−'; }
+            .dropdown { display: none; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.25); padding: 0.25rem 0; }
+            .nav-menu > li.open .dropdown { display: block; }
+            .dropdown a { padding: 0.7rem 2.5rem; font-size: 0.9rem; }
+            .dropdown a:hover { padding-left: 2.8rem; background: rgba(212,175,55,0.1); color: #d4af37; }
+            .mobile-menu-toggle { display: block; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+        }
+        @media (max-width: 768px) {
+            .articles-grid { grid-template-columns: 1fr; }
+            .page-title { font-size: 1.75rem; }
+            .featured-content { padding: 2rem; }
+            .featured-content h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-container">
+                <a href="/" class="logo"><span class="logo-circle">JW</span> WATCHES</a>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="/dial-color.html">By Dial Color</a>
+                        <div class="dropdown">
+                            <a href="/white-dial-watches.html">White Dial Watches</a>
+                            <a href="/black-dial-watches.html">Black Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
+                            <a href="/green-dial-watches.html">Green Dial Watches</a>
+                            <a href="/silver-dial-watches.html">Silver Dial Watches</a>
+                            <a href="/gold-dial-watches.html">Gold Dial Watches</a>
+                            <a href="/red-dial-watches.html">Red Dial Watches</a>
+                            <a href="/orange-dial-watches.html">Orange Dial Watches</a>
+                            <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
+                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/complications.html">By Complication</a>
+                        <div class="dropdown">
+                            <a href="/chronograph-watches.html">Chronograph</a>
+                            <a href="/gmt-watches.html">GMT</a>
+                            <a href="/dive-watches.html">Dive Watches</a>
+                            <a href="/day-date-watches.html">Day-Date</a>
+                            <a href="/moon-phase-watches.html">Moon Phase</a>
+                            <a href="/alarm-timer-watches.html">Alarm/Timer</a>
+                            <a href="/power-reserve-watches.html">Power Reserve</a>
+                            <a href="/jump-hour-watches.html">Jump Hour</a>
+                            <a href="/world-timer-watches.html">World Timer</a>
+                            <a href="/tourbillon-watches.html">Tourbillon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/price-range.html">By Price Range</a>
+                        <div class="dropdown">
+                            <a href="/watches-under-100.html">Under $100</a>
+                            <a href="/watches-100-300.html">$100 - $300</a>
+                            <a href="/watches-300-500.html">$300 - $500</a>
+                            <a href="/watches-500-1k.html">$500 - $1K</a>
+                            <a href="/watches-1k-2k.html">$1K - $2K</a>
+                            <a href="/watches-2k-3k.html">$2K - $3K</a>
+                            <a href="/watches-3k-5k.html">$3K - $5K</a>
+                            <a href="/watches-5k-10k.html">$5K - $10K</a>
+                            <a href="/watches-10k-20k.html">$10K - $20K</a>
+                            <a href="/watches-over-20k.html">$20K+</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/top-lists.html">Top 10 Lists</a>
+                        <div class="dropdown">
+                            <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
+                            <a href="/best-rolex-watches.html">Best Rolex Watches</a>
+                            <a href="/best-omega-watches.html">Best Omega Watches</a>
+                            <a href="/best-oris-watches.html">Best Oris Watches</a>
+                            <a href="/best-tudor-watches.html">Best Tudor Watches</a>
+                            <a href="/best-microbrands.html">Best Microbrands</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/guides.html" class="active">Guides <span class="nav-new-badge">NEW</span></a>
+                        <div class="dropdown">
+                            <a href="/automatic-watches.html">Automatic Watches: The Truth</a>
+                            <a href="/quartz-watches.html">Why Quartz Watches Win</a>
+                            <a href="/manual-wind-watches.html">The Dying Art of Manual Wind</a>
+                            <a href="/spring-drive-watches.html">The Spring Drive Story</a>
+                            <a href="/dress-watches.html">The One Watch That Works With Everything</a>
+                            <a href="/sport-watches.html">Sport Watches Worth Your Money</a>
+                            <a href="/dive-watch-guide.html">You'll Never Scuba Dive. Buy One Anyway.</a>
+                            <a href="/pilot-watches.html">Designed For Cockpits, Perfect For Real Life</a>
+                            <a href="/swiss-made.html">Is Swiss Made Worth The Premium?</a>
+                            <a href="/japanese-watches.html">Japan vs Switzerland</a>
+                            <a href="/german-watches.html">The Best Kept Secret In Horology</a>
+                            <a href="/microbrand-watches.html">How Microbrands Are Beating Rolex</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Watch Guides</h1>
+            <p class="page-subtitle">Honest, opinionated, in-depth guides on every aspect of watch collecting — from first purchase to serious obsession</p>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <!-- Featured Article -->
+        <div class="featured-label">Featured Guide</div>
+        <a href="/automatic-watches.html" class="featured-article">
+            <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1200&q=80" alt="Automatic watch movement" class="featured-image">
+            <div class="featured-content">
+                <div class="article-tag">Movement Type</div>
+                <h2>Automatic Watches: The Truth Nobody In The Industry Wants To Admit</h2>
+                <p>They're less accurate than a $15 Casio. They stop if you don't wear them. They cost a fortune to service. The watch industry knows this. They just prefer not to lead with it. So JW will.</p>
+                <div class="featured-meta">By JW &nbsp;·&nbsp; March 2026 &nbsp;·&nbsp; 8 min read</div>
+                <span class="read-btn">Read the Guide</span>
+            </div>
+        </a>
+
+        <!-- Published Articles -->
+        <h2 class="section-heading">All Guides</h2>
+        <div class="articles-grid">
+
+            <!-- Quartz -->
+            <a href="/quartz-watches.html" class="article-card">
+                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Quartz watch" class="card-image">
+                <div class="card-content">
+                    <div class="article-tag">Movement Type</div>
+                    <div class="card-title">Why Serious Watch People Are Finally Admitting Quartz Wins</div>
+                    <p class="card-excerpt">The watch community has a complicated relationship with quartz. JW makes the case for why it deserves far more respect than it gets.</p>
+                    <div class="card-meta">
+                        <span>By JW &nbsp;·&nbsp; March 2026</span>
+                        <span>8 min</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Manual Wind -->
+            <a href="/manual-wind-watches.html" class="article-card">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Manual wind watch" class="card-image">
+                <div class="card-content">
+                    <div class="article-tag">Movement Type</div>
+                    <div class="card-title">The Dying Art That Makes a Watch Feel Alive</div>
+                    <p class="card-excerpt">Manual wind watches ask something of you every morning. That's not a flaw. That's the entire point.</p>
+                    <div class="card-meta">
+                        <span>By JW &nbsp;·&nbsp; March 2026</span>
+                        <span>8 min</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Spring Drive -->
+            <a href="/spring-drive-watches.html" class="article-card">
+                <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80" alt="Grand Seiko Spring Drive" class="card-image">
+                <div class="card-content">
+                    <div class="article-tag">Movement Type</div>
+                    <div class="card-title">Seiko Built Something That Shouldn't Exist — The Spring Drive Story</div>
+                    <p class="card-excerpt">One engineer. 22 years. A movement that is neither mechanical nor quartz, and better than both.</p>
+                    <div class="card-meta">
+                        <span>By JW &nbsp;·&nbsp; March 2026</span>
+                        <span>9 min</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Dress Watches - Coming Soon -->
+            <a href="/dress-watches.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Dress watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">The One Watch That Works With Everything</div>
+                    <p class="card-excerpt">Dress watches explained — what they are, when to wear them, and why the category is far more interesting than it sounds.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- Sport Watches - Coming Soon -->
+            <a href="/sport-watches.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Sport watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">Built To Survive Anything — Sport Watches Worth Your Money</div>
+                    <p class="card-excerpt">The best sport watches across every budget, and how to choose the right one for what you actually do.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- Dive Watches - Coming Soon -->
+            <a href="/dive-watch-guide.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Dive watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">You'll Never Scuba Dive. Buy One Anyway.</div>
+                    <p class="card-excerpt">Why dive watches are the most versatile, most wearable, most practical category in watchmaking — and you don't need to go near water to justify one.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- Pilot Watches - Coming Soon -->
+            <a href="/pilot-watches.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Pilot watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">Designed For Cockpits, Perfect For Real Life</div>
+                    <p class="card-excerpt">Pilot watches left the cockpit decades ago and never looked back. Here's why they work so well everywhere else.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- Swiss Made - Coming Soon -->
+            <a href="/swiss-made.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Swiss watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">Is Swiss Made Worth The Premium? We Did The Math.</div>
+                    <p class="card-excerpt">Swiss Made is on the dial of watches from $200 to $200,000. JW investigates what it actually means — and when it matters.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- Japan vs Switzerland - Coming Soon -->
+            <a href="/japanese-watches.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Japanese watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">Japan vs Switzerland: The Watch War Nobody Talks About</div>
+                    <p class="card-excerpt">Two watchmaking traditions. Completely different philosophies. One winner at each price point — and it might not be the one you expect.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- German Watches - Coming Soon -->
+            <a href="/german-watches.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="German watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">Why German Watches Are The Best Kept Secret In Horology</div>
+                    <p class="card-excerpt">Glashütte. Nomos. Sinn. A. Lange &amp; Söhne. Germany produces some of the finest watches in the world. Most people walk right past them.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+            <!-- Microbrands - Coming Soon -->
+            <a href="/microbrand-watches.html" class="article-card coming-soon">
+                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Microbrand watch" class="card-image">
+                <div class="card-content">
+                    <div class="coming-soon-overlay">Coming Soon</div>
+                    <div class="card-title">How Unknown Watch Brands Are Beating Rolex At Their Own Game</div>
+                    <p class="card-excerpt">Microbrands are producing watches that rival Swiss luxury at a fraction of the price. Here's how they do it — and which ones are worth your money.</p>
+                    <div class="card-meta"><span>By JW</span></div>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Author note at bottom -->
+    <div class="author-intro">
+        <div class="author-intro-inner">
+            <div class="author-initial">JW</div>
+            <p>These guides are written by someone who thinks about watches more than is probably healthy. The goal is simple: give you the information you actually need, opinions you can challenge, and recommendations you can trust. Some links earn a small commission — that never influences what gets recommended or why. Every watch earns its place on merit, not margin. If a guide helps you find the right watch and you buy through our links, it helps keep the site running. We genuinely appreciate the support.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="/" class="logo" style="margin-bottom:0.8rem;display:inline-flex;"><span class="logo-circle">JW</span> WATCHES</a>
+                <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Latest Guides</h4>
+                <ul class="footer-links">
+                    <li><a href="/automatic-watches.html">Automatic Watches</a></li>
+                    <li><a href="/quartz-watches.html">Quartz Watches</a></li>
+                    <li><a href="/manual-wind-watches.html">Manual Wind Watches</a></li>
+                    <li><a href="/spring-drive-watches.html">The Spring Drive Story</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Top 10 Lists</h4>
+                <ul class="footer-links">
+                    <li><a href="/best-rolex-watches.html">Best Rolex Watches</a></li>
+                    <li><a href="/best-omega-watches.html">Best Omega Watches</a></li>
+                    <li><a href="/best-tudor-watches.html">Best Tudor Watches</a></li>
+                    <li><a href="/best-microbrands.html">Best Microbrands</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JW Watches. All rights reserved. | Affiliate Disclosure: We may earn commissions from purchases made through our links.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+            if (!navMenu.classList.contains('active')) {
+                navMenu.querySelectorAll('li.open').forEach(li => li.classList.remove('open'));
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+                const link = li.querySelector(':scope > a');
+                const dropdown = li.querySelector('.dropdown');
+                if (!dropdown) return;
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth > 1024) return;
+                    e.preventDefault();
+                    const isOpen = li.classList.contains('open');
+                    document.querySelectorAll('.nav-menu > li').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) li.classList.add('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

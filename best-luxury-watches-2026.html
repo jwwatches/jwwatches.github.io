@@ -65,6 +65,7 @@
             align-items: center;
         }
 
+        .logo-circle { width: 38px; height: 38px; background: var(--rich-gold, #d4af37); color: #0a1628; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -72,6 +73,9 @@
             color: var(--rich-gold);
             text-decoration: none;
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
         }
 
         nav {
@@ -463,38 +467,17 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--charcoal);
-                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu > li > a {
-                padding: 1rem 2rem;
-            }
-
-            .dropdown {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                border-top: none;
-                background: rgba(0,0,0,0.2);
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
+                        .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
+            .nav-menu.active { display: flex; }
+            .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+            .nav-menu > li > a { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 600; }
+            .nav-menu > li > a::after { content: '+'; font-size: 1.2rem; font-weight: 300; color: var(--rich-gold, #d4af37); margin-left: 0.5rem; }
+            .nav-menu > li.open > a::after { content: '−'; }
+            .dropdown { display: none; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.25); padding: 0.25rem 0; }
+            .nav-menu > li.open .dropdown { display: block; }
+            .dropdown a { padding: 0.7rem 2.5rem; font-size: 0.9rem; }
+            .dropdown a:hover { padding-left: 2.8rem; background: rgba(212,175,55,0.1); color: #d4af37; }
+            .mobile-menu-toggle { display: block; }
 
             .footer-content {
                 grid-template-columns: 1fr;
@@ -520,35 +503,12 @@
             }
         }
     </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Best Luxury Watches 2026",
-  "description": "Our top 10 luxury watch picks for 2026 across the finest Swiss and independent watchmakers.",
-  "url": "https://jwwatches.github.io/best-luxury-watches-2026.html",
-  "numberOfItems": 10,
-  "itemListElement": [
-    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Rolex Submariner Date","description":"The ultimate luxury dive watch. Ceramic bezel, caliber 3235, 300m water resistance.","brand":{"@type":"Brand","name":"Rolex"},"offers":{"@type":"Offer","price":"10250","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80"}},
-    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Omega Speedmaster Professional Moonwatch","description":"NASA-qualified moonwatch. Manual wind, iconic design, first watch worn on the moon.","brand":{"@type":"Brand","name":"Omega"},"offers":{"@type":"Offer","price":"6800","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80"}},
-    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Patek Philippe Calatrava","description":"The pinnacle of dress watchmaking. In-house movement, timeless design, investment piece.","brand":{"@type":"Brand","name":"Patek Philippe"},"offers":{"@type":"Offer","price":"28000","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80"}},
-    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Audemars Piguet Royal Oak","description":"Revolutionary integrated bracelet design. The watch that defined luxury sports watches in 1972.","brand":{"@type":"Brand","name":"Audemars Piguet"},"offers":{"@type":"Offer","price":"35000","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80"}},
-    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"IWC Portugieser Chronograph","description":"Portuguese heritage, in-house movement, elegant chronograph design. IWC at its finest.","brand":{"@type":"Brand","name":"IWC"},"offers":{"@type":"Offer","price":"8500","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80"}},
-    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Jaeger-LeCoultre Reverso","description":"Art Deco icon with reversible case. JLC in-house, dual time zone options. Horological art.","brand":{"@type":"Brand","name":"Jaeger-LeCoultre"},"offers":{"@type":"Offer","price":"9500","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80"}},
-    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Vacheron Constantin Overseas","description":"Triple calendar, multiple straps, exceptional finishing. Geneva Seal certified excellence.","brand":{"@type":"Brand","name":"Vacheron Constantin"},"offers":{"@type":"Offer","price":"32000","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80"}},
-    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"A. Lange and Sohne Saxonia","description":"German precision watchmaking. Hand-finished movement, outsize date, understated elegance.","brand":{"@type":"Brand","name":"A. Lange and Sohne"},"offers":{"@type":"Offer","price":"22000","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80"}},
-    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Panerai Luminor Marina","description":"Italian naval heritage. Bold 44mm cushion case, hand-wound movement, distinctive crown guard.","brand":{"@type":"Brand","name":"Panerai"},"offers":{"@type":"Offer","price":"8500","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80"}},
-    {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"Breitling Navitimer","description":"Aviation legend. Slide rule bezel, chronograph, pilots watch of choice since 1952.","brand":{"@type":"Brand","name":"Breitling"},"offers":{"@type":"Offer","price":"9500","priceCurrency":"USD","availability":"https://schema.org/InStock"},"image":"https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80"}}
-  ]
-}
-</script>
 </head>
 <body>
     <header>
         <div class="header-top">
             <div class="header-container">
-                <a href="/" class="logo">JW WATCHES</a>
+                <a href="/" class="logo"><span class="logo-circle">JW</span> WATCHES</a>
                 <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -1034,7 +994,7 @@
     <footer>
         <div class="footer-content">
             <div>
-                <div class="footer-brand">JW WATCHES</div>
+                <a href="/" class="logo" style="margin-bottom:0.8rem;display:inline-flex;"><span class="logo-circle">JW</span> WATCHES</a>
                 <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
             <div class="footer-section">
@@ -1074,7 +1034,24 @@
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
+            if (!navMenu.classList.contains('active')) {
+                navMenu.querySelectorAll('li.open').forEach(li => li.classList.remove('open'));
+            }
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+                const link = li.querySelector(':scope > a');
+                const dropdown = li.querySelector('.dropdown');
+                if (!dropdown) return;
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth > 1024) return;
+                    e.preventDefault();
+                    const isOpen = li.classList.contains('open');
+                    document.querySelectorAll('.nav-menu > li').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) li.classList.add('open');
+                });
+            });
+        });
 
         // Carousel rotation
         let currentSlide = 0;

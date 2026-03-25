@@ -16,7 +16,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, sans-serif; background: #fefdfb; color: #1e293b; line-height: 1.6; }
         header { background: #0a1628; padding: 1.5rem 2rem; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: #d4af37; text-decoration: none; }
+        
         .hero { background: linear-gradient(135deg, #0a1628 0%, #1e293b 100%); color: #f8f6f1; padding: 4rem 2rem; text-align: center; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; color: #d4af37; }
         .content { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
@@ -25,11 +25,121 @@
         .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
         .card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a1628; }
         .card p { color: #64748b; font-size: 0.95rem; }
+    
+        :root { --deep-navy: #0a1628; --rich-gold: #d4af37; --charcoal: #1e293b; }
+        .header-top { border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 0.9rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo-circle { width: 38px; height: 38px; background: #d4af37; color: #0a1628; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
+        nav { background: #0a1628; border-top: 1px solid rgba(255,255,255,0.04); }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        .nav-menu { list-style: none; display: flex; }
+        .nav-menu > li { position: relative; }
+        .nav-menu > li > a { display: block; padding: 1rem 1.4rem; color: rgba(248,246,241,0.75); text-decoration: none; font-weight: 500; font-size: 0.875rem; letter-spacing: 0.5px; transition: all 0.3s; border-bottom: 2px solid transparent; }
+        .nav-menu > li > a:hover { color: #d4af37; border-bottom-color: #d4af37; }
+        .dropdown { position: absolute; top: 100%; left: 0; background: #1e293b; min-width: 220px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s; border-top: 2px solid #d4af37; z-index: 100; }
+        .nav-menu > li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown a { display: block; padding: 0.7rem 1.4rem; color: rgba(248,246,241,0.75); text-decoration: none; font-size: 0.85rem; transition: all 0.2s; border-left: 2px solid transparent; }
+        .dropdown a:hover { background: rgba(212,175,55,0.1); border-left-color: #d4af37; color: #d4af37; padding-left: 1.8rem; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: #f8f6f1; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 1024px) {
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
+            .nav-menu.active { display: flex; }
+            .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+            .nav-menu > li > a { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 600; }
+            .nav-menu > li > a::after { content: '+'; font-size: 1.2rem; font-weight: 300; color: #d4af37; margin-left: 0.5rem; }
+            .nav-menu > li.open > a::after { content: '−'; }
+            .dropdown { display: none; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.25); padding: 0.25rem 0; }
+            .nav-menu > li.open .dropdown { display: block; }
+            .dropdown a { padding: 0.7rem 2.5rem; font-size: 0.9rem; }
+            .dropdown a:hover { padding-left: 2.8rem; background: rgba(212,175,55,0.1); color: #d4af37; }
+            .mobile-menu-toggle { display: block; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <a href="/" class="logo">JW WATCHES</a>
+        <div class="header-top">
+            <div class="header-container">
+                <a href="/" class="logo"><span class="logo-circle">JW</span> WATCHES</a>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="/dial-color.html">By Dial Color</a>
+                        <div class="dropdown">
+                            <a href="/white-dial-watches.html">White Dial Watches</a>
+                            <a href="/black-dial-watches.html">Black Dial Watches</a>
+                            <a href="/blue-dial-watches.html">Blue Dial Watches</a>
+                            <a href="/green-dial-watches.html">Green Dial Watches</a>
+                            <a href="/silver-dial-watches.html">Silver Dial Watches</a>
+                            <a href="/gold-dial-watches.html">Gold Dial Watches</a>
+                            <a href="/red-dial-watches.html">Red Dial Watches</a>
+                            <a href="/orange-dial-watches.html">Orange Dial Watches</a>
+                            <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
+                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/complications.html">By Complication</a>
+                        <div class="dropdown">
+                            <a href="/chronograph-watches.html">Chronograph</a>
+                            <a href="/gmt-watches.html">GMT</a>
+                            <a href="/dive-watches.html">Dive Watches</a>
+                            <a href="/day-date-watches.html">Day-Date</a>
+                            <a href="/moon-phase-watches.html">Moon Phase</a>
+                            <a href="/alarm-timer-watches.html">Alarm/Timer</a>
+                            <a href="/power-reserve-watches.html">Power Reserve</a>
+                            <a href="/jump-hour-watches.html">Jump Hour</a>
+                            <a href="/world-timer-watches.html">World Timer</a>
+                            <a href="/tourbillon-watches.html">Tourbillon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/price-range.html">By Price Range</a>
+                        <div class="dropdown">
+                            <a href="/watches-under-100.html">Under $100</a>
+                            <a href="/watches-100-300.html">$100 – $300</a>
+                            <a href="/watches-300-500.html">$300 – $500</a>
+                            <a href="/watches-500-1k.html">$500 – $1K</a>
+                            <a href="/watches-1k-2k.html">$1K – $2K</a>
+                            <a href="/watches-2k-3k.html">$2K – $3K</a>
+                            <a href="/watches-3k-5k.html">$3K – $5K</a>
+                            <a href="/watches-5k-10k.html">$5K – $10K</a>
+                            <a href="/watches-10k-20k.html">$10K – $20K</a>
+                            <a href="/watches-over-20k.html">$20K+</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/top-lists.html">Top 10 Lists</a>
+                        <div class="dropdown">
+                            <a href="/best-luxury-watches-2026.html">Best Luxury Watches 2026</a>
+                            <a href="/best-rolex-watches.html">Best Rolex Watches</a>
+                            <a href="/best-omega-watches.html">Best Omega Watches</a>
+                            <a href="/best-oris-watches.html">Best Oris Watches</a>
+                            <a href="/best-tudor-watches.html">Best Tudor Watches</a>
+                            <a href="/best-microbrands.html">Best Microbrands</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/guides.html">Guides</a>
+                        <div class="dropdown">
+                            <a href="/automatic-watches.html">Automatic Watches</a>
+                            <a href="/quartz-watches.html">Quartz Watches</a>
+                            <a href="/dive-watch-guide.html">Dive Watch Guide</a>
+                            <a href="/pilot-watches.html">Pilot Watches</a>
+                            <a href="/swiss-made.html">Swiss Made — Worth It?</a>
+                            <a href="/japanese-watches.html">Japanese Watches</a>
+                            <a href="/german-watches.html">German Watches</a>
+                            <a href="/microbrand-watches.html">Microbrand Watches</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     
     <div class="hero">
@@ -81,5 +191,35 @@
             </a>
         </div>
     </div>
+    <footer style="background:#0a1628;color:#f8f6f1;padding:3rem 2rem 1.5rem;margin-top:4rem;">
+        <div style="max-width:1200px;margin:0 auto;">
+            <a href="/" class="logo" style="margin-bottom:1rem;display:inline-flex;"><span class="logo-circle">JW</span> WATCHES</a>
+            <p style="color:rgba(248,246,241,0.5);font-size:0.9rem;margin-bottom:2rem;">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons.</p>
+            <p style="color:rgba(248,246,241,0.3);font-size:0.8rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;">&copy; 2026 JW Watches. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+            if (!navMenu.classList.contains('active')) {
+                navMenu.querySelectorAll('li.open').forEach(li => li.classList.remove('open'));
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+                const link = li.querySelector(':scope > a');
+                const dropdown = li.querySelector('.dropdown');
+                if (!dropdown) return;
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth > 1024) return;
+                    e.preventDefault();
+                    const isOpen = li.classList.contains('open');
+                    document.querySelectorAll('.nav-menu > li').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) li.classList.add('open');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
