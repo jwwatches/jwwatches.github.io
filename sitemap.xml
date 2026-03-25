@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Home -->
   <url><loc>https://jwwatches.github.io/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
-
-  <!-- Price Range Pages -->
   <url><loc>https://jwwatches.github.io/watches-under-100.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jwwatches.github.io/watches-100-300.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jwwatches.github.io/watches-300-500.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
@@ -15,8 +11,6 @@
   <url><loc>https://jwwatches.github.io/watches-5k-10k.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jwwatches.github.io/watches-10k-20k.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jwwatches.github.io/watches-over-20k.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-
-  <!-- By Dial Color -->
   <url><loc>https://jwwatches.github.io/dial-color.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/white-dial-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/black-dial-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -28,8 +22,6 @@
   <url><loc>https://jwwatches.github.io/orange-dial-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/yellow-dial-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/multi-color-dial-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-
-  <!-- By Complication -->
   <url><loc>https://jwwatches.github.io/complications.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/chronograph-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/gmt-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -41,8 +33,6 @@
   <url><loc>https://jwwatches.github.io/jump-hour-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/world-timer-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/tourbillon-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Top Lists -->
   <url><loc>https://jwwatches.github.io/top-lists.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/best-luxury-watches-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/best-rolex-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -50,8 +40,6 @@
   <url><loc>https://jwwatches.github.io/best-oris-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/best-tudor-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/best-microbrands.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Guides -->
   <url><loc>https://jwwatches.github.io/guides.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/automatic-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/quartz-watches.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
@@ -66,5 +54,4 @@
   <url><loc>https://jwwatches.github.io/german-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/microbrand-watches.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jwwatches.github.io/price-range.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-
 </urlset>
