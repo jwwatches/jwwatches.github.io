@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Red Dial Watches - From Affordable to Luxury | JW Watches</title>
-    <meta name="description" content="Discover the best red dial watches across every budget. Expert reviews of bold burgundy, crimson, and racing red timepieces that make a statement.">
+    <title>Best Red Dial Watches — From $60 to $13,400 | JW Watches</title>
+    <meta name="description" content="Discover the best white dial watches across every budget. Expert reviews of elegant ivory, cream, and pure white timepieces from top brands.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -65,7 +65,6 @@
             align-items: center;
         }
 
-        .logo-circle { width: 38px; height: 38px; background: var(--rich-gold); color: var(--deep-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -73,10 +72,24 @@
             color: var(--rich-gold);
             text-decoration: none;
             letter-spacing: 0.5px;
-        
             display: flex;
             align-items: center;
             gap: 0.6rem;
+        }
+
+        .logo-circle {
+            width: 38px;
+            height: 38px;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            letter-spacing: 0;
         }
 
         nav {
@@ -167,10 +180,10 @@
 
         /* Page Header */
         .page-header {
-            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+            background: linear-gradient(135deg, #f5f3ef 0%, #ffffff 100%);
             padding: 0.75rem 2rem 1.5rem 2rem;
             text-align: center;
-            color: white;
+            color: var(--charcoal);
         }
 
         .page-header-content {
@@ -183,14 +196,16 @@
             font-size: 2rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
+            color: var(--deep-navy);
         }
 
         .page-subtitle {
             font-size: 1rem;
-            opacity: 0.95;
+            opacity: 0.85;
             margin: 0 auto;
             line-height: 1.4;
             max-width: 700px;
+            color: var(--slate);
         }
 
         /* Hero Carousel */
@@ -229,7 +244,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(127, 29, 29, 0.4) 0%, rgba(220, 38, 38, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(245, 243, 239, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
         }
 
         .carousel-slide img {
@@ -279,21 +294,28 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        .watch-image-wrapper {
+                .watch-image-wrapper {
             position: relative;
             width: 100%;
-            height: 300px;
-            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+            height: 280px;
+            background: linear-gradient(145deg, #f8f9fb 0%, #eef0f4 50%, #f4f5f8 100%);
             overflow: hidden;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .watch-image {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 2rem;
+            object-fit: cover;
+            object-position: center;
+            padding: 0;
+            transition: transform 0.5s ease;
         }
+
+        
 
         .watch-info {
             padding: 2rem;
@@ -334,8 +356,8 @@
             gap: 1rem;
             margin-bottom: 1.5rem;
             padding: 1.5rem;
-            background: rgba(220, 38, 38, 0.05);
-            border-left: 3px solid #dc2626;
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--rich-gold);
             border-radius: 2px;
         }
 
@@ -467,7 +489,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-                        .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
             .nav-menu.active { display: flex; }
             .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
             .nav-menu > li > a { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 600; }
@@ -502,6 +524,109 @@
                 height: 300px;
             }
         }
+
+        .tier-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2px;
+            margin-bottom: 0.75rem;
+        }
+        .icon-tier {
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+        }
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--deep-navy);
+            color: var(--cream);
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid var(--deep-navy);
+            margin-top: auto;
+            cursor: pointer;
+        }
+        .buy-btn:hover {
+            background: transparent;
+            color: var(--deep-navy);
+        }
+        .reference-only {
+            background: var(--charcoal);
+            border-color: var(--charcoal);
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+        .reference-only:hover {
+            background: var(--charcoal);
+            color: var(--cream);
+        }
+
+        .dial-hero { position: relative; height: 420px; overflow: hidden; background: var(--deep-navy); }
+        .dial-hero-slides { position: absolute; inset: 0; }
+        .dial-hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s ease-in-out; background-size: cover; background-position: center; }
+        .dial-hero-slide.active { opacity: 1; }
+        .dial-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,22,40,0.93) 0%, rgba(10,22,40,0.7) 45%, rgba(10,22,40,0.15) 100%); z-index: 1; }
+        .dial-hero-content { position: relative; z-index: 2; height: 100%; display: flex; align-items: center; padding: 0 4rem; }
+        .dial-hero-inner { display: flex; flex-direction: column; gap: 1.1rem; max-width: 560px; }
+        .dial-accent-bar { width: 60px; height: 4px; background: #DC2626; box-shadow: 0 0 20px rgba(220,38,38,0.3); border-radius: 2px; }
+        .dial-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #DC2626; opacity: 0.85; }
+        .dial-hero-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: #f8f6f1; line-height: 1.1; margin: 0; }
+        .dial-hero-title span { color: #DC2626; text-shadow: 0 0 40px rgba(220,38,38,0.3); }
+        .dial-hero-sub { font-size: 0.95rem; color: rgba(248,246,241,0.68); line-height: 1.65; }
+        
+        
+        
+        .section-header { text-align: center; padding: 3rem 2rem 0.5rem; max-width: 800px; margin: 0 auto; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--deep-navy); margin-bottom: 0.75rem; }
+        .section-header p { color: #64748b; font-size: 0.95rem; line-height: 1.7; }
+        .price-note { text-align: center; font-size: 0.8rem; color: #94a3b8; margin: 0.75rem auto 2rem; font-style: italic; }
+        .tier-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; margin-bottom: 0.6rem; }
+        .icon-tier { background: var(--rich-gold); color: var(--deep-navy); }
+        .buy-btn { display: block; width: 100%; padding: 1rem; background: var(--deep-navy); color: var(--cream); text-decoration: none; text-align: center; font-weight: 600; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.3s ease; border: 2px solid var(--deep-navy); margin-top: auto; }
+        .buy-btn:hover { background: transparent; color: var(--deep-navy); }
+        .ref-btn { background: #334155; border-color: #334155; font-size: 0.75rem; opacity: 0.8; }
+        .ref-btn:hover { background: transparent; color: #334155; }
+        @media (max-width: 768px) { .dial-hero { height: 320px; } .dial-hero-title { font-size: 2.1rem; } .dial-hero-content { padding: 0 1.5rem; } }
+
+        
+
+        /* ── Ken Burns single hero image ─────────────────────── */
+        @keyframes kenBurns {
+            0%   { transform: scale(1.0) translate(0, 0); }
+            25%  { transform: scale(1.08) translate(-1%, 0.5%); }
+            50%  { transform: scale(1.12) translate(-1.5%, -1%); }
+            75%  { transform: scale(1.07) translate(0.5%, -0.5%); }
+            100% { transform: scale(1.0) translate(0, 0); }
+        }
+        .dial-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://hodinkee-production.s3.amazonaws.com/uploads/images/fbed9b7b-9530-4c17-a925-bdd3746f5c8e/tan2h-tan2h-7350.jpg'); background-position: center center;
+            background-size: cover;
+            background-position: center right;
+            animation: kenBurns 20s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .watch-image.img-contain {
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .watch-image.img-cover {
+            object-fit: cover;
+            object-position: center top;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -518,16 +643,15 @@
                     <li>
                         <a href="#dial-color" class="active">By Dial Color</a>
                         <div class="dropdown">
-                            <a href="/white-dial-watches.html">White Dial Watches</a>
+                            <a href="/red-dial-watches.html" style="color: var(--rich-gold);">White Dial Watches</a>
                             <a href="/black-dial-watches.html">Black Dial Watches</a>
                             <a href="/blue-dial-watches.html">Blue Dial Watches</a>
                             <a href="/green-dial-watches.html">Green Dial Watches</a>
                             <a href="/silver-dial-watches.html">Silver Dial Watches</a>
                             <a href="/gold-dial-watches.html">Gold Dial Watches</a>
-                            <a href="/red-dial-watches.html" style="color: var(--rich-gold);">Red Dial Watches</a>
+                            <a href="/red-dial-watches.html">Red Dial Watches</a>
                             <a href="/orange-dial-watches.html">Orange Dial Watches</a>
                             <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
-                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
                         </div>
                     </li>
                     <li>
@@ -576,416 +700,207 @@
         </nav>
     </header>
 
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1 class="page-title">Best Red Dial Watches</h1>
-            <p class="page-subtitle">Bold, passionate, and unmistakably confident - red dials command attention and celebrate racing heritage</p>
+    <div class="dial-hero">
+        <div class="dial-hero-bg"></div>
+        <div class="dial-hero-overlay"></div>
+        <div class="dial-hero-content">
+            <div class="dial-hero-inner">
+                <div class="dial-accent-bar"></div>
+                <div class="dial-hero-eyebrow">Dial Color Guide</div>
+                <h1 class="dial-hero-title">Best <span>Red Dial</span><br>Watches</h1>
+                <p class="dial-hero-sub">From a $60 Casio G-Shock to a $13,400 Grand Seiko Spring Drive — red is the rarest and most dramatic dial color in watchmaking.</p>
+            </div>
         </div>
     </div>
-
-    <!-- Hero Carousel -->
-    <section class="hero-carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Red dial luxury watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="Red dial racing chronograph">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="Red dial sports watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1600&q=80" alt="Red dial timepiece">
-            </div>
-        </div>
-    </section>
-
+    <div class="section-header">
+        <h2>10 Essential Red Dial Watches</h2>
+        <p>Red dials are rare, bold, and unforgettable. From tool watches to haute horlogerie, these are the finest red dial watches money can buy.</p>
+    </div>
+    <p class="price-note">Prices are approximate and change frequently. Always check Amazon for current pricing.</p>
     <main class="main-content">
-        <p class="intro-text">Red dials are the bold choice for collectors who aren't afraid to stand out. Often associated with racing heritage and haute horology, these vibrant timepieces range from deep burgundy dress watches to fire-engine racing chronographs. Here are the best red dial watches that balance statement-making style with genuine watchmaking credentials.</p>
-
         <div class="watch-grid">
-            <!-- Watch 1: TAG Heuer Carrera Calibre 16 Red -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="TAG Heuer red dial chronograph" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/81agZMLlILL._AC_SY695_.jpg" alt="CASIO G-Shock GA-2100-4A Red" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">TAG HEUER</div>
-                    <h2 class="watch-model">Carrera Calibre 16 Day-Date Red</h2>
-                    <p class="watch-description">Racing-inspired chronograph with vibrant red accents. TAG Heuer's motorsport DNA meets everyday wearability with reliable in-house movement.</p>
+                    <div class="watch-brand">CASIO</div>
+                    <h2 class="watch-model">G-Shock GA-2100-4A Red</h2>
+                    <p class="watch-description">The Casioak in bold red. Carbon Core Guard, shock resistance, world time, 200m water resistance. The most versatile red watch under $100 — and one of the toughest watches period.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">43mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic Chrono</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">45.4mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Mineral</span></div>
                     </div>
-                    <div class="watch-price">$5,650</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$60</div>
+                    <a href="https://www.amazon.com/dp/B0DJ1GHWH8/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 2: Seiko 5 Sports SRPD83 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Seiko 5 red dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61FEXRNq8QL._AC_SY695_.jpg" alt="SEIKO 5 Sports SRPK29 Red" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">SEIKO</div>
-                    <h2 class="watch-model">5 Sports SRPD83 Red Dial</h2>
-                    <p class="watch-description">Affordable sports watch with bold red dial and day-date display. Exceptional value with Seiko's reliable automatic movement and 100m water resistance.</p>
+                    <h2 class="watch-model">5 Sports SRPK29 Red</h2>
+                    <p class="watch-description">Seiko 5 Sports in a vivid red that turns heads. 4R36 automatic movement, rotating bezel, day/date display, 100m water resistance. The best red dial automatic under $500.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42.5mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Hardlex</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Hardlex</span></div>
                     </div>
-                    <div class="watch-price">$295</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$475</div>
+                    <a href="https://www.amazon.com/dp/B0BY2BYCYQ/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 3: Omega Speedmaster Racing Red -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Omega Speedmaster red dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">OMEGA</div>
-                    <h2 class="watch-model">Speedmaster Racing Co-Axial Red</h2>
-                    <p class="watch-description">Modern racing chronograph with striking red and black dial. Co-Axial escapement delivers exceptional precision and reliability in Omega's iconic Speedmaster case.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">44.25mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic Chrono</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$6,500</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 4: Tudor Black Bay Fifty-Eight 925 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Tudor burgundy dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">TUDOR</div>
-                    <h2 class="watch-model">Black Bay Fifty-Eight 925 Burgundy</h2>
-                    <p class="watch-description">Unique silver case with deep burgundy dial. Limited edition combining vintage aesthetics with modern Tudor reliability in a perfectly sized package.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">39mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$5,025</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 5: Tissot PRX Powermatic 80 Red -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Tissot PRX red dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/81-knZMK1-L._AC_SX679_.jpg" alt="TISSOT T-Race MotoGP Chronograph" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">TISSOT</div>
-                    <h2 class="watch-model">PRX Powermatic 80 Red Dial</h2>
-                    <p class="watch-description">Retro-styled integrated bracelet watch with burgundy red dial. Exceptional value with 80-hour power reserve and Swiss automatic movement.</p>
+                    <h2 class="watch-model">T-Race MotoGP Chronograph</h2>
+                    <p class="watch-description">Born on the racetrack. MotoGP official timekeeper's watch in striking red. Swiss quartz chronograph, tachymeter, sapphire crystal. Racing DNA you can wear to the office.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">43mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Quartz Chrono</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$725</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$450</div>
+                    <a href="https://www.amazon.com/dp/B0F7423X8P/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 6: Rolex Daytona "Paul Newman" Style -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Rolex Daytona red accents" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">ROLEX</div>
-                    <h2 class="watch-model">Cosmograph Daytona Red Text</h2>
-                    <p class="watch-description">Legendary racing chronograph with iconic red "Daytona" text. The ultimate motorsport watch combining heritage, performance, and investment potential.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic Chrono</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$38,000</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 7: Hamilton Khaki Aviation Red Bull -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80" alt="Hamilton red dial pilot watch" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">HAMILTON</div>
-                    <h2 class="watch-model">Khaki Aviation Red Bull Racing</h2>
-                    <p class="watch-description">Aviation chronograph with bold red accents celebrating racing partnership. Swiss-made reliability with racing-inspired design at accessible pricing.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">44mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic Chrono</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$1,295</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 8: Zenith Chronomaster Sport Red Edition -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Zenith red dial chronograph" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">ZENITH</div>
-                    <h2 class="watch-model">Chronomaster Sport Boutique Red</h2>
-                    <p class="watch-description">Exclusive chronograph with striking red accents on sub-dials. El Primero high-beat movement delivers 1/10th second precision in a modern sports package.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">El Primero Auto</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$10,900</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 9: Orient Kamasu Red -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Orient red dial dive watch" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/61RcExuAh+L._AC_SX679_.jpg" alt="ORIENT Mako III Red" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">ORIENT</div>
-                    <h2 class="watch-model">Kamasu Red Dial</h2>
-                    <p class="watch-description">Budget dive watch with vibrant red dial and sapphire crystal. Incredible value with in-house automatic movement and 200m water resistance.</p>
+                    <h2 class="watch-model">Mako III Red</h2>
+                    <p class="watch-description">In-house automatic diver in a bold red. Unidirectional bezel, sapphire crystal, 200m water resistance, hacking and hand-winding. Orient punching well above its price tag in red.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41.8mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$285</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$300</div>
+                    <a href="https://www.amazon.com/dp/B0C9L1QNL8/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 10: Breitling Navitimer Red Arrows -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Breitling red accents" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/718xNiquoKL._AC_SY695_.jpg" alt="ORIS Divers Sixty-Five Red" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">BREITLING</div>
-                    <h2 class="watch-model">Navitimer B01 Red Arrows Limited</h2>
-                    <p class="watch-description">Aviation chronograph celebrating RAF Red Arrows aerobatic team. Limited edition with red accents honoring military aviation excellence.</p>
+                    <div class="watch-brand">ORIS</div>
+                    <h2 class="watch-model">Divers Sixty-Five Red</h2>
+                    <p class="watch-description">Vintage-inspired dive watch with a modern heart. In-house calibre, domed crystal, red dial that references classic 1960s dive watches. Swiss independence done beautifully.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">43mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic Chrono</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$9,950</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$2,500</div>
+                    <a href="https://www.amazon.com/dp/B07VT1NTSV/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 11: Vostok Amphibia Red -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Vostok red dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71MjRr08mrL._AC_SY879_.jpg" alt="RADO Captain Cook High-Tech Ceramic Red" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">VOSTOK</div>
-                    <h2 class="watch-model">Amphibia Red Scuba Dude</h2>
-                    <p class="watch-description">Soviet-era dive watch with bold red dial and unique character. Cult classic offering incredible value and quirky charm with proven reliability.</p>
+                    <div class="watch-brand">RADO</div>
+                    <h2 class="watch-model">Captain Cook High-Tech Ceramic Red</h2>
+                    <p class="watch-description">High-tech ceramic in a bold red — scratch-proof, hypoallergenic, extraordinarily light. Rado's most striking watch, brought to life in a red that never fades.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">43mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">300m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$89</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$3,250</div>
+                    <a href="https://www.amazon.com/dp/B0912YB89Z/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 12: Grand Seiko SBGH267 "Hotaka" -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Grand Seiko burgundy dial" class="watch-image">
+                    <img src="https://hodinkee-production.s3.amazonaws.com/uploads/images/5b394c9a-4640-4a4f-95e3-847fedc1b3a4/20240410_CartierSantosRewind_010.JPG" alt="CARTIER Santos de Cartier Red Strap" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">CARTIER</div>
+                    <h2 class="watch-model">Santos de Cartier Red Strap</h2>
+                    <p class="watch-description">Parisian elegance with a red leather strap. The Santos is one of the world's oldest sports watches — born 1904. The red strap edition adds a modern twist to a timeless icon.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">39.8mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$7,500</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/711ypq78SiL._AC_SX679_.jpg" alt="BULOVA Lunar Pilot 'Blood Moon' 96K115" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">BULOVA</div>
+                    <h2 class="watch-model">Lunar Pilot 'Blood Moon' 96K115</h2>
+                    <p class="watch-description">The 'other Moonwatch' in its most dramatic form. Vibrant crimson panda dial inspired by a total lunar eclipse, Precisionist 262kHz movement, authentic Apollo 15 heritage. Stunning.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">43.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Quartz HPQ</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$895</div>
+                    <a href="https://www.amazon.com/dp/B0FNNPJK5H/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://hodinkee-production.s3.amazonaws.com/uploads/images/fbed9b7b-9530-4c17-a925-bdd3746f5c8e/tan2h-tan2h-7350.jpg" alt="GRAND SEIKO Spring Drive Chronograph SBGC275" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
                     <div class="watch-brand">GRAND SEIKO</div>
-                    <h2 class="watch-model">Heritage Hi-Beat "Hotaka" Burgundy</h2>
-                    <p class="watch-description">Limited edition with deep burgundy dial inspired by Mount Hotaka at sunset. High-beat precision meets Japanese aesthetic excellence.</p>
+                    <h2 class="watch-model">Spring Drive Chronograph SBGC275</h2>
+                    <p class="watch-description">Japanese artistry at its zenith. Shifting red-to-orange dial using Grand Seiko's patented Optical Multilayer Coating technology, 9R86 Spring Drive Chronograph GMT. Limited to 700 pieces.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Hi-Beat Auto</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">44.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Spring Drive</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$7,200</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$13,400</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://www.perpetualpassion.com/wp-content/uploads/2023/04/DSCF0697-2-scaled.jpeg" alt="PANERAI Luminor Quaranta Red" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">PANERAI</div>
+                    <h2 class="watch-model">Luminor Quaranta Red</h2>
+                    <p class="watch-description">Italian naval heritage in unmistakable red. The iconic crown-protecting bridge, cushion-shaped case, automatic P.900 calibre. Panerai's bold personality in its boldest colour.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$7,800</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
                 </div>
             </div>
         </div>
@@ -1053,18 +968,7 @@
             });
         });
 
-        // Carousel rotation
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        function rotateCarousel() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(rotateCarousel, 5000); // Change slide every 5 seconds
+                // Ken Burns — no JS needed // Change slide every 5 seconds
     </script>
 </body>
 </html>
