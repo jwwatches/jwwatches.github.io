@@ -294,21 +294,28 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        .watch-image-wrapper {
+                .watch-image-wrapper {
             position: relative;
             width: 100%;
-            height: 300px;
-            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+            height: 280px;
+            background: linear-gradient(145deg, #f8f9fb 0%, #eef0f4 50%, #f4f5f8 100%);
             overflow: hidden;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .watch-image {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 2rem;
+            object-fit: cover;
+            object-position: center;
+            padding: 0;
+            transition: transform 0.5s ease;
         }
+
+        
 
         .watch-info {
             padding: 2rem;
@@ -517,6 +524,109 @@
                 height: 300px;
             }
         }
+
+        .tier-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2px;
+            margin-bottom: 0.75rem;
+        }
+        .icon-tier {
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+        }
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--deep-navy);
+            color: var(--cream);
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid var(--deep-navy);
+            margin-top: auto;
+            cursor: pointer;
+        }
+        .buy-btn:hover {
+            background: transparent;
+            color: var(--deep-navy);
+        }
+        .reference-only {
+            background: var(--charcoal);
+            border-color: var(--charcoal);
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+        .reference-only:hover {
+            background: var(--charcoal);
+            color: var(--cream);
+        }
+
+        .dial-hero { position: relative; height: 420px; overflow: hidden; background: var(--deep-navy); }
+        .dial-hero-slides { position: absolute; inset: 0; }
+        .dial-hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s ease-in-out; background-size: cover; background-position: center; }
+        .dial-hero-slide.active { opacity: 1; }
+        .dial-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,22,40,0.93) 0%, rgba(10,22,40,0.7) 45%, rgba(10,22,40,0.15) 100%); z-index: 1; }
+        .dial-hero-content { position: relative; z-index: 2; height: 100%; display: flex; align-items: center; padding: 0 4rem; }
+        .dial-hero-inner { display: flex; flex-direction: column; gap: 1.1rem; max-width: 560px; }
+        .dial-accent-bar { width: 60px; height: 4px; background: #f0f0f0; box-shadow: 0 0 20px rgba(240,240,240,0.4); border-radius: 2px; }
+        .dial-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #f0f0f0; opacity: 0.85; }
+        .dial-hero-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: #f8f6f1; line-height: 1.1; margin: 0; }
+        .dial-hero-title span { color: #f0f0f0; text-shadow: 0 0 40px rgba(240,240,240,0.35); }
+        .dial-hero-sub { font-size: 0.95rem; color: rgba(248,246,241,0.68); line-height: 1.65; }
+        
+        
+        
+        .section-header { text-align: center; padding: 3rem 2rem 0.5rem; max-width: 800px; margin: 0 auto; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--deep-navy); margin-bottom: 0.75rem; }
+        .section-header p { color: #64748b; font-size: 0.95rem; line-height: 1.7; }
+        .price-note { text-align: center; font-size: 0.8rem; color: #94a3b8; margin: 0.75rem auto 2rem; font-style: italic; }
+        .tier-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; margin-bottom: 0.6rem; }
+        .icon-tier { background: var(--rich-gold); color: var(--deep-navy); }
+        .buy-btn { display: block; width: 100%; padding: 1rem; background: var(--deep-navy); color: var(--cream); text-decoration: none; text-align: center; font-weight: 600; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.3s ease; border: 2px solid var(--deep-navy); margin-top: auto; }
+        .buy-btn:hover { background: transparent; color: var(--deep-navy); }
+        .ref-btn { background: #334155; border-color: #334155; font-size: 0.75rem; opacity: 0.8; }
+        .ref-btn:hover { background: transparent; color: #334155; }
+        @media (max-width: 768px) { .dial-hero { height: 320px; } .dial-hero-title { font-size: 2.1rem; } .dial-hero-content { padding: 0 1.5rem; } }
+
+        
+
+        /* ── Ken Burns single hero image ─────────────────────── */
+        @keyframes kenBurns {
+            0%   { transform: scale(1.0) translate(0, 0); }
+            25%  { transform: scale(1.08) translate(-1%, 0.5%); }
+            50%  { transform: scale(1.12) translate(-1.5%, -1%); }
+            75%  { transform: scale(1.07) translate(0.5%, -0.5%); }
+            100% { transform: scale(1.0) translate(0, 0); }
+        }
+        .dial-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://hodinkee-production.s3.amazonaws.com/uploads/images/1603730078798-dh1eizhzm16-1b55d7a22046735ad3fde35613056ebd/_10-08-20203404.jpg');
+            background-size: cover;
+            background-position: center right;
+            animation: kenBurns 20s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .watch-image.img-contain {
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .watch-image.img-cover {
+            object-fit: cover;
+            object-position: center top;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -591,416 +701,243 @@
         </nav>
     </header>
 
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1 class="page-title">Best White Dial Watches</h1>
-            <p class="page-subtitle">Timeless elegance meets versatility - white dials offer unmatched legibility and refined sophistication for every occasion</p>
+    <div class="dial-hero">
+        <div class="dial-hero-bg"></div>
+        <div class="dial-hero-overlay"></div>
+        <div class="dial-hero-content">
+            <div class="dial-hero-inner">
+                <div class="dial-accent-bar"></div>
+                <div class="dial-hero-eyebrow">Dial Color Guide</div>
+                <h1 class="dial-hero-title">Best <span>White Dial</span><br>Watches</h1>
+                <p class="dial-hero-sub">From a $35 Casio to a $7,600 IWC Portofino — the complete guide to white dial watches at every price point.</p>
+            </div>
         </div>
     </div>
-
-    <!-- Hero Carousel -->
-    <section class="hero-carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="White dial luxury watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="White dial dive watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="White dial dress watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=1600&q=80" alt="White dial sports watch">
-            </div>
-        </div>
-    </section>
-
+    <div class="section-header">
+        <h2>12 Essential White Dial Watches</h2>
+        <p>White dials offer timeless elegance and superior legibility — from creamy ivory to pure lacquer white, these watches work effortlessly from boardroom to black tie.</p>
+    </div>
+    <p class="price-note">Prices are approximate and change frequently. Always check Amazon for current pricing.</p>
     <main class="main-content">
-        <p class="intro-text">White dials represent the pinnacle of classic watch design - offering superior legibility, timeless elegance, and remarkable versatility. From creamy ivory tones to pure snow-white surfaces, these dials catch and reflect light beautifully while maintaining their refined character in any setting.</p>
-
         <div class="watch-grid">
-            <!-- Watch 1: Rolex Datejust 41 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Rolex Datejust white dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/617gXKgl2vL._AC_SY879_.jpg" alt="Casio MTP-V005L-7B4" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">ROLEX</div>
-                    <h2 class="watch-model">Datejust 41 White Dial</h2>
-                    <p class="watch-description">The quintessential Rolex with classic white dial and fluted bezel. Timeless design that works equally well in boardrooms and black-tie events.</p>
+                    <div class="watch-brand">CASIO</div>
+                    <h2 class="watch-model">MTP-V005L-7B4</h2>
+                    <p class="watch-description">The perfect entry-level white dial. Clean Roman numerals, genuine leather strap, Japanese quartz precision. Timeless dress watch elegance for under $35.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Mineral</span></div>
                     </div>
-                    <div class="watch-price">$10,800</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$35</div>
+                    <a href="https://www.amazon.com/dp/B09F89NJ6B/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 2: Seiko Presage Cocktail Time -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Seiko Presage white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">SEIKO</div>
-                    <h2 class="watch-model">Presage Cocktail Time "Fuyugeshiki"</h2>
-                    <p class="watch-description">Stunning textured white dial inspired by winter frost. Exceptional value dress watch with in-house movement and beautiful finishing.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40.5mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$525</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 3: Cartier Tank Must -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Cartier Tank white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">CARTIER</div>
-                    <h2 class="watch-model">Tank Must</h2>
-                    <p class="watch-description">Iconic Art Deco design with silvered white dial and Roman numerals. The accessible entry point to Cartier's legendary Tank collection.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">33.7mm x 25.5mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$2,720</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 4: Grand Seiko SBGW231 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Grand Seiko white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">GRAND SEIKO</div>
-                    <h2 class="watch-model">Elegance Collection SBGW231</h2>
-                    <p class="watch-description">Pristine white enamel dial with exquisite hand-finished details. Manual-wind elegance showcasing Grand Seiko's watchmaking mastery.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">37mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Manual Wind</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$5,900</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 5: Timex Marlin Automatic -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Timex Marlin white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">TIMEX</div>
-                    <h2 class="watch-model">Marlin Automatic</h2>
-                    <p class="watch-description">Vintage-inspired dress watch with clean white dial at an incredible price point. Automatic movement and domed crystal evoke 1960s elegance.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Acrylic</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$269</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 6: Omega Seamaster Aqua Terra -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Omega Aqua Terra white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">OMEGA</div>
-                    <h2 class="watch-model">Seamaster Aqua Terra Silver Dial</h2>
-                    <p class="watch-description">Versatile sports-luxury watch with silvery-white dial and horizontal teak pattern. Master Chronometer movement offers exceptional precision.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">150m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$6,200</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 7: Longines Master Collection -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Longines white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">LONGINES</div>
-                    <h2 class="watch-model">Master Collection Moon Phase</h2>
-                    <p class="watch-description">Elegant dress watch with moon phase complication and pristine white dial. Classic Swiss watchmaking at an accessible luxury price.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$2,750</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 8: Patek Philippe Calatrava -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Patek Philippe white dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">PATEK PHILIPPE</div>
-                    <h2 class="watch-model">Calatrava 5227G White Gold</h2>
-                    <p class="watch-description">The ultimate dress watch with flawless white enamel dial. Patek Philippe's purest expression of horological elegance and refinement.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">39mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$38,720</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 9: Orient Bambino -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80" alt="Orient Bambino white dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/6152nD5LC6L._AC_SY695_.jpg" alt="Orient Bambino Version 8" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">ORIENT</div>
-                    <h2 class="watch-model">Bambino Version 2 White</h2>
-                    <p class="watch-description">Incredible value dress watch with domed crystal and clean white dial. In-house automatic movement at an unbeatable entry-level price.</p>
+                    <h2 class="watch-model">Bambino Version 8</h2>
+                    <p class="watch-description">Orient's most refined Bambino yet. Domed mineral crystal, in-house automatic with hand-winding and hacking, exhibition caseback. The best dress watch under $250.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40.5mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Mineral</span></div>
                     </div>
-                    <div class="watch-price">$179</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$230</div>
+                    <a href="https://www.amazon.com/dp/B0C8F8BSTT/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 10: JLC Master Ultra Thin -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="JLC Master Ultra Thin white dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71mydiU9-QL._AC_SY695_.jpg" alt="Seiko Presage Cocktail Time" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">JAEGER-LECOULTRE</div>
-                    <h2 class="watch-model">Master Ultra Thin Moon</h2>
-                    <p class="watch-description">Impossibly elegant dress watch with moon phase complication. Razor-thin profile and pristine white dial showcase JLC's haute horology expertise.</p>
+                    <div class="watch-brand">SEIKO</div>
+                    <h2 class="watch-model">Presage Cocktail Time</h2>
+                    <p class="watch-description">Japanese artistry at an attainable price. Enamel-inspired white dial catches light beautifully, in-house 4R35 automatic, exhibition caseback. A miniature masterpiece.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">39mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Hardlex</span></div>
                     </div>
-                    <div class="watch-price">$11,400</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$340</div>
+                    <a href="https://www.amazon.com/dp/B074KL28XK/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 11: Nomos Tangente -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="Nomos Tangente white dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/81n3blvEIgL._AC_SX679_.jpg" alt="Hamilton Khaki Field Mechanical H69439411" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">NOMOS GLASHÜTTE</div>
-                    <h2 class="watch-model">Tangente 38</h2>
-                    <p class="watch-description">German Bauhaus minimalism with silvery-white dial. Clean, functional design paired with in-house manual-wind movement and exceptional finishing.</p>
+                    <div class="watch-brand">HAMILTON</div>
+                    <h2 class="watch-model">Khaki Field Mechanical H69439411</h2>
+                    <p class="watch-description">WWII heritage reborn. Hand-wound H-50 caliber with 80-hour power reserve, sapphire crystal. White dial adds unexpected modern flash to serious military DNA.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Manual Wind</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Manual Wind</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$2,280</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$625</div>
+                    <a href="https://www.amazon.com/dp/B07Q4998L3/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 12: Vacheron Constantin Patrimony -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Vacheron Constantin white dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/81IVU-ROmpL._AC_SX679_.jpg" alt="Tissot Classic Dream T129.410.11.013.00" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">VACHERON CONSTANTIN</div>
-                    <h2 class="watch-model">Patrimony Manual Wind</h2>
-                    <p class="watch-description">Haute horology at its finest with hand-guilloché white dial. One of watchmaking's oldest maisons delivers timeless elegance in pure form.</p>
+                    <div class="watch-brand">TISSOT</div>
+                    <h2 class="watch-model">Classic Dream T129.410.11.013.00</h2>
+                    <p class="watch-description">Swiss precision in a clean, dressy package. Sapphire crystal, quartz movement, stainless steel bracelet. Understated elegance that works everywhere.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Manual Wind</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">30m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$21,500</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$325</div>
+                    <a href="https://www.amazon.com/dp/B08JVKPD1H/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/91GKTdbSVcL._AC_SY695_.jpg" alt="Longines Lyre Automatic L4.960.4.11.6" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">LONGINES</div>
+                    <h2 class="watch-model">Lyre Automatic L4.960.4.11.6</h2>
+                    <p class="watch-description">Pure Swiss elegance from one of horology's great historic collections. Clean white dial, ETA-based automatic, sapphire crystal. Effortlessly refined.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$945</div>
+                    <a href="https://www.amazon.com/dp/B0BNQYTTXD/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/81y8NOV-x2L._AC_SX679_.jpg" alt="Raymond Weil Freelancer Diver Automatic" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">RAYMOND WEIL</div>
+                    <h2 class="watch-model">Freelancer Diver Automatic</h2>
+                    <p class="watch-description">Independent Swiss excellence meets serious dive capability. White dial with bold indices, in-house inspired movement, 300m water resistance. Style without compromise.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">300m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$2,925</div>
+                    <a href="https://www.amazon.com/dp/B0DMTX36ZB/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61M0xRphFQL._AC_SY879_.jpg" alt="Frederique Constant Classics Index Automatic FC-303MC5B4" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">FREDERIQUE CONSTANT</div>
+                    <h2 class="watch-model">Classics Index Automatic FC-303MC5B4</h2>
+                    <p class="watch-description">Geneva sophistication at an accessible luxury price. White dial with clean baton indices, in-house automatic movement, exhibition caseback. The thinking collector's choice.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$1,495</div>
+                    <a href="https://www.amazon.com/dp/B0C3VG5NGD/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61JwnROEUrL._AC_SX679_.jpg" alt="Omega Seamaster Aqua Terra 220.12.41.21.02.001" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">OMEGA</div>
+                    <h2 class="watch-model">Seamaster Aqua Terra 220.12.41.21.02.001</h2>
+                    <p class="watch-description">The modern icon. Co-Axial Master Chronometer movement, horizontal teak-pattern white dial, 150m water resistance. Chosen by James Bond, coveted by everyone.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">41mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Auto COSC</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">150m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$6,800</div>
+                    <a href="https://www.amazon.com/dp/B0761SLL99/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://hodinkee-production.s3.amazonaws.com/uploads/images/1603730078798-dh1eizhzm16-1b55d7a22046735ad3fde35613056ebd/_10-08-20203404.jpg" alt="Rolex Oyster Perpetual 41" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">ROLEX</div>
+                    <h2 class="watch-model">Oyster Perpetual 41</h2>
+                    <p class="watch-description">The definition of a white dial watch. Perpetual movement, Oystersteel case, white lacquer dial. Pure, timeless, inimitable perfection.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">41mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$6,150</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61fhOCAeEPL._AC_SY695_.jpg" alt="Grand Seiko Heritage GMT Hi-Beat SBGJ211" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">GRAND SEIKO</div>
+                    <h2 class="watch-model">Heritage GMT Hi-Beat SBGJ211</h2>
+                    <p class="watch-description">Japanese haute horologie. Striking white dial in lightweight titanium, 36,000 bph Hi-Beat movement, GMT complication. Where precision meets artistry.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Auto Hi-Beat</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$7,400</div>
+                    <a href="https://www.amazon.com/dp/B08MB9BKJR/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/61DuxMzp8zL._AC_SX679_.jpg" alt="IWC Portofino Automatic IW356517" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">IWC</div>
+                    <h2 class="watch-model">Portofino Automatic IW356517</h2>
+                    <p class="watch-description">Horological nobility. Silver-plated white dial, Pellaton automatic winding, dress watch proportions done to absolute perfection. The benchmark.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">30m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$7,600</div>
+                    <a href="https://www.amazon.com/dp/B01FWW8BJ2/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
         </div>
@@ -1068,18 +1005,7 @@
             });
         });
 
-        // Carousel rotation
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        function rotateCarousel() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(rotateCarousel, 5000); // Change slide every 5 seconds
+                // Ken Burns — no JS needed // Change slide every 5 seconds
     </script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Black Dial Watches - From Affordable to Luxury | JW Watches</title>
-    <meta name="description" content="Discover the best black dial watches across every budget. Expert reviews of Rolex, Omega, Seiko, and microbrand timepieces with classic black dials.">
+    <title>Best Black Dial Watches — From $45 to $87,500 | JW Watches</title>
+    <meta name="description" content="Discover the best white dial watches across every budget. Expert reviews of elegant ivory, cream, and pure white timepieces from top brands.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -65,7 +65,6 @@
             align-items: center;
         }
 
-        .logo-circle { width: 38px; height: 38px; background: var(--rich-gold, #d4af37); color: #0a1628; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -76,6 +75,21 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
+        }
+
+        .logo-circle {
+            width: 38px;
+            height: 38px;
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            letter-spacing: 0;
         }
 
         nav {
@@ -166,10 +180,10 @@
 
         /* Page Header */
         .page-header {
-            background: linear-gradient(135deg, #18181b 0%, #52525b 100%);
+            background: linear-gradient(135deg, #f5f3ef 0%, #ffffff 100%);
             padding: 0.75rem 2rem 1.5rem 2rem;
             text-align: center;
-            color: white;
+            color: var(--charcoal);
         }
 
         .page-header-content {
@@ -182,14 +196,16 @@
             font-size: 2rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
+            color: var(--deep-navy);
         }
 
         .page-subtitle {
             font-size: 1rem;
-            opacity: 0.95;
+            opacity: 0.85;
             margin: 0 auto;
             line-height: 1.4;
             max-width: 700px;
+            color: var(--slate);
         }
 
         /* Hero Carousel */
@@ -228,7 +244,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(24, 24, 27, 0.4) 0%, rgba(82, 82, 91, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(245, 243, 239, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
         }
 
         .carousel-slide img {
@@ -278,21 +294,28 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        .watch-image-wrapper {
+                .watch-image-wrapper {
             position: relative;
             width: 100%;
-            height: 300px;
-            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+            height: 280px;
+            background: linear-gradient(145deg, #f8f9fb 0%, #eef0f4 50%, #f4f5f8 100%);
             overflow: hidden;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .watch-image {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 2rem;
+            object-fit: cover;
+            object-position: center;
+            padding: 0;
+            transition: transform 0.5s ease;
         }
+
+        
 
         .watch-info {
             padding: 2rem;
@@ -333,8 +356,8 @@
             gap: 1rem;
             margin-bottom: 1.5rem;
             padding: 1.5rem;
-            background: rgba(24, 24, 27, 0.05);
-            border-left: 3px solid #18181b;
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--rich-gold);
             border-radius: 2px;
         }
 
@@ -466,16 +489,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-                        .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 80vh; overflow-y: auto; }
             .nav-menu.active { display: flex; }
             .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
             .nav-menu > li > a { padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; font-weight: 600; }
-            .nav-menu > li > a::after { content: '+'; font-size: 1.2rem; font-weight: 300; color: var(--rich-gold, #d4af37); margin-left: 0.5rem; }
+            .nav-menu > li > a::after { content: '+'; font-size: 1.2rem; font-weight: 300; color: var(--rich-gold); margin-left: 0.5rem; }
             .nav-menu > li.open > a::after { content: '−'; }
             .dropdown { display: none; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.25); padding: 0.25rem 0; }
             .nav-menu > li.open .dropdown { display: block; }
             .dropdown a { padding: 0.7rem 2.5rem; font-size: 0.9rem; }
-            .dropdown a:hover { padding-left: 2.8rem; background: rgba(212,175,55,0.1); color: #d4af37; }
+            .dropdown a:hover { padding-left: 2.8rem; background: rgba(212,175,55,0.1); color: var(--rich-gold); }
             .mobile-menu-toggle { display: block; }
 
             .footer-content {
@@ -501,6 +524,109 @@
                 height: 300px;
             }
         }
+
+        .tier-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2px;
+            margin-bottom: 0.75rem;
+        }
+        .icon-tier {
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+        }
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--deep-navy);
+            color: var(--cream);
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid var(--deep-navy);
+            margin-top: auto;
+            cursor: pointer;
+        }
+        .buy-btn:hover {
+            background: transparent;
+            color: var(--deep-navy);
+        }
+        .reference-only {
+            background: var(--charcoal);
+            border-color: var(--charcoal);
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+        .reference-only:hover {
+            background: var(--charcoal);
+            color: var(--cream);
+        }
+
+        .dial-hero { position: relative; height: 420px; overflow: hidden; background: var(--deep-navy); }
+        .dial-hero-slides { position: absolute; inset: 0; }
+        .dial-hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s ease-in-out; background-size: cover; background-position: center; }
+        .dial-hero-slide.active { opacity: 1; }
+        .dial-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,22,40,0.93) 0%, rgba(10,22,40,0.7) 45%, rgba(10,22,40,0.15) 100%); z-index: 1; }
+        .dial-hero-content { position: relative; z-index: 2; height: 100%; display: flex; align-items: center; padding: 0 4rem; }
+        .dial-hero-inner { display: flex; flex-direction: column; gap: 1.1rem; max-width: 560px; }
+        .dial-accent-bar { width: 60px; height: 4px; background: #c8c8c8; box-shadow: 0 0 20px rgba(200,200,200,0.3); border-radius: 2px; }
+        .dial-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c8c8c8; opacity: 0.85; }
+        .dial-hero-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: #f8f6f1; line-height: 1.1; margin: 0; }
+        .dial-hero-title span { color: #c8c8c8; text-shadow: 0 0 40px rgba(200,200,200,0.3); }
+        .dial-hero-sub { font-size: 0.95rem; color: rgba(248,246,241,0.68); line-height: 1.65; }
+        
+        
+        
+        .section-header { text-align: center; padding: 3rem 2rem 0.5rem; max-width: 800px; margin: 0 auto; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--deep-navy); margin-bottom: 0.75rem; }
+        .section-header p { color: #64748b; font-size: 0.95rem; line-height: 1.7; }
+        .price-note { text-align: center; font-size: 0.8rem; color: #94a3b8; margin: 0.75rem auto 2rem; font-style: italic; }
+        .tier-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; margin-bottom: 0.6rem; }
+        .icon-tier { background: var(--rich-gold); color: var(--deep-navy); }
+        .buy-btn { display: block; width: 100%; padding: 1rem; background: var(--deep-navy); color: var(--cream); text-decoration: none; text-align: center; font-weight: 600; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.3s ease; border: 2px solid var(--deep-navy); margin-top: auto; }
+        .buy-btn:hover { background: transparent; color: var(--deep-navy); }
+        .ref-btn { background: #334155; border-color: #334155; font-size: 0.75rem; opacity: 0.8; }
+        .ref-btn:hover { background: transparent; color: #334155; }
+        @media (max-width: 768px) { .dial-hero { height: 320px; } .dial-hero-title { font-size: 2.1rem; } .dial-hero-content { padding: 0 1.5rem; } }
+
+        
+
+        /* ── Ken Burns single hero image ─────────────────────── */
+        @keyframes kenBurns {
+            0%   { transform: scale(1.0) translate(0, 0); }
+            25%  { transform: scale(1.08) translate(-1%, 0.5%); }
+            50%  { transform: scale(1.12) translate(-1.5%, -1%); }
+            75%  { transform: scale(1.07) translate(0.5%, -0.5%); }
+            100% { transform: scale(1.0) translate(0, 0); }
+        }
+        .dial-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://wristaficionado.com/cdn/shop/files/audemars-piguet-royal-oak-15500st-oo-1220st-03-selfwinding-stainless-steel-black-dial-2021-audemars-piguet-41108332445940.jpg?v=1711749408&width=2160'); background-position: center center;
+            background-size: cover;
+            background-position: center right;
+            animation: kenBurns 20s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .watch-image.img-contain {
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .watch-image.img-cover {
+            object-fit: cover;
+            object-position: center top;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
@@ -517,8 +643,8 @@
                     <li>
                         <a href="#dial-color" class="active">By Dial Color</a>
                         <div class="dropdown">
-                            <a href="/white-dial-watches.html">White Dial Watches</a>
-                            <a href="/black-dial-watches.html" style="color: var(--rich-gold);">Black Dial Watches</a>
+                            <a href="/black-dial-watches.html" style="color: var(--rich-gold);">White Dial Watches</a>
+                            <a href="/black-dial-watches.html">Black Dial Watches</a>
                             <a href="/blue-dial-watches.html">Blue Dial Watches</a>
                             <a href="/green-dial-watches.html">Green Dial Watches</a>
                             <a href="/silver-dial-watches.html">Silver Dial Watches</a>
@@ -575,416 +701,243 @@
         </nav>
     </header>
 
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1 class="page-title">Best Black Dial Watches</h1>
-            <p class="page-subtitle">The timeless appeal of black dials - versatile, elegant, and perfect for any occasion from boardroom to adventure</p>
+    <div class="dial-hero">
+        <div class="dial-hero-bg"></div>
+        <div class="dial-hero-overlay"></div>
+        <div class="dial-hero-content">
+            <div class="dial-hero-inner">
+                <div class="dial-accent-bar"></div>
+                <div class="dial-hero-eyebrow">Dial Color Guide</div>
+                <h1 class="dial-hero-title">Best <span>Black Dial</span><br>Watches</h1>
+                <p class="dial-hero-sub">From a $45 Casio to a $43,400 Audemars Piguet — the definitive guide to black dial watches at every price point.</p>
+            </div>
         </div>
     </div>
-
-    <!-- Hero Carousel -->
-    <section class="hero-carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Black dial luxury watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=1600&q=80" alt="Black dial dive watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=1600&q=80" alt="Black dial dress watch">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1600&q=80" alt="Black dial sports watch">
-            </div>
-        </div>
-    </section>
-
+    <div class="section-header">
+        <h2>12 Essential Black Dial Watches</h2>
+        <p>Black dials are the universal language of watches — versatile, serious, and endlessly wearable. From field watches to dive icons to the rarest sports watches on earth.</p>
+    </div>
+    <p class="price-note">Prices are approximate and change frequently. Always check Amazon for current pricing.</p>
     <main class="main-content">
-        <p class="intro-text">Black dials are the most versatile choice in watchmaking - equally at home with a tuxedo or tactical gear. Their timeless appeal and superior legibility have made them the default choice for tool watches, while their understated elegance elevates any dress watch. Here are our top black dial selections across all budgets.</p>
-
         <div class="watch-grid">
-            <!-- Watch 1: Rolex Submariner No-Date -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Rolex Submariner black dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">ROLEX</div>
-                    <h2 class="watch-model">Submariner No-Date</h2>
-                    <p class="watch-description">The iconic dive watch that defined a category. Clean black dial without date window offers perfect symmetry and tool watch purity.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">300m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$9,100</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 2: Seiko SKX007 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Seiko SKX black dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">SEIKO</div>
-                    <h2 class="watch-model">SKX007 (or SPB143 successor)</h2>
-                    <p class="watch-description">The legendary affordable dive watch. Proven tool watch credentials with bulletproof automatic movement and iconic design.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Hardlex</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$275</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 3: Omega Speedmaster Moonwatch -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Omega Speedmaster black dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">OMEGA</div>
-                    <h2 class="watch-model">Speedmaster Professional Moonwatch</h2>
-                    <p class="watch-description">The first watch worn on the moon. Manual-wind chronograph with legendary black dial and tachymeter bezel - a true icon of horology.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">42mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Manual Wind</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Hesalite</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$6,800</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 4: Tudor Black Bay 41 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Tudor Black Bay black dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">TUDOR</div>
-                    <h2 class="watch-model">Black Bay 41</h2>
-                    <p class="watch-description">Pure three-hand simplicity with Tudor's signature snowflake hands. A versatile everyday watch that works in any setting.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">150m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$3,700</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 5: Casio G-Shock DW-5600 -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="G-Shock black dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71Tz2scwrHL._AC_SX679_.jpg" alt="Casio Casio Collection Unisex Adults Watch AQ-230A " class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">CASIO</div>
-                    <h2 class="watch-model">G-Shock DW-5600E</h2>
-                    <p class="watch-description">The virtually indestructible digital icon. Perfect beater watch with legendary toughness and timeless square case design.</p>
+                    <h2 class="watch-model">AQ-230A Dual-Time</h2>
+                    <p class="watch-description">Retro dual-time on a steel bracelet. Day/date, 50m water resistance, 10-year battery. Old-school cool that never goes out of style.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">43mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Quartz Digital</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">200m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Mineral</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Quartz</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Mineral</span></div>
                     </div>
-                    <div class="watch-price">$49</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$45</div>
+                    <a href="https://www.amazon.com/dp/B000J39T2S/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 6: Grand Seiko SBGM221 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Grand Seiko black dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/617xFpn+4SL._AC_SX679_.jpg" alt="Seiko SEIKO Automatic Watch for Men - 5 Sports - Day/Date Calendar, LumiBrite Hands and Markers, and Rotating Bezel, 100m Water-Resistant" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">GRAND SEIKO</div>
-                    <h2 class="watch-model">Heritage GMT SBGM221</h2>
-                    <p class="watch-description">Japanese watchmaking perfection with stunning black dial finishing. GMT complication and zaratsu polished case showcase Grand Seiko's mastery.</p>
+                    <div class="watch-brand">SEIKO</div>
+                    <h2 class="watch-model">5 Sports SRPD Black</h2>
+                    <p class="watch-description">The benchmark automatic under $250. 4R36 movement, 200m water resistance, date/day, exhibition caseback. Impossible value.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40.5mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic GMT</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Hardlex</span></div>
                     </div>
-                    <div class="watch-price">$5,200</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$220</div>
+                    <a href="https://www.amazon.com/dp/B07ZJW4Q8P/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 7: Oris Divers Sixty-Five -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Oris black dial dive watch" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/617pfLwPt8L._AC_SY879_.jpg" alt="Orient Mako II Diver" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">ORIS</div>
-                    <h2 class="watch-model">Divers Sixty-Five Black</h2>
-                    <p class="watch-description">Vintage-inspired dive watch with modern reliability. Domed sapphire crystal and retro styling make this a standout value proposition.</p>
+                    <div class="watch-brand">ORIENT</div>
+                    <h2 class="watch-model">Mako II Diver</h2>
+                    <p class="watch-description">In-house automatic with hacking and hand-winding. Unidirectional bezel, 200m water resistance. The dive watch that punches well above its price.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">41.5mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Mineral</span></div>
                     </div>
-                    <div class="watch-price">$2,100</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$230</div>
+                    <a href="https://www.amazon.com/dp/B01AK5TQQ8/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 8: Audemars Piguet Royal Oak -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80" alt="AP Royal Oak black dial" class="watch-image">
-                </div>
-                <div class="watch-info">
-                    <div class="watch-brand">AUDEMARS PIGUET</div>
-                    <h2 class="watch-model">Royal Oak 41mm Black</h2>
-                    <p class="watch-description">The ultimate luxury sports watch. Iconic octagonal bezel and integrated bracelet paired with a stunning black grande tapisserie dial.</p>
-                    <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
-                    </div>
-                    <div class="watch-price">$28,500</div>
-                    <a href="#" class="view-details-btn">View Details</a>
-                </div>
-            </div>
-
-            <!-- Watch 9: Hamilton Khaki Field Mechanical -->
-            <div class="watch-card">
-                <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&q=80" alt="Hamilton Khaki black dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71d5sNGKbCL._AC_SY879_.jpg" alt="Hamilton Hamilton Khaki Field Automatic Men's Watch, 38mm Stainless Steel Case, Swiss Made, Black Dial Analog Wrist Watch for Men, 100m Waterproof, Sapphire Crystal, 3-Hand Movement, Stainless Steel Strap " class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
                     <div class="watch-brand">HAMILTON</div>
-                    <h2 class="watch-model">Khaki Field Mechanical</h2>
-                    <p class="watch-description">Classic military field watch with hand-wound movement. Simple, legible, and built to last - perfect everyday companion under $500.</p>
+                    <h2 class="watch-model">Khaki Field Automatic</h2>
+                    <p class="watch-description">Swiss-made field watch built for the long haul. 100m water resistance, sapphire crystal, ETA movement. The serious everyday tool watch.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">38mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Manual Wind</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">50m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">38mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$475</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$845</div>
+                    <a href="https://www.amazon.com/dp/B001QT1LWK/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 10: Zenith Chronomaster Sport -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Zenith chronograph black dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/81dSmPahrqL._AC_SX679_.jpg" alt="Tissot PRX Powermatic 80" class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">ZENITH</div>
-                    <h2 class="watch-model">Chronomaster Sport Black</h2>
-                    <p class="watch-description">High-beat chronograph with Zenith's legendary El Primero movement. The black dial version offers sportier, more versatile styling.</p>
+                    <div class="watch-brand">TISSOT</div>
+                    <h2 class="watch-model">PRX Powermatic 80</h2>
+                    <p class="watch-description">Integrated bracelet sports elegance. Powermatic 80 movement with 80-hour reserve, sapphire crystal. The watch that looks like it costs three times the price.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">41mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">El Primero Auto</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">100m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$9,900</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$775</div>
+                    <a href="https://www.amazon.com/dp/B0CCJY2FQQ/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 11: Christopher Ward C60 Trident Pro 300 -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&q=80" alt="Christopher Ward black dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/81KNULGGBDL._AC_SL1500_.jpg" alt="Longines Spirit Zulu TIME Automatic Watch " class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
-                    <div class="watch-brand">CHRISTOPHER WARD</div>
-                    <h2 class="watch-model">C60 Trident Pro 300 Black</h2>
-                    <p class="watch-description">British microbrand offering exceptional value. True 300m dive watch with ceramic bezel and in-house movement at a fraction of luxury prices.</p>
+                    <div class="watch-brand">LONGINES</div>
+                    <h2 class="watch-model">Spirit Zulu Time GMT</h2>
+                    <p class="watch-description">Aviation DNA with serious credentials. GMT complication, COSC-certified movement, titanium case option. Explorers and aviators trust this watch.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">300m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic COSC</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">100m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$1,095</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~$3,550</div>
+                    <a href="https://www.amazon.com/dp/B0FNWNWRTX/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
                 </div>
             </div>
-
-            <!-- Watch 12: Patek Philippe Nautilus -->
             <div class="watch-card">
                 <div class="watch-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Patek Philippe black dial" class="watch-image">
+                    <img src="https://m.media-amazon.com/images/I/71VdAH7dukL._AC_SY695_.jpg" alt="Tudor Black Bay 58 M79030N-0001 " class="watch-image img-contain" loading="lazy">
                 </div>
                 <div class="watch-info">
+                    <div class="watch-brand">TUDOR</div>
+                    <h2 class="watch-model">Black Bay 58 M79030N</h2>
+                    <p class="watch-description">The dive watch that changed the game. Vintage-inspired 39mm case, in-house MT5402 movement, 200m water resistance. Tudor's modern masterpiece.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">39mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">200m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$4,700</div>
+                    <a href="https://www.amazon.com/dp/B08R45KZC2/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://m.media-amazon.com/images/I/718PpKHKSML._AC_SY695_.jpg" alt="Omega Omega Seamaster Automatic Chronometer Black Dial Men's Watch 210.30.42.20.01.001 " class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-brand">OMEGA</div>
+                    <h2 class="watch-model">Seamaster 300M Black</h2>
+                    <p class="watch-description">James Bond's watch since 1995. Co-Axial Master Chronometer, ceramic bezel, 300m water resistance. The world's most famous dive watch.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">42mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Auto COSC</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">300m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$6,500</div>
+                    <a href="https://www.amazon.com/dp/B07RY4JVM9/?tag=jwwatches-20" class="buy-btn" target="_blank" rel="noopener">Buy on Amazon →</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://debonarwatches.com/cdn/shop/files/4O0A4729.jpg?v=1764674129" alt="Rolex Submariner Date 116610LN" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">VACHERON CONSTANTIN</div>
+                    <h2 class="watch-model">Overseas Black</h2>
+                    <p class="watch-description">The Swiss trifecta of Grande Maison luxury watchmaking at its most sporty. Interchangeable strap system, every finish perfect. Wears beautifully every single day.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">41mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">150m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$27,000</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://gandgtimepieces.com/cdn/shop/files/DSC_6229-X4.jpg?v=1755697832&width=2048" alt="Patek Philippe 2023 Patek Philippe Aquanaut 5167A" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">ROLEX</div>
+                    <h2 class="watch-model">Submariner Date 116610LN</h2>
+                    <p class="watch-description">The definitive dive watch. The benchmark every other watch is measured against. Cerachrom bezel, Oystersteel, 300m. The most recognised watch ever made.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">300m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$14,000</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://wristaficionado.com/cdn/shop/files/audemars-piguet-royal-oak-15500st-oo-1220st-03-selfwinding-stainless-steel-black-dial-2021-audemars-piguet-41108332445940.jpg?v=1711749408&width=2160" alt="AP Royal Oak 15500ST Black" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
+                    <div class="watch-brand">AUDEMARS PIGUET</div>
+                    <h2 class="watch-model">Royal Oak 15500ST Black</h2>
+                    <p class="watch-description">Gerald Genta's masterpiece. The integrated bracelet that changed watchmaking forever in 1972. Tapisserie dial, Grande Tapisserie pattern. Nothing else comes close.</p>
+                    <div class="watch-specs">
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">41mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">50m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
+                    </div>
+                    <div class="watch-price">~$43,400</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
+                </div>
+            </div>
+            <div class="watch-card">
+                <div class="watch-image-wrapper">
+                    <img src="https://www.watchonista.com/sites/default/files/watchographer/1/articles/470853/front/vacheron_constantin_overseas_black_dial_05_rectangle.jpg" alt="Vacheron Constantin Overseas Black" class="watch-image img-contain" loading="lazy">
+                </div>
+                <div class="watch-info">
+                    <span class="tier-badge icon-tier">✦ Icon Watch</span>
                     <div class="watch-brand">PATEK PHILIPPE</div>
-                    <h2 class="watch-model">Nautilus 5711/1A Black</h2>
-                    <p class="watch-description">The holy grail of luxury sports watches. Impossibly thin profile, iconic porthole case, and Patek's legendary finishing make this the ultimate black dial watch.</p>
+                    <h2 class="watch-model">Aquanaut 5167A</h2>
+                    <p class="watch-description">The next generation of Patek Philippe sports watches. Tropical embossed dial, composite strap, 120m water resistance. One of the most coveted watches in the world.</p>
                     <div class="watch-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Case Size</span>
-                            <span class="spec-value">40mm</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Movement</span>
-                            <span class="spec-value">Automatic</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Water Resistance</span>
-                            <span class="spec-value">120m</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Crystal</span>
-                            <span class="spec-value">Sapphire</span>
-                        </div>
+                        <div class="spec-item"><span class="spec-label">Case Size</span><span class="spec-value">40mm</span></div>
+                        <div class="spec-item"><span class="spec-label">Movement</span><span class="spec-value">Automatic</span></div>
+                        <div class="spec-item"><span class="spec-label">Water Resist.</span><span class="spec-value">120m</span></div>
+                        <div class="spec-item"><span class="spec-label">Crystal</span><span class="spec-value">Sapphire</span></div>
                     </div>
-                    <div class="watch-price">$34,890</div>
-                    <a href="#" class="view-details-btn">View Details</a>
+                    <div class="watch-price">~Contact Dealer</div>
+                    <a href="#" class="buy-btn ref-btn" >Available at Authorized Dealers</a>
                 </div>
             </div>
         </div>
@@ -1030,7 +983,7 @@
     </footer>
 
     <script>
-        function toggleMenu() {
+                function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
             if (!navMenu.classList.contains('active')) {
@@ -1052,18 +1005,7 @@
             });
         });
 
-        // Carousel rotation
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        function rotateCarousel() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add('active');
-        }
-
-        setInterval(rotateCarousel, 5000); // Change slide every 5 seconds
+                // Ken Burns — no JS needed // Change slide every 5 seconds
     </script>
 </body>
 </html>
