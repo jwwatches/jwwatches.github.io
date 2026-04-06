@@ -34,8 +34,9 @@
         .header-top { border-bottom: 1px solid rgba(212,175,55,0.2); padding: 1rem 0; }
         .header-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
 
-        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--rich-gold); text-decoration: none; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.6rem; }
-        .logo-circle { width: 38px; height: 38px; background: var(--rich-gold); color: var(--deep-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 900; flex-shrink: 0; letter-spacing: 0; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--rich-gold); text-decoration: none; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0; }
+        .logo-jw { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: #d4af37; letter-spacing: -1px; }
+        .logo-atches { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: -1px; }
 
         nav { background: var(--deep-navy); }
         .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
@@ -82,7 +83,7 @@
 
         footer { background: var(--deep-navy); color: var(--cream); padding: 4rem 2rem 2rem; margin-top: 6rem; }
         .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-        .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 900; color: var(--rich-gold); margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 900; color: var(--rich-gold); margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0; text-decoration: none; }
         .footer-tagline { color: var(--cream); opacity: 0.8; line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
         .footer-section h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--rich-gold); margin-bottom: 1rem; }
         .footer-links { list-style: none; }
@@ -118,7 +119,7 @@
     <header>
         <div class="header-top">
             <div class="header-container">
-                <a href="/" class="logo"><span class="logo-circle">JW</span> WATCHES</a>
+                <a href="/index.html" class="logo"><span class="logo-jw">JW</span><span class="logo-atches">atches</span></a>
                 <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -137,7 +138,6 @@
                             <a href="/red-dial-watches.html">Red Dial Watches</a>
                             <a href="/orange-dial-watches.html">Orange Dial Watches</a>
                             <a href="/yellow-dial-watches.html">Yellow Dial Watches</a>
-                            <a href="/multi-color-dial-watches.html">Multi-Color Dial Watches</a>
                         </div>
                     </li>
                     <li>
@@ -148,11 +148,7 @@
                             <a href="/dive-watches.html">Dive Watches</a>
                             <a href="/day-date-watches.html">Day-Date</a>
                             <a href="/moon-phase-watches.html">Moon Phase</a>
-                            <a href="/alarm-timer-watches.html">Alarm/Timer</a>
                             <a href="/power-reserve-watches.html">Power Reserve</a>
-                            <a href="/jump-hour-watches.html">Jump Hour</a>
-                            <a href="/world-timer-watches.html">World Timer</a>
-                            <a href="/tourbillon-watches.html">Tourbillon</a>
                         </div>
                     </li>
                     <li>
@@ -437,7 +433,7 @@
     <footer>
         <div class="footer-content">
             <div>
-                <a href="/" class="footer-logo"><span class="logo-circle">JW</span> WATCHES</a>
+                <a href="/index.html" class="footer-logo"><span class="logo-jw">JW</span><span class="logo-atches">atches</span></a>
                 <p class="footer-tagline">Your trusted guide to finding the perfect timepiece, from affordable gems to luxury icons. Expert reviews, honest recommendations, and comprehensive guides for every budget.</p>
             </div>
             <div class="footer-section">
@@ -452,7 +448,7 @@
             <div class="footer-section">
                 <h4>Popular Guides</h4>
                 <ul class="footer-links">
-                    <li><a href="/automatic-watches.html">Automatic Watches</a></li>
+                    <li></li>
                     <li><a href="/dive-watch-guide.html">Dive Watch Guide</a></li>
                     <li><a href="/swiss-made.html">Swiss Made — Worth It?</a></li>
                     <li><a href="/japanese-watches.html">Japanese Watches</a></li>
