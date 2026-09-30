@@ -141,27 +141,26 @@
 
         .featured-article {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 240px 1fr;
             gap: 0;
             background: white;
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
-            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
             text-decoration: none;
             color: inherit;
             transition: box-shadow 0.3s ease;
         }
-        .featured-article:hover { box-shadow: 0 16px 60px rgba(0,0,0,0.15); }
+        .featured-article:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
         .featured-image {
-            height: 100%;
-            min-height: 380px;
+            height: 140px;
             object-fit: cover;
             display: block;
             width: 100%;
         }
         .featured-content {
-            padding: 3rem;
+            padding: 1rem 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -170,43 +169,47 @@
             display: inline-block;
             background: rgba(212,175,55,0.12);
             color: var(--rich-gold);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            padding: 0.3rem 0.75rem;
+            padding: 0.2rem 0.6rem;
             border-radius: 2px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.4rem;
             width: fit-content;
         }
         .article-tag.new { background: var(--rich-gold); color: var(--deep-navy); }
         .featured-content h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--deep-navy);
-            margin-bottom: 1rem;
+            margin-bottom: 0.35rem;
             line-height: 1.3;
         }
         .featured-content p {
-            font-size: 1rem;
-            color: var(--slate);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        .featured-meta {
             font-size: 0.85rem;
             color: var(--slate);
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .featured-meta {
+            font-size: 0.7rem;
+            color: var(--slate);
             opacity: 0.65;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
         }
         .read-btn {
             display: inline-block;
-            padding: 0.875rem 2rem;
+            padding: 0.4rem 1rem;
             background: var(--deep-navy);
             color: var(--cream);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             letter-spacing: 0.5px;
             border-radius: 2px;
             text-decoration: none;
@@ -316,7 +319,7 @@
         @media (max-width: 1024px) {
             .articles-grid { grid-template-columns: repeat(2, 1fr); }
             .featured-article { grid-template-columns: 1fr; }
-            .featured-image { min-height: 260px; }
+            .featured-image { height: 160px; }
                         .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0e1e36; box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 999; max-height: 70vh; overflow-y: scroll; scrollbar-width: thin; scrollbar-color: var(--rich-gold) var(--charcoal); }
             .nav-menu.active { display: flex; }
             .nav-menu > li { border-bottom: 1px solid rgba(255,255,255,0.07); }
@@ -333,8 +336,8 @@
         @media (max-width: 768px) {
             .articles-grid { grid-template-columns: 1fr; }
             .page-title { font-size: 1.75rem; }
-            .featured-content { padding: 2rem; }
-            .featured-content h2 { font-size: 1.5rem; }
+            .featured-content { padding: 1.25rem; }
+            .featured-content h2 { font-size: 1.1rem; }
         }
     
         .nav-logo {
@@ -416,20 +419,6 @@
 
 <body>
     {% include nav.html active="guides" %}
-
-    <div class="page-header">
-        <div class="page-header-content">
-            <h1 class="page-title">Watch Guides</h1>
-            <p class="page-subtitle">Honest, opinionated guides to buying watches — movements, styles, origins, and the questions everyone Googles but nobody answers straight.</p>
-        </div>
-    </div>
-
-    <div class="author-intro">
-        <div class="author-intro-inner">
-            <h2>About These Guides</h2>
-            <p>JW got a Victorinox GMT for Christmas, fell down the WatchTok rabbit hole, and hasn't climbed out since. These are the honest, opinionated answers to the questions that rabbit hole raises — no sponsored fluff, just what's actually worth buying.</p>
-        </div>
-    </div>
 
     <div class="main-content">
         {% assign all_guides = site.data.guides | sort: "date" | reverse %}
