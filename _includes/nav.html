@@ -62,8 +62,8 @@
                     <li>
                         <a href="/guides.html"{% if include.active == "guides" %} class="active"{% endif %}>Guides <span class="nav-new-badge">NEW</span></a>
                         <div class="dropdown">
-                            {% assign recent_guides = site.data.guides | sort: "date" | reverse %}
-                            {% for guide in recent_guides limit: 10 %}
+                            {% for url in site.data.nav_featured limit: 5 %}
+                            {% assign guide = site.data.guides | where: "url", url | first %}
                             <a href="{{ guide.url }}"{% if guide.gold %} style="color:var(--rich-gold);"{% endif %}>{{ guide.title }}</a>
                             {% endfor %}
                             <a href="/guides.html" style="border-top:1px solid rgba(255,255,255,0.15); margin-top:0.5rem; padding-top:0.75rem; font-weight:700;">See All Guides &rarr;</a>
