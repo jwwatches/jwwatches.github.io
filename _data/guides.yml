@@ -1,72 +1,84 @@
 - title: "Automatic Watches: The Truth Nobody In The Industry Wants To Admit"
   url: /automatic-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/71VdAH7dukL._AC_SY695_.jpg
   excerpt: "Everything you need to know about automatic watches — how they work, why they're worth it, and the inconvenient truths the watch industry glosses over."
   date: 2026-03-01
   read_time: "8 min"
 - title: "Why Serious Watch People Are Finally Admitting Quartz Wins"
   url: /quartz-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/71GMH3jFbiL._AC_SY695_.jpg
   excerpt: "The watch community has a complicated relationship with quartz. JW makes the case for why quartz deserves far more respect than it gets."
   date: 2026-03-03
   read_time: "7 min"
 - title: "The Dying Art That Makes a Watch Feel Alive"
   url: /manual-wind-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/91utjDZT7QL._AC_SY879_.jpg
   excerpt: "Manual wind watches are the purest expression of mechanical watchmaking — why hand-winding every morning is one of the great small pleasures in life."
   date: 2026-03-05
   read_time: "7 min"
 - title: "Seiko Built Something That Shouldn't Exist — The Spring Drive Story"
   url: /spring-drive-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/618dvX7gZWL._AC_SY695_.jpg
   excerpt: "The Spring Drive is neither quartz nor mechanical. It's something else entirely — and understanding it changes how you think about watchmaking."
   date: 2026-03-07
   read_time: "8 min"
 - title: "The One Watch That Works With Everything"
   url: /dress-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/51SUq9z8VFL._AC_SY879_.jpg
   excerpt: "Dress watches explained — what makes a great one, why a clean dial beats complications every time, and the five worth buying."
   date: 2026-03-09
   read_time: "8 min"
 - title: "Built To Survive Anything — Sport Watches Worth Your Money"
   url: /sport-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/81U34eatAVL._AC_SX679_.jpg
   excerpt: "The best sport watches across every budget, and how to choose the right one for what you actually do."
   date: 2026-03-11
   read_time: "8 min"
 - title: "You'll Never Scuba Dive. Buy One Anyway."
   url: /dive-watch-guide.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/71GDtOwSdiL._AC_SY695_.jpg
   excerpt: "Why dive watches are the most versatile, most wearable, most practical category in watchmaking — and you don't need to go near water to justify one."
   date: 2026-03-13
   read_time: "9 min"
 - title: "Designed For Cockpits, Perfect For Real Life"
   url: /pilot-watches.html
   tag: "Watch Types"
+  image: https://m.media-amazon.com/images/I/61ujVwHF+dL._AC_SX679_.jpg
   excerpt: "Pilot watches left the cockpit decades ago and never looked back. Here's why they work so well everywhere else."
   date: 2026-03-15
   read_time: "8 min"
 - title: "Is Swiss Made Worth The Premium? We Did The Math."
   url: /swiss-made.html
   tag: "Industry"
+  image: https://m.media-amazon.com/images/I/718CJ0vA1bL._AC_SY695_.jpg
   excerpt: "Swiss Made is stamped on watches from $200 to $200,000. JW investigates what the label actually guarantees — and what it doesn't."
   date: 2026-03-17
   read_time: "9 min"
 - title: "Japan vs Switzerland: The Watch War Nobody Talks About"
   url: /japanese-watches.html
   tag: "By Origin"
+  image: https://m.media-amazon.com/images/I/81uYP8v808L._AC_SX679_.jpg
   excerpt: "Two watchmaking traditions. Completely different philosophies. JW examines where Japan beats Switzerland and where it doesn't."
   date: 2026-03-19
   read_time: "10 min"
 - title: "Why German Watches Are The Best Kept Secret In Horology"
   url: /german-watches.html
   tag: "By Origin"
+  image: https://m.media-amazon.com/images/I/51H5-h7gO1L._AC_SY695_.jpg
   excerpt: "Glashütte. Nomos. Sinn. A. Lange & Söhne. Germany produces some of the finest watches in the world and most people have no idea."
   date: 2026-03-21
   read_time: "10 min"
 - title: "How Unknown Watch Brands Are Beating Rolex At Their Own Game"
   url: /microbrand-watches.html
   tag: "Industry"
+  image: https://m.media-amazon.com/images/I/61KmOsmg2+L._AC_SY695_.jpg
   excerpt: "Microbrands are producing remarkable watches at a fraction of what the major brands charge. JW makes the case for the independents."
   date: 2026-03-22
   read_time: "9 min"
@@ -74,6 +86,7 @@
   url: /fathers-day-watches-under-100.html
   tag: "Father's Day"
   gold: true
+  image: https://m.media-amazon.com/images/I/61nHUVwR65L._AC_SY879_.jpg
   excerpt: "The best watch gifts for dad under $100 — real picks that look good and last. Casio, G-Shock, Timex and more."
   date: 2026-06-01
   read_time: "6 min"
@@ -81,6 +94,7 @@
   url: /fathers-day-watches-100-250.html
   tag: "Father's Day"
   gold: true
+  image: https://m.media-amazon.com/images/I/51dCF5s-xkL._AC_SX679_.jpg
   excerpt: "Automatic movements, solar power, and names serious watch people recognize. Orient, Seiko, Citizen, Timex."
   date: 2026-06-02
   read_time: "6 min"
@@ -88,6 +102,7 @@
   url: /fathers-day-watches-250-500.html
   tag: "Father's Day"
   gold: true
+  image: https://m.media-amazon.com/images/I/61xjD+DW2HL._AC_SY695_.jpg
   excerpt: "Swiss-made Tissot and Hamilton, Japanese Seiko Presage finishing, and tool watches built to last a lifetime."
   date: 2026-06-03
   read_time: "6 min"
@@ -95,12 +110,14 @@
   url: /fathers-day-watches-500-1000.html
   tag: "Father's Day"
   gold: true
+  image: https://m.media-amazon.com/images/I/81+HC9V8sJL._AC_SX679_.jpg
   excerpt: "Swiss automatic Hamilton and Tissot, Movado Museum design, Victorinox built for a lifetime."
   date: 2026-06-04
   read_time: "7 min"
 - title: "Halloween Watches 2026: Blood Moons, Pumpkin Dials & Shadow-Ready Timepieces"
   url: /halloween-watches.html
   tag: "Seasonal"
+  image: https://m.media-amazon.com/images/I/713QbFLWg1L._AC_SY695_.jpg
   excerpt: "The best watches for spooky season — blood-moon moonphase dials, pumpkin-orange faces, and shadow-dark stealth pieces."
   date: 2026-10-01
   read_time: "7 min"

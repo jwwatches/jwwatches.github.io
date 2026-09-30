@@ -426,7 +426,6 @@
 
     <div class="author-intro">
         <div class="author-intro-inner">
-            <div class="author-initial">JW</div>
             <h2>About These Guides</h2>
             <p>JW got a Victorinox GMT for Christmas, fell down the WatchTok rabbit hole, and hasn't climbed out since. These are the honest, opinionated answers to the questions that rabbit hole raises — no sponsored fluff, just what's actually worth buying.</p>
         </div>
@@ -439,9 +438,7 @@
 
         <div class="featured-label">Latest</div>
         <a href="{{ featured.url }}" class="featured-article">
-            <div class="featured-image" style="background:linear-gradient(135deg, var(--deep-navy) 0%, #1e293b 100%); display:flex; align-items:center; justify-content:center;">
-                <span style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; letter-spacing:1px; color:var(--rich-gold); text-transform:uppercase; opacity:0.85;">{{ featured.tag }}</span>
-            </div>
+            <img class="featured-image" src="{{ featured.image }}" alt="{{ featured.title }}" style="background:var(--deep-navy);">
             <div class="featured-content">
                 <span class="article-tag new">{{ featured.tag }}</span>
                 <h2>{{ featured.title }}</h2>
@@ -466,9 +463,7 @@
         <div class="articles-grid" id="articlesGrid">
             {% for guide in all_guides offset: 1 %}
             <a href="{{ guide.url }}" class="article-card" data-tag="{{ guide.tag }}">
-                <div class="card-image" style="background:linear-gradient(135deg, var(--deep-navy) 0%, #1e293b 100%); display:flex; align-items:center; justify-content:center;">
-                    <span style="font-family:'Playfair Display',serif; font-size:0.8rem; font-weight:700; letter-spacing:1px; color:var(--rich-gold); text-transform:uppercase; opacity:0.85;">{{ guide.tag }}</span>
-                </div>
+                <img class="card-image" src="{{ guide.image }}" alt="{{ guide.title }}" style="background:var(--deep-navy);">
                 <div class="card-content">
                     <div class="article-tag">{{ guide.tag }}</div>
                     <div class="card-title">{{ guide.title }}</div>
